@@ -33,6 +33,7 @@ This catalogue is designed for professionals who write documents and use AI to h
 - **Tax and finance professionals** — technical notes, board papers, regulatory submissions, client memos
 - **Consultants and strategists** — proposals, strategy memos, executive briefings, business cases
 - **Executives and board members** — investor updates, performance reviews, approval memos, stakeholder communications
+- **Marketing, product, and website owners** — SEO audits, conversion reviews, content plans, and 90-day website improvement roadmaps
 - **Job seekers** — cover letters, LinkedIn profiles, application materials
 - **Learners and educators** — study summaries, tutorials, Socratic explainers, learning notes
 
@@ -88,6 +89,7 @@ Pick your style first. Use a pattern when a section needs a clear structure. The
 | Job cover letter | Job Application | — | [job-application-prompts.md](prompt-templates/job-application-prompts.md) |
 | Slide deck | Consulting Style | [create-slide-deck.md](skills/create-slide-deck.md) | [presentation-prompts.md](prompt-templates/presentation-prompts.md) |
 | PDF-ready report | Executive Briefing | [create-pdf.md](skills/create-pdf.md) | [pdf-document-prompts.md](prompt-templates/pdf-document-prompts.md) |
+| Website marketing and SEO audit | Executive Briefing | [create-website-marketing-seo-audit.md](skills/create-website-marketing-seo-audit.md) | [website-marketing-seo-prompts.md](prompt-templates/website-marketing-seo-prompts.md) |
 | Risk register | Consulting Style | [create-risk-register.md](skills/create-risk-register.md) | — |
 | Sales outreach email | Persuasive Sales | [create-email-sequence.md](skills/create-email-sequence.md) | [sales-outreach-prompts.md](prompt-templates/sales-outreach-prompts.md) |
 | Study or learning summary | Plain English | — | [learning-notes-prompts.md](prompt-templates/learning-notes-prompts.md) |
@@ -123,6 +125,7 @@ Use a pre-built workflow from `personal-workflows/`:
 - [Tax Technical Note Workflow](personal-workflows/tax-technical-note-workflow.md) — adviser memo or client note
 - [Cloud Migration Briefing](personal-workflows/cloud-migration-briefing-workflow.md) — senior stakeholder briefing
 - [IAM Strategy Workflow](personal-workflows/iam-strategy-workflow.md) — identity and access management paper
+- [Website Marketing and SEO Audit Workflow](personal-workflows/website-marketing-seo-audit-workflow.md) — URL-led current-state report and action plan
 - [Job Application Workflow](personal-workflows/job-application-workflow.md) — cover letter and profile
 - [Supplier Outreach Workflow](personal-workflows/supplier-importer-outreach-workflow.md) — commercial outreach
 - [Study Summary Workflow](personal-workflows/one-page-study-summary-workflow.md) — learning synthesis
@@ -137,11 +140,11 @@ writing-style-catalogue/
 ├── assets/              site CSS, JavaScript, catalogue data, and screenshots
 ├── styles/              25 writing frameworks with copy-paste prompts
 ├── patterns/             reusable argument and section structures
-├── prompt-templates/    22 copy-paste LLM prompts by document type
+├── prompt-templates/    23 copy-paste LLM prompts by document type
 ├── meta-prompts/         prompts for improving prompts and drafts
-├── skills/              23 document-generation processes
-├── personal-workflows/   8 end-to-end worked workflows
-├── examples/            10 realistic output samples
+├── skills/              26 document-generation processes
+├── personal-workflows/   9 end-to-end worked workflows
+├── examples/            11 realistic output samples
 ├── checklists/           quick quality review checklists
 ├── rubrics/              scoring guides for professional review
 ├── reference/            reference guides (tone, structure, prompting)
@@ -165,6 +168,7 @@ writing-style-catalogue/
 | [reference/tone-spectrum.md](reference/tone-spectrum.md) | You need to set the right tone deliberately |
 | [reference/good-vs-bad-prompts.md](reference/good-vs-bad-prompts.md) | Your LLM output isn't what you expected |
 | [reference/llm-prompting-principles.md](reference/llm-prompting-principles.md) | You want to improve your prompting technique |
+| [reference/website-seo-audit-inputs-and-evidence.md](reference/website-seo-audit-inputs-and-evidence.md) | You need to know what a URL audit can and cannot prove |
 | [checklists/ai-output-review-checklist.md](checklists/ai-output-review-checklist.md) | Before you send or publish anything |
 
 ---

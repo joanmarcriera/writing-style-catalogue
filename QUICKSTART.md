@@ -13,6 +13,7 @@ What kind of document do you need?
 - **Recommendation memo?** → Minto Pyramid Principle
 - **Board presentation?** → Board Paper Style
 - **Technical explanation?** → Technical Documentation
+- **Website or SEO audit?** → Executive Briefing + Consulting Style
 
 See [CHEATSHEET.md](CHEATSHEET.md) for a full comparison.
 
@@ -24,6 +25,7 @@ Navigate to `prompt-templates/` and find your document type:
 - Executive update? → `executive-summary-prompts.md`
 - Board paper? → `board-paper-prompts.md`
 - Technical doc? → `technical-documentation-prompts.md`
+- Website audit? → `website-marketing-seo-prompts.md`
 
 ### Step 3: Copy the Template (1 minute)
 
@@ -73,6 +75,13 @@ Before publishing, scan the relevant checklist in `checklists/`:
 1. Copy template from `prompt-templates/technical-documentation-prompts.md`
 2. Use `styles/technical-documentation.md` for structure
 3. Review with `checklists/technical-document-checklist.md`
+
+### Auditing a Website from a URL
+
+1. Copy template from `prompt-templates/website-marketing-seo-prompts.md`
+2. Follow `personal-workflows/website-marketing-seo-audit-workflow.md`
+3. Use `skills/create-website-marketing-seo-audit.md` for the main report
+4. Review with `rubrics/website-marketing-seo-rubric.md`
 
 ---
 

@@ -80,6 +80,7 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [Tax Note Prompts](prompt-templates/tax-note-prompts.md) — Draft a structured tax technical note that analyses a specific tax question by applying law to facts, states a conclusion with an appropriate confidence level, and identifies uncer…
 - [Technical Documentation Prompts](prompt-templates/technical-documentation-prompts.md) — Write clear, structured technical documentation — including system overviews, runbooks, API references, and how-to guides — that enables engineers and operators to understand and w…
 - [Translation & Localisation Prompts](prompt-templates/translation-localisation-prompts.md) — Translate and adapt content for a target language and market, preserving meaning and brand voice while adjusting for cultural context, local conventions, and idiomatic appropriaten…
+- [Website Marketing and SEO Prompts](prompt-templates/website-marketing-seo-prompts.md) — Analyse a website from a URL and produce a practical current-state report, prioritised recommendations, and next-action plan.
 
 ## Meta Prompts
 
@@ -98,6 +99,7 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [Create Business Case](skills/create-business-case.md) — A comprehensive investment justification document with financial analysis, strategic rationale, options assessment, risk register, and implementation plan — typically 8–15 pages
 - [Create Checklist](skills/create-checklist.md) — A grouped, actionable checklist with checkbox items, section headings, and a sign-off block — formatted for practical use in print or digital form
 - [Create Comparison Table](skills/create-comparison-table.md) — A structured Markdown or formatted table comparing multiple options, vendors, or approaches across a consistent set of criteria — designed to support a specific decision
+- [Create Conversion Landing Page Audit](skills/create-conversion-landing-page-audit.md) — Landing page or journey audit with messaging diagnosis, friction map, copy recommendations, experiment backlog, and measurement plan
 - [Create Data Room Index](skills/create-data-room-index.md) — A structured document index and folder taxonomy for a virtual data room, with document metadata, access controls, and a completeness tracker — suitable for M&A due diligence, regul…
 - [Create Decision Tree](skills/create-decision-tree.md) — A text-based or ASCII decision tree that maps a decision process with branching paths, clear criteria at each node, and labelled outcomes at each endpoint
 - [Create Email Sequence](skills/create-email-sequence.md) — A set of 3–6 coordinated emails with subject lines, body copy, send-timing guidance, and CTAs — written as a coherent campaign rather than isolated messages
@@ -111,11 +113,13 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [Create Risk Register](skills/create-risk-register.md) — A structured risk register table with identified risks, likelihood and impact scores, risk scores, owners, mitigations, and review dates — formatted for ongoing management use
 - [Create Roadmap](skills/create-roadmap.md) — A phased, timeline-based roadmap showing initiatives, milestones, dependencies, and ownership — formatted as a structured Markdown document or a table suitable for executive or boa…
 - [Create Runbook](skills/create-runbook.md) — An operational runbook with numbered response steps, decision trees, escalation paths, and resolution verification — designed to be followed under time pressure by an on-call engin…
+- [Create SEO Content Plan](skills/create-seo-content-plan.md) — SEO content strategy with topic clusters, priority pages, content briefs, internal linking plan, and 90-day editorial roadmap
 - [Create Slide Deck](skills/create-slide-deck.md) — A complete slide-by-slide outline with speaker notes, visual specifications, and narrative flow, ready to build in PowerPoint, Keynote, or Google Slides
 - [Create SOP](skills/create-sop.md) — A Standard Operating Procedure document with numbered steps, decision points, verification criteria, and a version control header — usable by any competent person without additiona…
 - [Create Tax Technical Note](skills/create-tax-technical-note.md) — A professional tax analysis document that states a specific tax question, applies the relevant law to the client's facts, reaches a clear conclusion, and quantifies any exposure or…
 - [Create Training Material](skills/create-training-material.md) — Structured training content with clear learning objectives, module-by-module explanations, worked examples, practice exercises, and an assessment — suitable for self-paced or facil…
 - [Create Visual Diagram Spec](skills/create-visual-diagram-spec.md) — A detailed written specification for a diagram or infographic — precise enough that a designer or diagram tool (Lucidchart, draw.io, Mermaid) can produce the visual without further…
+- [Create Website Marketing and SEO Audit](skills/create-website-marketing-seo-audit.md) — A URL-led website audit report with current-state scorecard, evidence, recommendations, 30/60/90-day plan, and implementation backlog
 
 ## Examples
 
@@ -129,6 +133,7 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [Smart Brevity Example](examples/smart-brevity-update.md)
 - [Tax Note Example](examples/tax-note.md) — An illustrative tax technical note showing question, facts, assumptions, analysis, confidence, caveats, and next steps.
 - [Technical Runbook Example](examples/technical-runbook.md) — A practical operational runbook with detection, triage, response, escalation, verification, and post-incident actions.
+- [Website SEO Audit Example](examples/website-seo-audit.md) — Illustrative excerpt of a website marketing and SEO audit report with evidence labels and prioritised actions.
 
 ## Checklists
 
@@ -141,6 +146,7 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [Presentation Quality Checklist](checklists/presentation-quality-checklist.md)
 - [Tax Note Checklist](checklists/tax-note-checklist.md) — A pre-finalisation checklist for tax technical notes and adviser memos.
 - [Technical Document Checklist](checklists/technical-document-checklist.md)
+- [Website SEO Audit Checklist](checklists/website-seo-audit-checklist.md)
 
 ## Rubrics
 
@@ -151,6 +157,7 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [Slide Deck Rubric](rubrics/slide-deck-rubric.md) — Scores whether a slide deck outline has a strong narrative, useful speaker notes, and decision-ready content.
 - [Tax Note Rubric](rubrics/tax-note-rubric.md) — Scores whether a tax technical note is structured, fact-led, appropriately caveated, and ready for qualified adviser review.
 - [Technical Documentation Rubric](rubrics/technical-documentation-rubric.md) — Scores whether technical documentation is accurate, usable, and safe for engineers or operators.
+- [Website Marketing and SEO Rubric](rubrics/website-marketing-seo-rubric.md) — Scores whether a website marketing or SEO audit is evidence-led, commercially useful, and safe to act on.
 
 ## Reference
 
@@ -161,6 +168,7 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [Recommended Resources](reference/recommended-resources.md)
 - [Structure Patterns](reference/structure-patterns.md)
 - [Tone Spectrum](reference/tone-spectrum.md)
+- [Website SEO Audit Inputs and Evidence](reference/website-seo-audit-inputs-and-evidence.md) — Explains what can and cannot be inferred from a public URL when producing a website marketing or SEO audit.
 
 ## Personal Workflows
 
@@ -172,6 +180,7 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [One-Page Study Summary Workflow](personal-workflows/one-page-study-summary-workflow.md)
 - [Supplier/Importer Outreach Workflow](personal-workflows/supplier-importer-outreach-workflow.md)
 - [Tax Technical Note Workflow](personal-workflows/tax-technical-note-workflow.md)
+- [Website Marketing and SEO Audit Workflow](personal-workflows/website-marketing-seo-audit-workflow.md)
 
 ---
 

@@ -17,7 +17,7 @@ window.CATALOGUE_DATA = {
       "folder": "prompt-templates",
       "label": "Prompt Templates",
       "kind": "template",
-      "count": 22
+      "count": 23
     },
     {
       "folder": "meta-prompts",
@@ -29,37 +29,37 @@ window.CATALOGUE_DATA = {
       "folder": "skills",
       "label": "Skills",
       "kind": "skill",
-      "count": 23
+      "count": 26
     },
     {
       "folder": "personal-workflows",
       "label": "Personal Workflows",
       "kind": "workflow",
-      "count": 8
+      "count": 9
     },
     {
       "folder": "examples",
       "label": "Examples",
       "kind": "example",
-      "count": 10
+      "count": 11
     },
     {
       "folder": "checklists",
       "label": "Checklists",
       "kind": "checklist",
-      "count": 9
+      "count": 10
     },
     {
       "folder": "rubrics",
       "label": "Rubrics",
       "kind": "rubric",
-      "count": 7
+      "count": 8
     },
     {
       "folder": "reference",
       "label": "Reference",
       "kind": "reference",
-      "count": 7
+      "count": 8
     }
   ],
   "items": [
@@ -624,6 +624,16 @@ window.CATALOGUE_DATA = {
       "templateType": "Translation / Localisation"
     },
     {
+      "title": "Website Marketing and SEO Prompts",
+      "path": "prompt-templates/website-marketing-seo-prompts.md",
+      "section": "Prompt Templates",
+      "kind": "template",
+      "description": "Analyse a website from a URL and produce a practical current-state report, prioritised recommendations, and next-action plan.",
+      "category": "",
+      "audience": "Founders, marketing leads, product owners, consultants, technical teams, and executive sponsors",
+      "templateType": "Website Marketing / SEO Audit / Growth Plan"
+    },
+    {
       "title": "Meta Prompts",
       "path": "meta-prompts/README.md",
       "section": "Meta Prompts",
@@ -739,6 +749,16 @@ window.CATALOGUE_DATA = {
       "section": "Skills",
       "kind": "skill",
       "description": "A structured Markdown or formatted table comparing multiple options, vendors, or approaches across a consistent set of criteria — designed to support a specific decision",
+      "category": "",
+      "audience": "",
+      "templateType": ""
+    },
+    {
+      "title": "Create Conversion Landing Page Audit",
+      "path": "skills/create-conversion-landing-page-audit.md",
+      "section": "Skills",
+      "kind": "skill",
+      "description": "Landing page or journey audit with messaging diagnosis, friction map, copy recommendations, experiment backlog, and measurement plan",
       "category": "",
       "audience": "",
       "templateType": ""
@@ -874,6 +894,16 @@ window.CATALOGUE_DATA = {
       "templateType": ""
     },
     {
+      "title": "Create SEO Content Plan",
+      "path": "skills/create-seo-content-plan.md",
+      "section": "Skills",
+      "kind": "skill",
+      "description": "SEO content strategy with topic clusters, priority pages, content briefs, internal linking plan, and 90-day editorial roadmap",
+      "category": "",
+      "audience": "",
+      "templateType": ""
+    },
+    {
       "title": "Create Slide Deck",
       "path": "skills/create-slide-deck.md",
       "section": "Skills",
@@ -919,6 +949,16 @@ window.CATALOGUE_DATA = {
       "section": "Skills",
       "kind": "skill",
       "description": "A detailed written specification for a diagram or infographic — precise enough that a designer or diagram tool (Lucidchart, draw.io, Mermaid) can produce the visual without further input",
+      "category": "",
+      "audience": "",
+      "templateType": ""
+    },
+    {
+      "title": "Create Website Marketing and SEO Audit",
+      "path": "skills/create-website-marketing-seo-audit.md",
+      "section": "Skills",
+      "kind": "skill",
+      "description": "A URL-led website audit report with current-state scorecard, evidence, recommendations, 30/60/90-day plan, and implementation backlog",
       "category": "",
       "audience": "",
       "templateType": ""
@@ -999,6 +1039,16 @@ window.CATALOGUE_DATA = {
       "section": "Personal Workflows",
       "kind": "workflow",
       "description": "Workflow: Creating a Tax Technical Note A tax technical note is a formal professional document that applies law to facts to answer a specific tax question. It is the primary output of a tax adviser working on a client...",
+      "category": "Workflow",
+      "audience": "",
+      "templateType": ""
+    },
+    {
+      "title": "Website Marketing and SEO Audit Workflow",
+      "path": "personal-workflows/website-marketing-seo-audit-workflow.md",
+      "section": "Personal Workflows",
+      "kind": "workflow",
+      "description": "Workflow: Website Marketing and SEO Audit Use this workflow when you have a URL and need a strong report on the website's current marketing, SEO, content, conversion, and measurement position. The workflow produces two...",
       "category": "Workflow",
       "audience": "",
       "templateType": ""
@@ -1104,6 +1154,16 @@ window.CATALOGUE_DATA = {
       "templateType": ""
     },
     {
+      "title": "Website SEO Audit Example",
+      "path": "examples/website-seo-audit.md",
+      "section": "Examples",
+      "kind": "example",
+      "description": "Illustrative excerpt of a website marketing and SEO audit report with evidence labels and prioritised actions.",
+      "category": "Example",
+      "audience": "",
+      "templateType": ""
+    },
+    {
       "title": "AI Output Review Checklist",
       "path": "checklists/ai-output-review-checklist.md",
       "section": "Checklists",
@@ -1194,6 +1254,16 @@ window.CATALOGUE_DATA = {
       "templateType": ""
     },
     {
+      "title": "Website SEO Audit Checklist",
+      "path": "checklists/website-seo-audit-checklist.md",
+      "section": "Checklists",
+      "kind": "checklist",
+      "description": "Checklist: Website SEO Audit Review Use this before sharing a website marketing or SEO audit. Scope and Evidence [ ] Primary URL and reviewed pages are listed. [ ] Data sources are named: public site, analytics, Search...",
+      "category": "Quality",
+      "audience": "",
+      "templateType": ""
+    },
+    {
       "title": "Rubrics",
       "path": "rubrics/README.md",
       "section": "Rubrics",
@@ -1264,6 +1334,16 @@ window.CATALOGUE_DATA = {
       "templateType": ""
     },
     {
+      "title": "Website Marketing and SEO Rubric",
+      "path": "rubrics/website-marketing-seo-rubric.md",
+      "section": "Rubrics",
+      "kind": "rubric",
+      "description": "Scores whether a website marketing or SEO audit is evidence-led, commercially useful, and safe to act on.",
+      "category": "Rubric",
+      "audience": "",
+      "templateType": ""
+    },
+    {
       "title": "Common Document Types",
       "path": "reference/common-document-types.md",
       "section": "Reference",
@@ -1329,6 +1409,16 @@ window.CATALOGUE_DATA = {
       "section": "Reference",
       "kind": "reference",
       "description": "Tone Spectrum Tone is the single variable that most determines whether a document is trusted, ignored, or resented. A technically accurate board paper written in a casual tone will be discounted. A friendly internal...",
+      "category": "Reference",
+      "audience": "",
+      "templateType": ""
+    },
+    {
+      "title": "Website SEO Audit Inputs and Evidence",
+      "path": "reference/website-seo-audit-inputs-and-evidence.md",
+      "section": "Reference",
+      "kind": "reference",
+      "description": "Explains what can and cannot be inferred from a public URL when producing a website marketing or SEO audit.",
       "category": "Reference",
       "audience": "",
       "templateType": ""

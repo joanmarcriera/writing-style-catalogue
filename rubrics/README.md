@@ -18,6 +18,7 @@ Rubrics are stricter than checklists. Use them when an output matters enough to 
 | [Technical Documentation Rubric](technical-documentation-rubric.md) | Runbooks, ADRs, architecture docs, SOPs |
 | [LLM Output Quality Rubric](llm-output-quality-rubric.md) | Any generated draft before human editing |
 | [Slide Deck Rubric](slide-deck-rubric.md) | Executive, board, client, or internal presentation outlines |
+| [Website Marketing and SEO Rubric](website-marketing-seo-rubric.md) | Website audits, SEO reports, content plans, conversion reviews |
 
 ## Scoring
 

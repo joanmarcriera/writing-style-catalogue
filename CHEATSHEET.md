@@ -21,6 +21,7 @@ If you are unsure where to begin, use [START-HERE.md](START-HERE.md) first.
 | Preparing a slide deck | [Consulting Style](styles/consulting-style.md) | [create-slide-deck.md](skills/create-slide-deck.md) | [presentation-prompts.md](prompt-templates/presentation-prompts.md) | Assertion headlines; one idea per slide |
 | Creating a one-page printable summary | [Executive Briefing](styles/executive-briefing.md) | [create-one-page-brief.md](skills/create-one-page-brief.md) | [executive-summary-prompts.md](prompt-templates/executive-summary-prompts.md) | Fits A4; use bullets; include one clear recommendation |
 | Turning notes into a PDF | [Executive Briefing](styles/executive-briefing.md) or chosen style | [create-pdf.md](skills/create-pdf.md) | [pdf-document-prompts.md](prompt-templates/pdf-document-prompts.md) | Use Markdown first; convert only after content review |
+| Auditing a website from a URL | [Executive Briefing](styles/executive-briefing.md) + [Consulting Style](styles/consulting-style.md) | [create-website-marketing-seo-audit.md](skills/create-website-marketing-seo-audit.md) | [website-marketing-seo-prompts.md](prompt-templates/website-marketing-seo-prompts.md) | Separate observed facts from missing analytics |
 | Writing a sales outreach email | [Persuasive Sales](styles/persuasive-sales-style.md) | [create-email-sequence.md](skills/create-email-sequence.md) | [sales-outreach-prompts.md](prompt-templates/sales-outreach-prompts.md) | Lead with their problem, not your product |
 | Preparing a job application | [Job Application](styles/job-application-style.md) | — | [job-application-prompts.md](prompt-templates/job-application-prompts.md) | Tailor to role; quantify achievements |
 | Summarising study notes | [Plain English](styles/plain-english.md) | — | [learning-notes-prompts.md](prompt-templates/learning-notes-prompts.md) | Question → answer → example format works well |
@@ -46,6 +47,7 @@ If you are unsure where to begin, use [START-HERE.md](START-HERE.md) first.
 | A tax technical note prompt | [tax-note-prompts.md](prompt-templates/tax-note-prompts.md) | [tax-note-rubric.md](rubrics/tax-note-rubric.md) |
 | A slide deck prompt | [presentation-prompts.md](prompt-templates/presentation-prompts.md) | [slide-deck-rubric.md](rubrics/slide-deck-rubric.md) |
 | A PDF-ready report prompt | [pdf-document-prompts.md](prompt-templates/pdf-document-prompts.md) | [executive-communication-rubric.md](rubrics/executive-communication-rubric.md) |
+| A website marketing and SEO audit prompt | [website-marketing-seo-prompts.md](prompt-templates/website-marketing-seo-prompts.md) | [website-marketing-seo-rubric.md](rubrics/website-marketing-seo-rubric.md) |
 | A prompt-improvement prompt | [improve-this-prompt.md](meta-prompts/improve-this-prompt.md) | [good-vs-bad-prompts.md](reference/good-vs-bad-prompts.md) |
 | A draft-review prompt | [critique-this-output.md](meta-prompts/critique-this-output.md) | Relevant rubric in [rubrics/](rubrics/) |
 
@@ -113,5 +115,7 @@ If you are unsure where to begin, use [START-HERE.md](START-HERE.md) first.
 **Need to engage a broad audience?** → Narrative Storytelling, Journalistic, or Social Media
 
 **Need a specialist professional document?** → Tax Advisory or Legal Professional
+
+**Need to diagnose a website?** → Website Marketing and SEO Prompts + Executive Briefing + Consulting Style
 
 See [STYLE-SELECTION-GUIDE.md](STYLE-SELECTION-GUIDE.md) for the full decision tree and selection matrices.

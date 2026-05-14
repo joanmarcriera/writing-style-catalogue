@@ -66,6 +66,22 @@ const workflows = [
     prompt: "Write a PDF-ready Markdown document for [AUDIENCE]. Purpose: [PURPOSE]. Include title page elements, table of contents, executive summary, numbered sections, tables where useful, appendices, and page-break hints. Separate facts and assumptions. Use British English.",
   },
   {
+    id: "website-seo-audit",
+    title: "Website SEO audit",
+    audience: "Founder, marketing lead, product owner, technical team",
+    time: "2-6 hrs",
+    description: "URL-led marketing and SEO report with current-state diagnosis, conversion issues, content gaps, technical fixes, and a 30/60/90-day plan.",
+    source: "prompt-templates/website-marketing-seo-prompts.md",
+    chain: [
+      ["style", "Executive Briefing"],
+      ["style", "Consulting Style"],
+      ["template", "website-marketing-seo-prompts"],
+      ["skill", "create-website-marketing-seo-audit"],
+      ["rubric", "website-marketing-seo-rubric"],
+    ],
+    prompt: "Audit [URL] for [BUSINESS CONTEXT] and [TARGET AUDIENCE]. Goal: [COMMERCIAL GOAL]. Inspect public pages and any supplied analytics/Search Console evidence. Separate Observed, Inferred, and Not observed findings. Do not invent traffic, rankings, conversion rate, backlinks, or keyword volume. Produce an executive summary, current-state scorecard, prioritised recommendations, 30/60/90-day plan, and implementation backlog. Use British English.",
+  },
+  {
     id: "runbook",
     title: "Operational runbook",
     audience: "On-call engineer, service owner, support lead",
@@ -222,10 +238,11 @@ function renderPreview(item = selectedWorkflow) {
 
 function filteredItems() {
   const q = activeQuery.trim().toLowerCase();
+  const terms = q.split(/\s+/).filter(Boolean);
   return DATA.items.filter(item => {
     const kindMatch = activeKind === "all" || item.kind === activeKind;
     const haystack = `${item.title} ${item.description} ${item.section} ${item.category} ${item.path}`.toLowerCase();
-    return kindMatch && (!q || haystack.includes(q));
+    return kindMatch && (!terms.length || terms.every(term => haystack.includes(term)));
   });
 }
 
@@ -242,7 +259,7 @@ function renderResults() {
     empty.className = "result-card empty";
     empty.innerHTML = `
       <h3>No matches</h3>
-      <p>Try a broader term such as board, tax, slide, runbook, ADR, briefing, or prompt.</p>
+      <p>Try a broader term such as board, tax, slide, runbook, ADR, briefing, SEO, website, or prompt.</p>
     `;
     $("#result-grid").replaceChildren(empty);
     return;
