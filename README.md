@@ -1,12 +1,32 @@
 # Writing Style Catalogue
 
-A practical, reusable catalogue of writing styles, prompt templates, document-generation skills, and end-to-end workflows for use with large language models.
+Live site: **[p.riera.co.uk](https://p.riera.co.uk/)**
+
+Use this catalogue when you need to write a professional document with an LLM and want the right style, prompt, skill, and review checklist quickly.
+
+How it works:
+
+1. Open **[p.riera.co.uk](https://p.riera.co.uk/)**.
+2. Pick the workflow closest to what you need: board paper, tax note, slide deck, PDF report, website SEO audit, runbook, or ADR.
+3. Copy the prompt, fill in the placeholders, generate the draft, then review it with the linked rubric or checklist.
+
+The repository behind the site contains the Markdown source files for all styles, prompt templates, document-generation skills, examples, rubrics, checklists, and workflows.
 
 ---
 
 ## GitHub Pages site
 
-This repository includes a static GitHub Pages catalogue at [index.html](index.html). It turns the Markdown files into a searchable workflow-first interface using generated data from [scripts/generate_site_data.py](scripts/generate_site_data.py).
+The public catalogue is available at **[https://p.riera.co.uk/](https://p.riera.co.uk/)**.
+
+It is a static GitHub Pages site built from [index.html](index.html), [assets/site.js](assets/site.js), [assets/site.css](assets/site.css), and generated catalogue data in [assets/catalogue-data.js](assets/catalogue-data.js). The site turns the Markdown files in this repository into a searchable, workflow-first interface.
+
+The intended user flow is simple:
+
+1. **Choose a workflow** — start with the artefact you need, not a blank LLM prompt.
+2. **Review the bundle** — each workflow combines a style, structure pattern, prompt template, skill, and rubric.
+3. **Copy the prompt** — paste it into your LLM and replace the placeholders with real context.
+4. **Follow the skill** — use the linked skill file when the output needs a reliable production process.
+5. **Review before sending** — use the rubric or checklist to catch missing facts, weak structure, invented claims, or tone problems.
 
 ![Desktop preview of the Writing Catalogue GitHub Pages site](assets/screenshots/writing-catalogue-desktop.png)
 
