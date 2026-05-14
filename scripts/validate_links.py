@@ -9,10 +9,19 @@ from pathlib import Path
 
 def find_markdown_links(content):
     """Extract all markdown links from content."""
-    # Match [text](path) pattern
-    pattern = r'\[([^\]]+)\]\(([^\)]+)\)'
+    # Match [text](path) pattern. The validator handles file fragments
+    # such as docs/page.md#section by checking the file target.
+    pattern = r'!?\[([^\]]+)\]\(([^\)]+)\)'
     matches = re.findall(pattern, content)
-    return [(text, path) for text, path in matches if path.endswith('.md')]
+    links = []
+    for text, path in matches:
+        path = path.strip()
+        if path.startswith(('http://', 'https://', 'mailto:', '#')):
+            continue
+        target = path.split('#', 1)[0]
+        if target.endswith('.md'):
+            links.append((text, target))
+    return links
 
 def validate_link(base_path, current_file, link_path):
     """Validate a single link."""
@@ -30,7 +39,12 @@ def validate_link(base_path, current_file, link_path):
 def main():
     """Validate all internal links."""
     base_path = Path(__file__).parent.parent
-    all_markdown = list(base_path.rglob('*.md'))
+    all_markdown = [
+        path for path in base_path.rglob('*.md')
+        if '.git' not in path.parts
+        and '.claude' not in path.parts
+        and path.name != 'AGENTS.md'
+    ]
 
     broken_links = []
 

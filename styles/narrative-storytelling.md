@@ -1,131 +1,172 @@
 ---
 title: Narrative Storytelling
-category: Engaging
-aliases: [Story Structure, Internal Narrative]
+category: Personal
+best_for: Internal communications where emotional resonance and cultural connection matter as much as the facts — leadership messages, change communications, purpose and values narratives, and team milestone celebrations. Particularly effective when the goal is to shift attitude or build commitment, not just transfer information.
+not_good_for: Formal governance decisions requiring complete factual analysis (use Board Paper Style); quick operational updates (use Smart Brevity); technical explanations (use Technical Documentation); situations where the audience is already impatient and needs the answer immediately (use BLUF).
+default_tone: Personal and authentic. Warm and purposeful. Honest, including about difficulty.
+typical_length: 400–800 words for an internal leadership message; 600–1,200 words for a full narrative piece
+aliases: [Story Structure, Internal Narrative, Leadership Communication]
 ---
 
 # Narrative Storytelling
 
-## What This Style Is
+## What this style is
 
-Engaging narrative that draws the reader in through story structure. Used for internal communications, vision setting, and building emotional connection. Not journalistic; more personal and purposeful.
+Narrative storytelling is the deliberate use of story structure to communicate meaning, build emotional connection, and inspire action. It is distinct from journalism (which reports facts) and consulting writing (which builds logical argument): storytelling puts the reader inside a human experience and allows them to draw the meaning themselves. Done well, a well-told story is the most memorable and persuasive form of communication available to a leader.
 
-**Core principle**: Character → Challenge → Resolution → Lesson.
+In professional contexts, narrative storytelling is most powerful when the story is true, specific, and personal. Invented parables and generic success stories fail because audiences sense the absence of authenticity. The most effective professional narratives draw on a real experience — a crisis survived, a decision made under pressure, a moment when values were tested — and use it to illuminate something larger about the team, the organisation, or the mission.
 
-## When to Use It
+**Core principle**: Character → Challenge → Response → Resolution → Lesson. The lesson gives the story its purpose; the specificity gives it its credibility.
 
-- Internal company updates and vision
-- Leadership messages
-- Change management communications
-- Culture and value messaging
-- Employee announcements
-- Mission or purpose communications
+## When to use it
 
-## When NOT to Use It
+- CEO or leadership messages accompanying a major change, challenge, or milestone
+- Culture and values communications where the goal is to show, not tell, what the organisation believes
+- Change management communications where the audience needs to understand why, not just what
+- Team retrospectives, anniversary messages, or milestone celebrations
+- Personal introductions or "About the leader" sections of internal communications
+- All-hands or town hall prepared remarks requiring genuine human connection
+- Stories of customer impact, team resilience, or mission fulfilment
 
-- Formal decisions (use Board Paper)
-- Technical explanations (use Technical Documentation)
-- Quick updates (use Smart Brevity)
-- Persuasive recommendations (use Consulting)
+## When not to use it
 
-## Core Structure
+- Formal governance decisions — use [Board Paper Style](board-paper-style.md) instead
+- Technical explanations — use [Technical Documentation](technical-documentation.md) instead
+- Quick operational updates — use [Smart Brevity](axios-smart-brevity.md) instead
+- Persuasive analytical recommendations — use [Consulting Style](consulting-style.md) instead
+
+## Core structure
 
 ```
 [SCENE SETTING]
-Paint a picture; introduce a character or situation.
+Drop the reader into a specific moment or situation.
+Not "a few years ago" — "Six months ago, at 2am on a Tuesday."
+Use concrete details: a place, a person, a feeling.
 
-[CHALLENGE OR TENSION]
-What makes this story worth telling.
+[THE CHARACTER OR SITUATION]
+Who is this about? (May be the writer, a team member, the organisation.)
+What is their goal or responsibility?
+What do they care about?
 
-[ACTION OR TURNING POINT]
-How we responded or what changed.
+[THE CHALLENGE OR TENSION]
+What went wrong, or what is at stake?
+Why does this moment matter?
+What was the temptation to take the easy path?
 
-[RESOLUTION]
-Where we are now; how things improved.
+[THE RESPONSE OR TURNING POINT]
+What did the character (or team) actually do?
+What was difficult about this choice?
+What values guided the decision?
 
-[LESSON OR IMPLICATION]
-What this means for us going forward.
+[THE RESOLUTION]
+What happened as a result?
+What is different now?
+What was learned?
 
-[CALL TO ACTION]
-What we're asking from the team now.
+[THE LESSON OR IMPLICATION]
+What does this mean for us going forward?
+What does this story reveal about who we are or who we want to be?
+This must emerge from the story — not be imposed on top of it.
+
+[CALL TO ACTION] (optional)
+What are we asking from the audience as a result of this story?
 ```
 
-## Copy-Paste Prompt Template
+## Copy-paste prompt
 
 ```
-You are a storyteller. Write a narrative from:
+You are an expert in leadership narrative and internal communication. Your task is to write a narrative storytelling piece from the following brief.
 
-SITUATION:
-[What was happening]
-
-THE CHALLENGE:
-[What problem or tension emerged]
-
-HOW WE RESPONDED:
-[What action did we take]
-
-THE OUTCOME:
-[Where we are now]
-
-THE LESSON:
-[What this teaches us about ourselves or our values]
+AUDIENCE: [AUDIENCE — e.g. "All 340 employees of a UK financial services firm", "Engineering leadership team of 45 people", "New joiners in their first week of onboarding"]
+PURPOSE: [PURPOSE — e.g. "CEO message accompanying the announcement of a major restructure", "Team retrospective piece celebrating the completion of a difficult 18-month migration", "Culture communication explaining what integrity means in practice at this company"]
+CONTEXT: [CONTEXT — e.g. "The company has just completed a difficult year including a security incident, a leadership change, and a successful product launch; the CEO wants to acknowledge the difficulty honestly while expressing pride and forward momentum"]
+INPUT: [INPUT — paste the real story, the events, the people involved, the emotions, the decisions made, and the outcome here. The more specific and honest, the better.]
+DESIRED_OUTCOME: [DESIRED_OUTCOME — e.g. "Employees feel seen and proud, and understand why the company's values matter beyond the policy document", "The team feels the migration milestone genuinely celebrated and understands the significance of what they achieved"]
+TONE: [TONE — e.g. "Personal and honest — including about the difficulty", "Warm and celebratory — without being saccharine", "Reflective and purposeful — drawing a lesson that motivates future action"]
+LENGTH: [LENGTH — e.g. "500–700 words for an all-staff email", "300–400 words for a team Slack post", "800–1,000 words for a longer leadership communication"]
+FORMAT: [FORMAT — e.g. "Flowing narrative prose — no bullet points or headers", "Personal letter format with a greeting and sign-off"]
+CONSTRAINTS: [CONSTRAINTS — e.g. "Do not name the security incident by its internal code name", "The individual at the centre of the story has given consent to be named", "Do not make the story exclusively about one team — acknowledge the full cross-functional effort"]
 
 INSTRUCTIONS:
-1. Start with a scene or character
-2. Build tension or challenge
-3. Show how we responded
-4. Reveal the outcome
-5. Reflect on what it means
-6. End with what we're asking next
-7. Make it personal; avoid being generic
+1. Begin with a specific, concrete scene — not a general statement or a thesis. Drop the reader into a moment.
+2. Use real, specific details from [INPUT]. Specificity is what makes a story credible and memorable. Vague stories ("a difficult year," "a challenging project") fail to land.
+3. Include genuine tension or difficulty. Stories without stakes have no emotional power. Do not sanitise or resolve tension too quickly.
+4. Show how values or character guided the response to the challenge — but show it through the action, not through stating it as a principle.
+5. The lesson must emerge from the story. Do not tack on a moral that could have been stated without the story.
+6. Use British English throughout (colour, organisation, licence, favour, etc.).
+7. Preserve all factual details exactly as provided in [INPUT]. Do not invent events, dialogue, or outcomes.
+8. Distinguish facts from interpretations. If you are attributing a motivation or emotion to a person, base it on what [INPUT] provides — flag any inference with "(inferred)."
+9. The story must be retellable: after reading, the audience should be able to describe what happened in two sentences.
+10. Total length must not exceed [LENGTH].
 
-Output only the narrative. No preamble.
+Output the narrative only. No preamble, no commentary.
 ```
 
-## Short Example
+## Output format
 
-**Building our Culture Through Crisis – A Message From the CEO**
+A narrative storytelling piece is typically delivered as a personal communication — an all-staff email, a CEO letter, a Slack message, or a prepared speech. It is formatted as flowing prose, not bullet points or headers. It contains:
 
-Six months ago, a critical security incident exposed a data set affecting 5,000 customers. We didn't know if we'd survive it.
+- **Opening line**: Drops the reader into a specific moment; never a statement of intent ("I want to tell you a story about…")
+- **Body**: 3–5 paragraphs of narrative prose; each paragraph moves the story forward
+- **Turning point**: A paragraph that describes a key decision or revelation — the emotional centre of the piece
+- **Resolution**: A paragraph describing what changed or what was gained
+- **Closing**: A short paragraph stating what this means going forward and, if applicable, what is being asked of the reader
 
-Our first instinct was to protect ourselves. Lawyer's advice. PR strategy. Risk minimisation. But as our team met that morning, Sarah from customer success said something I'll never forget: "Our customers trusted us with their data. We owe them honesty."
+Total word count: 400–800 words for most internal communications; up to 1,200 words for a major leadership narrative. The piece should have no bullet points, no section headers, and no formal structure — it reads like a personal letter or prepared remarks.
 
-That shifted everything.
+## Example
 
-We spent the next 48 hours telling customers the truth. What happened. What we knew. What we didn't know. We didn't have all the answers. We didn't have a perfect plan. But we had transparency.
+**From our Chief Technology Officer — On what we actually built this year**
 
-The response wasn't what we expected. Customers appreciated the honesty. Many told us they'd work with us through the recovery because they knew we were being straight with them. The incident became a turning point in how our customers trusted us.
+At 6:47pm on a Tuesday in January, I got a message from our Head of Security that I did not expect to receive.
 
-But it also showed us something about ourselves. When faced with a real test, we chose integrity over optics. And that choice made us stronger.
+"We have a problem with the legacy system. Real access issue. I need the team."
 
-As we grow, that's the culture we're protecting. Honesty over polish. Ownership over blame. Trust over transactions.
+Within 20 minutes, we had eight people on a call. It was the first time most of them had spoken to each other. We had an identity engineer from our old team, a cloud architect who had joined three weeks earlier, two senior developers who had been on the migration project for months, and a security analyst who had flagged a concern six weeks earlier that we had not fully resolved.
 
-That's who we are.
+The next seven hours were not impressive. We made two incorrect diagnoses before finding the real issue. We had to explain to three executives what was happening without fully understanding it ourselves. One of our engineers nearly deleted the wrong configuration file and caught themselves seconds before.
 
-Going forward, integrity will be how we measure every decision.
+But at 1:53am, it was resolved. No data was lost. No customer was affected.
 
----
+I have thought about that evening many times since. Not because of the incident itself — but because of what it revealed.
 
-## Quality Checklist
+We had spent 18 months building a new identity platform. We had made the right technical choices. We had documented the architecture. We had run the tests. But on that call at midnight, what actually mattered was whether people trusted each other enough to say "I got that wrong" and move on fast, whether the newest person in the room felt they could speak, and whether we cared more about fixing the problem than looking good.
 
-- [ ] Story has a clear character or situation
-- [ ] Challenge or tension is compelling
-- [ ] Response is authentic and specific
-- [ ] Outcome is clear and meaningful
-- [ ] Lesson connects to broader values
-- [ ] Tone is personal and sincere
-- [ ] Call to action is clear
-- [ ] Story is memorable and retellable
+Those things are not in any architecture document.
 
-## Common Mistakes
+The migration completed last week — four days ahead of schedule, 8% under budget. We are the first firm in our sector to run fully on AWS. That is genuinely worth celebrating, and I am proud of every person who contributed to it.
 
-| Mistake | Why It's Wrong | Fix |
+But when I think about what we actually built this year, I keep coming back to that call in January. We built a team that trusts each other enough to be honest under pressure. That is harder than any migration. And it is more valuable.
+
+What comes next — and there is a lot that comes next — will need that same thing. The technology will change. The team will grow. The problems will be different. But the way we handled that night is exactly how I hope we will handle whatever comes.
+
+Thank you for this year. I mean it.
+
+*— Priya Nair, Chief Technology Officer*
+
+## Quality checklist
+
+- [ ] Opening drops the reader into a specific moment — not a general statement
+- [ ] Story uses concrete, specific details from [INPUT] — not generalities
+- [ ] Genuine tension or challenge is present — the story is not sanitised
+- [ ] The character's response to the challenge reveals values through action, not declaration
+- [ ] The lesson emerges from the story — it is not imposed on top of it
+- [ ] The story is retellable: the reader can describe it in two sentences
+- [ ] Tone is personal and honest — including about difficulty or failure
+- [ ] Closing connects the story to what comes next
+- [ ] British English used throughout
+- [ ] No bullet points or section headers in the body
+
+## Common mistakes
+
+| Mistake | Why it's wrong | Fix |
 |---------|----------------|-----|
-| Generic story | Doesn't resonate or feel real | Make it specific; use real details |
-| Unclear lesson | Reader doesn't know what to take away | Explicitly state what the story teaches |
-| Too long or meandering | Reader loses patience | Keep story focused; cut unnecessary details |
-| Preachy tone | Feels manipulative | Let the story teach; don't over-explain |
-| Unresolved tension | Story feels incomplete | Show how the challenge was addressed |
+| Generic story without specific details | Does not feel real; reader disengages immediately | Use real names, real times, real places from [INPUT] |
+| Unclear lesson or moral | Reader does not know what to take away | The lesson should flow from the story — but make it explicit in the closing |
+| Tension resolved too quickly | Story has no emotional weight | Stay in the difficulty for longer before resolving it |
+| Preachy or self-congratulatory tone | Feels manipulative; reader disengages | Let the story carry the message; do not over-explain |
+| Too long or meandering | Reader loses patience | Cut every sentence that does not move the story or the lesson forward |
+| Invented or embellished details | Reader senses inauthenticity | Use only what is in [INPUT]; flag any inference |
 
 ---
 

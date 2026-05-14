@@ -15,6 +15,8 @@ Review before using AI-generated content in professional contexts.
 - [ ] No fabricated citations
 - [ ] Technical claims are correct
 - [ ] Names and titles are accurate
+- [ ] No invented URLs, case names, statutory references, product features, or benchmark figures
+- [ ] Facts and assumptions are visibly separate
 
 ## Clarity Check
 
@@ -24,6 +26,8 @@ Review before using AI-generated content in professional contexts.
 - [ ] Flows naturally
 - [ ] Main points are clear
 - [ ] No redundant information
+- [ ] British English used throughout where required
+- [ ] Missing critical information is flagged rather than hidden
 
 ## Completeness Check
 
@@ -32,6 +36,8 @@ Review before using AI-generated content in professional contexts.
 - [ ] Examples support the message
 - [ ] Sufficient detail without over-elaboration
 - [ ] Actionable (not just informational)
+- [ ] Risks, caveats, and trade-offs are included where relevant
+- [ ] The output can be used as an artefact, not just inspiration
 
 ## Professional Standards
 
@@ -40,6 +46,7 @@ Review before using AI-generated content in professional contexts.
 - [ ] Proper formatting
 - [ ] Consistent style throughout
 - [ ] Suitable for intended use
+- [ ] High-impact output has been reviewed against the relevant rubric in [rubrics/](../rubrics/)
 
 ## Originality Check
 

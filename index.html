@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A workflow-first catalogue of professional writing styles, prompt templates, skills, patterns, rubrics, and examples.">
+    <title>Writing Catalogue</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Writing Catalogue home">
+        <span class="brand-mark">W</span>
+        <span>Writing Catalogue</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link active" href="#workflows" data-section-link="workflows">Workflows</a>
+        <a class="nav-link" href="#styles" data-section-link="style">Styles</a>
+        <a class="nav-link" href="#skills" data-section-link="skill">Skills</a>
+        <a class="nav-link" href="#templates" data-section-link="template">Templates</a>
+        <a class="nav-link" href="#reference" data-section-link="reference">Reference</a>
+      </nav>
+      <div class="top-actions">
+        <label class="search-shell" for="site-search">
+          <span>Search</span>
+          <input id="site-search" type="search" autocomplete="off" placeholder="board paper, tax, runbook">
+          <kbd>⌘K</kbd>
+        </label>
+        <button class="btn btn-ghost" id="density-toggle" type="button">Compact</button>
+        <button class="btn" id="theme-toggle" type="button" aria-pressed="false">Dark</button>
+      </div>
+    </header>
+
+    <main id="main" class="shell">
+      <aside class="sidebar" aria-label="Catalogue navigation">
+        <section>
+          <h2>Start here</h2>
+          <ul class="quiet-list">
+            <li><a href="START-HERE.md">START-HERE.md</a></li>
+            <li><a href="CHEATSHEET.md">CHEATSHEET.md</a></li>
+            <li><a href="STYLE-SELECTION-GUIDE.md">STYLE-SELECTION-GUIDE.md</a></li>
+            <li><a href="INDEX.md">INDEX.md</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Browse</h2>
+          <div class="section-list" id="section-list"></div>
+        </section>
+
+        <section class="repo-card">
+          <h2>Get the repo</h2>
+          <p>Publish from the repository root or the included GitHub Pages workflow. Replace the URL with your GitHub remote after creating the repository.</p>
+          <code>git clone &lt;repository-url&gt;</code>
+          <code>python3 scripts/generate_site_data.py</code>
+        </section>
+      </aside>
+
+      <section class="content">
+        <section class="hero" id="top">
+          <p class="eyeline">Pick what you are writing today</p>
+          <h1>Style, prompt, skill, and rubric in one place.</h1>
+          <p class="lede">A workflow-first navigator for turning rough notes into professional artefacts: board papers, tax notes, executive updates, PDFs, slide decks, runbooks, and ADRs.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#workflows">Browse workflows</a>
+            <a class="btn" href="START-HERE.md">Open start guide</a>
+          </div>
+        </section>
+
+        <section class="panel" id="workflows">
+          <div class="section-heading">
+            <div>
+              <p class="eyeline">Workflow reel</p>
+              <h2>Common artefacts</h2>
+            </div>
+            <p>Each workflow bundles a style, a pattern, a prompt template, a skill, and a review standard.</p>
+          </div>
+          <div class="workflow-list" id="workflow-list"></div>
+        </section>
+
+        <section class="panel" id="catalogue">
+          <div class="section-heading">
+            <div>
+              <p class="eyeline">Catalogue</p>
+              <h2 id="catalogue-title">All files</h2>
+            </div>
+            <p id="catalogue-summary">Search or choose a section to narrow the repository.</p>
+          </div>
+          <div class="result-grid" id="result-grid"></div>
+        </section>
+      </section>
+
+      <aside class="preview" aria-label="Selected workflow preview">
+        <div class="preview-card">
+          <p class="eyeline">Selected bundle</p>
+          <h2 id="preview-title">Board paper</h2>
+          <p id="preview-description">Full governance paper on a major decision, with options, risk, financials, recommendation, and resolution wording.</p>
+          <div class="bundle-chain" id="bundle-chain"></div>
+          <pre class="prompt-preview" id="prompt-preview" tabindex="0"></pre>
+          <div class="preview-actions">
+            <button class="btn btn-primary" id="copy-prompt" type="button">Copy prompt</button>
+            <a class="btn" id="open-source" href="prompt-templates/board-paper-prompts.md">Open source</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="assets/catalogue-data.js"></script>
+    <script src="assets/site.js" defer></script>
+  </body>
+</html>

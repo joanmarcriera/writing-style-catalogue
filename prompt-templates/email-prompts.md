@@ -1,130 +1,168 @@
 ---
 title: Email Prompts
-category: Common
+template_type: Email
+use_case: Write professional, action-oriented emails that get read and responded to.
+audience: Internal colleagues, senior stakeholders, external contacts, or clients — defined per use
+output_format: Structured email with clear subject line, BLUF opening, bulleted facts, and explicit ask
 ---
 
 # Email Prompts
 
 ## Purpose
 
-Write professional, clear emails that get action and response.
+Use these prompts when you need to write a professional email that achieves a specific outcome: securing approval, providing an update, making a request, or reaching out to an external contact. The BLUF (Bottom Line Up Front) format is the default because busy recipients decide in the first sentence whether to act — so the ask or key point must come first. Use the outreach variant when cold-contacting a supplier, partner, or prospective client. Both variants are written for British English and a professional register that avoids empty formality.
 
-## Copy-Paste Prompt – Professional Email (BLUF)
+## Copy-paste prompt — Professional email (BLUF)
 
 ```
-You are an email writing expert. Write a professional email from:
+You are an expert professional email writer. Write a clear, concise email that gets a specific response or action.
 
-RECIPIENT:
-[Name and role]
+AUDIENCE: [AUDIENCE]
 
-PURPOSE:
-[What do you need from them]
+PURPOSE: [PURPOSE]
 
-KEY FACTS:
-[3–5 essential facts]
+CONTEXT: [CONTEXT]
 
-YOUR ASK:
-[What specific action do you want]
+INPUT (key facts, background, and any draft content):
+[INPUT]
 
-DEADLINE:
-[When do you need their response]
+DESIRED_OUTCOME: [DESIRED_OUTCOME]
+
+TONE: [TONE]
+
+LENGTH: [LENGTH — recommended: under 300 words]
+
+FORMAT: [FORMAT — recommended: subject line / BLUF opening sentence / 2–3 sentence context / bulleted facts / explicit ask with deadline]
+
+CONSTRAINTS: [CONSTRAINTS]
 
 INSTRUCTIONS:
-1. Start with bottom line (ask or main point)
-2. Keep total length under 300 words
-3. Use 2–3 short paragraphs
-4. Use bullet points for lists
-5. End with clear deadline and next steps
+1. Write in British English throughout (organise, recognise, colour, licence as noun, practise as verb).
+2. Open with the bottom line: what you need and when. The recipient must understand the ask from the first sentence alone.
+3. Keep the body to 2–3 short paragraphs maximum. If listing more than two items, use bullet points.
+4. State the deadline or required response date explicitly.
+5. Preserve all factual figures and named details from the input — do not invent data.
+6. Distinguish between confirmed facts and assumptions where relevant (e.g. "subject to board approval" or "assuming current pricing").
+7. Avoid corporate filler: no "please do not hesitate", "as per my previous email", "going forward", or "leveraging synergies". Be direct and human.
+8. Tone: [TONE].
+9. Apply these constraints: [CONSTRAINTS].
+10. If a critical piece of information — such as the recipient's name or the specific deadline — is missing and you cannot infer it, note it with [MISSING: X] rather than guessing.
+11. Output only the email (subject line through sign-off). No preamble or commentary.
 
-Format:
-Subject: [Clear subject line]
+FORMAT TO USE:
+Subject: [specific, action-oriented subject line]
 
-[Bottom line – what you need]
+[Bottom line: what you need in one sentence]
 
-[2–3 sentences context]
+[2–3 sentences of context — why this matters and why now]
 
-• Fact 1
-• Fact 2
-• Fact 3
+[Bulleted facts if there are more than two supporting points]
 
-[Action required and deadline]
+[Explicit ask + deadline]
 
-Output only the email. No preamble.
+[Sign-off]
 ```
 
-## Copy-Paste Prompt – Outreach Email
+## Copy-paste prompt — Outreach email
 
 ```
-You are a professional outreach specialist. Write an outreach email from:
+You are a professional outreach specialist. Write a short, personalised outreach email that earns a reply.
 
-RECIPIENT:
-[Who you're contacting and why]
+AUDIENCE: [AUDIENCE — who you are contacting and their role/organisation]
 
-YOUR VALUE:
-[How you can help them]
+PURPOSE: [PURPOSE — what you want from this contact]
 
-SPECIFIC ASK:
-[What you want: meeting, collaboration, introduction]
+CONTEXT: [CONTEXT — why you are reaching out now; any shared connection or relevant hook]
 
-CONTEXT:
-[Why you're reaching out now]
+INPUT (background on the recipient, their organisation, or prior interaction):
+[INPUT]
+
+DESIRED_OUTCOME: [DESIRED_OUTCOME — e.g. a 30-minute call, an introduction, agreement to review a proposal]
+
+TONE: [TONE — recommended: warm and professional, not salesy]
+
+LENGTH: [LENGTH — recommended: under 150 words]
+
+FORMAT: [FORMAT — recommended: personalised hook / one-sentence value proposition / specific low-friction ask / sign-off]
+
+CONSTRAINTS: [CONSTRAINTS]
 
 INSTRUCTIONS:
-1. Personalised opening (reference their work/company)
-2. Brief value proposition (how you help)
-3. Specific ask (not vague)
-4. Low-friction next step
-5. Length: under 150 words
-
-Output only the email. No preamble.
+1. Write in British English.
+2. Open with a personalised hook that references something specific about the recipient's work, company, or a shared context — not a generic compliment.
+3. State in one sentence what you do and why it is relevant to them. Focus on their gain, not your product or service.
+4. Make a single, specific ask with a low barrier: suggest two or three times for a call, or offer a one-paragraph summary they can forward. Do not ask for "a quick chat sometime".
+5. Do not use pressure language, urgency tactics, or flattery.
+6. Distinguish what you know about the recipient (stated in the input) from assumptions — do not present inferences as facts.
+7. Apply these constraints: [CONSTRAINTS].
+8. Output only the email. No preamble.
 ```
 
-## Variables to Customise
+## Variables to customise
 
-- `[RECIPIENT]` → Name, role, company
-- `[PURPOSE]` → What you need from them
-- `[KEY FACTS]` → Supporting information
-- `[YOUR ASK]` → Specific action required
-- `[DEADLINE]` → When you need response
+- `[AUDIENCE]` — who is receiving the email. Examples: "Sarah Chen, Finance Director at Meridian Group", "the IT leadership team", "a procurement contact at a prospective cloud vendor".
+- `[PURPOSE]` — what the email is trying to achieve. Examples: "obtain approval for a £600k infrastructure budget", "notify the team of a platform outage resolution", "arrange an introductory call with a potential IAM vendor".
+- `[CONTEXT]` — why this email is being sent now and any relevant background. Examples: "budget cycle closes on 30 June", "the outage ran from 09:14 to 11:47 and affected 400 users", "we met briefly at the Cloud Expo in March".
+- `[INPUT]` — the raw material: facts, a previous draft, bullet-point notes, or a situation description.
+- `[DESIRED_OUTCOME]` — what success looks like. Examples: "the Finance Director replies with written approval by Friday", "the vendor sends a pricing proposal within five working days".
+- `[TONE]` — register to use. Examples: "professional and direct", "formal and cautious", "warm and collegial", "confident but not pushy".
+- `[LENGTH]` — target length. Under 300 words for internal professional emails; under 150 words for outreach.
+- `[FORMAT]` — structure of the output. The defaults above work well; override if needed.
+- `[CONSTRAINTS]` — any restrictions. Examples: "do not mention the ongoing redundancy process", "must reference the contract reference number CR-2026-041", "no bullet points — prose only".
 
-## Example Input – Professional Email
+## Example input — Professional email
 
 ```
-Recipient: Finance Director
-Purpose: Approve budget for cloud infrastructure project
-Facts: Saves £1.5M/year, 18-month timeline, phase implementation
-Ask: Approve £600k budget
-Deadline: 30 June
+AUDIENCE: James Okafor, Group Finance Director, Vertex Holdings
+PURPOSE: Request approval for a £600k cloud infrastructure investment
+CONTEXT: The infrastructure programme is due to begin in Q3 2026. Vendor commitment is needed by 30 June. The business case was submitted to Finance three weeks ago.
+INPUT:
+  - Annual operating savings: £1.5M from Year 2
+  - Total investment: £600k over 18 months
+  - Payback period: approximately 14 months
+  - Risk is low — phased rollout with external delivery partner
+  - Three vendors shortlisted; preferred vendor selected pending budget sign-off
+DESIRED_OUTCOME: James replies with written budget approval by end of Friday 29 May.
+TONE: Professional, respectful, direct — James is senior but we have a good working relationship
+LENGTH: Under 250 words
+FORMAT: Standard BLUF email
+CONSTRAINTS: Reference the business case document submitted on 24 April
 ```
 
-## Example Output
+## Example output
 
-**Subject: Budget Approval Needed – Cloud Migration (£600k Investment)**
+**Subject: Cloud Infrastructure Budget Approval — £600k — Response Needed by 29 May**
 
-Please approve a £600k investment for cloud infrastructure migration. This locks in £1.5M in annual savings starting Year 2.
+James,
 
-**Business case:**
-• Annual operating savings: £1.5M (vs. £3.6M renewal cost)
-• Payback period: 18 months
-• Risk: Low (phased approach; external partner support)
+I need your approval to proceed with the cloud infrastructure investment of £600k, which we need to confirm to the preferred vendor by 30 June.
 
-**Timeline:**
-Phase 1 begins Q3 2026. Budget needed by 30 June for vendor commitments.
+The business case submitted on 24 April sets out the full rationale. In brief:
 
-Can you confirm approval by end of week? I'll forward detailed financial analysis separately.
+- **Total investment**: £600k over 18 months
+- **Annual savings from Year 2**: £1.5M (data centre decommission, hardware and licensing costs)
+- **Payback period**: approximately 14 months
+- **Risk**: low — phased rollout with external delivery partner and rollback capability at each stage
+
+Three vendors were assessed; the preferred partner has been selected and is awaiting our commitment. Delaying past 30 June risks losing our Q3 start date and deferring savings by at least one financial year.
+
+Could you confirm approval by end of day Friday 29 May? I am happy to set up a brief call beforehand if that would help.
 
 Thanks,
-Jordan
+[Name]
 
-## Review Checklist
+## Review checklist
 
-- [ ] Subject line is clear and specific
-- [ ] First sentence contains the ask
-- [ ] Tone is professional but conversational
-- [ ] Facts are bulleted, not paragraphs
-- [ ] Deadline is explicit
-- [ ] Length is under 300 words
-- [ ] Call to action is clear
+- [ ] Subject line is specific and includes the key ask or topic
+- [ ] First sentence contains the bottom line — what is needed
+- [ ] Facts and figures are accurate and match the input
+- [ ] Assumptions are flagged where present (not stated as certainties)
+- [ ] Tone is appropriate for the recipient's seniority and relationship
+- [ ] Bullet points used for lists of three or more items
+- [ ] Deadline is stated explicitly
+- [ ] No filler phrases or corporate language
+- [ ] British English spellings used throughout
+- [ ] Total length is within the specified target
 
 ---
 

@@ -1,46 +1,43 @@
 ---
 title: Tax Note Checklist
 category: Quality
+description: A pre-finalisation checklist for tax technical notes and adviser memos.
 ---
 
 # Checklist: Tax Note Review
 
-Before finalising a tax advisory note.
+Use before a tax note is relied on internally, sent to a client, or used to support a filing position.
 
-## Technical Accuracy
+## Question and Facts
 
-- [ ] Question is stated clearly and specifically
-- [ ] Relevant facts are complete and accurate
-- [ ] No material facts are omitted
-- [ ] Assumptions are explicit
-- [ ] Law and precedent are current
-- [ ] Analysis applies law correctly to facts
-- [ ] Conclusion logically follows analysis
+- [ ] The tax question is a single precise question, not a broad topic.
+- [ ] Jurisdiction, tax, tax period, parties, amounts, and dates are stated.
+- [ ] Confirmed facts are separate from assumptions.
+- [ ] Missing facts that could change the conclusion are listed.
+- [ ] The scope of the note is explicit, including what is not covered.
 
-## Compliance
+## Law and Analysis
 
-- [ ] Relevant statutes and guidance are cited
-- [ ] Court precedent referenced if applicable
-- [ ] Confidence level is appropriate (high/medium/low)
-- [ ] Any uncertainties or ambiguities are flagged
-- [ ] Limitations of advice are noted
+- [ ] Every statutory reference has been verified against current legislation.
+- [ ] HMRC guidance references have been checked and are current.
+- [ ] Relevant case law or tribunal authority is included only where verified.
+- [ ] The analysis applies law to facts step by step.
+- [ ] Alternative interpretations or HMRC challenge points are addressed.
 
-## Professional Standards
+## Conclusion and Caveats
 
-- [ ] Grammar and spelling are flawless
-- [ ] Technical terminology is precise
-- [ ] No unsupported opinions
-- [ ] Tone is professional and measured
-- [ ] Appropriate for client/adviser communication
+- [ ] The conclusion answers the question directly.
+- [ ] Confidence level is stated and explained.
+- [ ] Conditions on which the conclusion depends are explicit.
+- [ ] The note does not overstate certainty.
+- [ ] Professional limitations and reliance wording are included.
 
-## Completeness
+## Next Steps
 
-- [ ] All relevant aspects of the question addressed
-- [ ] No gaps in reasoning
-- [ ] Alternative interpretations considered if relevant
-- [ ] Next steps are clear and specific
-- [ ] Documentation requirements noted
+- [ ] Required filings, elections, disclosures, clearances, or documentation are listed.
+- [ ] Timings and deadlines are stated.
+- [ ] Owner for each next step is clear.
+- [ ] Senior qualified adviser review is complete before external use.
+- [ ] Source materials and research notes are retained on file.
 
----
-
-Always escalate if uncertain. Qualified review required before client delivery.
+For deeper scoring, use [rubrics/tax-note-rubric.md](../rubrics/tax-note-rubric.md).

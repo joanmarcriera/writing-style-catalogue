@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+.playwright-mcp/
+*.tmp
+tmp/
+
+# Local agent/runtime context. Do not publish these in the public repository.
+AGENTS.md
+.claude/
+
+# Local design input. The implemented GitHub Pages site is index.html + assets/.
+UI-design/

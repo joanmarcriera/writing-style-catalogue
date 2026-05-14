@@ -1,76 +1,103 @@
 ---
 title: Create Board Pack
-category: Governance
+skill_type: Document generation
+output: A complete board meeting package including cover letter, agenda, individual board papers, financial summary, and decision templates — typically 20–40 pages in total
+tools_needed: LLM (Claude/ChatGPT/Gemini), Word or Google Docs, PDF converter
+difficulty: Complex
 ---
 
 # Skill: Create Board Pack
 
-## What This Skill Does
+## What this skill does
 
-Assembles a complete board meeting package including agenda, board papers, supporting materials, and decision documents.
+Assembles and drafts all materials required for a board meeting: the agenda with time allocations, individual board papers for each substantive item, a financial performance summary, a risk update, and formal decision or resolution templates. Each board paper follows the same structure — executive summary, background, options analysis, recommendation, risk assessment — so the board can navigate the pack consistently. The LLM helps draft each paper and the connecting materials; a human reviewer must check legal accuracy, financial figures, and compliance requirements before distribution.
 
-## When to Use It
+## When to use it
 
-- Preparing for board meetings
-- Major strategic decision packages
-- Annual or quarterly board reviews
+- Preparing quarterly or annual board meetings where formal papers are required
+- Seeking board approval for a major capital investment, strategic initiative, or policy change
+- Creating the governance documentation package for an audit, regulatory review, or investor due diligence exercise
+- Onboarding a new company secretary who needs a template set to work from
+- Producing a special board meeting pack for an urgent decision (M&A, crisis response, leadership change)
 
-## Inputs Required
+## Inputs required
 
-- Board meeting agenda items
-- Strategic issues requiring board decisions
-- Financial or performance data
-- Supporting analysis and recommendations
+- Meeting date, location, and list of attendees (directors, executives, company secretary)
+- Agenda items with the type of action required for each (decision, noting, discussion)
+- For each major paper: background context, options considered, financial data, recommendation, and key risks
+- Current financial performance data (P&L summary, cash position, key variances)
+- Any standing items (approval of previous minutes, matters arising, risk register update)
+- Regulatory or legal requirements specific to the entity type (plc, private, charity, etc.)
+- Any pre-read materials that should accompany but not form part of the formal pack
 
-## Copy-Paste Prompt
+## Copy-paste prompt
 
 ```
-You are a board secretary. Create a complete board pack from:
+You are a company secretary and governance specialist. Draft a board pack for the meeting described below.
 
-MEETING DATE:
-[When]
+AUDIENCE: [e.g. PLC board / Private company directors / Trustee board / Advisory board]
+PURPOSE: [Primary decisions and matters the board must address at this meeting]
+CONTEXT: [Company stage, sector, any recent events or context the board is aware of]
+INPUT: [Paste agenda items, background notes, financial data, and any existing drafts here]
+DESIRED_OUTCOME: [What decisions must be made and what the board should know by the end of the meeting]
+TONE: Formal and precise. Board papers are legal documents — language must be unambiguous.
+LENGTH: Cover letter 1 page; agenda 1 page; each board paper 3–5 pages; financial summary 2 pages; appendices as needed. Total pack 20–40 pages.
+FORMAT: Each section as a separate clearly labelled document within the pack. Each board paper must have: paper number, title, author, date, status (for decision / for noting / for discussion), executive summary, background, analysis, recommendation, financial implications, risk assessment, and proposed resolution wording.
+CONSTRAINTS: Use British English. All financial figures in £ with consistent decimal places. Use passive voice sparingly — prefer "The board resolved to..." over "It was resolved that..." Output only the pack content; no preamble.
 
-AGENDA ITEMS:
-[Topics for board discussion]
+QUALITY BAR:
+- Every decision item must have proposed resolution wording.
+- Every financial figure must reconcile across the pack.
+- Facts, assumptions, estimates, and recommendations must be visibly separate.
+- Do not invent legal, tax, regulatory, or financial claims. Flag missing inputs instead.
 
-DECISIONS NEEDED:
-[Major decisions required]
-
-SUPPORTING MATERIALS:
-[Financial data, analyses, proposals]
-
-INSTRUCTIONS:
-1. Create agenda with time allocations
-2. Write board paper for each major item
-3. Assemble supporting materials
-4. Include decision templates
-5. Create cover letter/meeting brief
-6. Ensure everything is self-contained
-
-Output the board pack outline. No preamble.
+PACK STRUCTURE:
+1. Cover letter from Chair or CEO (1 page)
+2. Agenda with time allocations
+3. Board Paper 1: [First agenda item]
+4. Board Paper 2: [Second agenda item]
+5. [Additional papers as needed]
+6. Financial Performance Summary
+7. Risk Register Update
+8. Any Other Business items
+9. Decision/Resolution Templates (one per paper requiring a vote)
 ```
 
-## Suggested Structure
+## Suggested output structure
 
-- Cover Letter (board chair/CEO summary)
-- Agenda (with time allocations)
-- Board Papers (1 per major agenda item)
-- Supporting Materials (financial data, appendices)
-- Decision Templates (for voting)
+- **Cover letter** — from the Chair or CEO; summarises the key agenda items; flags any pre-reading required; confirms quorum
+- **Agenda** — numbered items with time allocations, action type (decision/noting/discussion), and paper reference number
+- **Board Paper(s)** — one per substantive agenda item; each containing:
+  - Paper number, title, author, date, status
+  - Executive summary (half page maximum)
+  - Background and context (1–2 pages)
+  - Options analysis (if decision required)
+  - Recommendation with rationale
+  - Financial implications
+  - Risk assessment
+  - Proposed resolution wording
+- **Financial performance summary** — P&L highlights, cash position, key variances vs. budget, year-on-year comparisons
+- **Risk register update** — top risks, changes since last meeting, mitigations
+- **Resolution templates** — pre-drafted formal wording for each vote
 
-## Quality Controls
+## Quality controls
 
-- [ ] All agenda items have supporting documentation
-- [ ] Board papers are 1–2 pages each
-- [ ] Financial data is clear and contexted
-- [ ] All decisions have clear approval language
-- [ ] Pack can be reviewed in 2–3 hours
-- [ ] All materials are internally consistent
+- [ ] Every agenda item that requires a decision has a corresponding board paper with proposed resolution wording
+- [ ] Each board paper is self-contained — a director can read any single paper without needing to cross-reference others
+- [ ] Financial figures are internally consistent across all papers and the financial summary
+- [ ] The pack can be reviewed in full in under 3 hours (this is the practical limit for non-executive directors)
+- [ ] All recommendations have a clear rationale — "we recommend Option B because..." not just "we recommend Option B"
+- [ ] Legal or compliance implications are flagged and the company's legal adviser has reviewed those sections
+- [ ] Version, date, and "CONFIDENTIAL" classification appear on every page
 
-## Example Request
+## Common failure modes
 
-"Create a board pack for Q2 meeting: agenda, board paper on cloud migration decision (with options analysis), financial performance summary, and investor update."
+- **Papers too long**: Board members read packs in limited time; papers over 5 pages are rarely read in full — move detail to appendices and keep the main paper tight
+- **Recommendation buried**: The executive summary should state the recommendation in the first sentence; never make the board wade through background to find what they are being asked to decide
+- **Inconsistent financials**: If the P&L summary shows different numbers from the board paper, trust collapses — have one person reconcile all figures before distribution
+- **Missing resolution wording**: Without precise proposed resolution text, the meeting may produce ambiguous minutes — draft resolution wording for every decision item
+- **No options analysis**: A paper that presents only one option looks like a fait accompli and invites board resistance — always show at least two alternatives and explain why you are not recommending them
 
----
+## Example request
 
-Typically 20–30 pages total including appendices.
+"Draft the board pack for our Q2 board meeting on 15 June. The key agenda item is approval of the Azure cloud migration (Phase 1, £600k, 18-month programme). Also include the Q1 financial performance paper (revenue £4.2M, 12% ahead of budget; EBITDA £820k), a risk register update (two new risks: AI governance and supplier concentration), and the standard approval of Q1 board minutes. We are a private limited company in financial services. Directors: CEO, CFO, CTO, two independent NEDs."

@@ -15,6 +15,8 @@ Before finalising a presentation.
 - [ ] Logical flow from slide to slide
 - [ ] Call to action is clear
 - [ ] Conclusion restates key message
+- [ ] Final main slide states the decision, commitment, or action required
+- [ ] Risks or objections are addressed before the ask
 
 ## Slides
 
@@ -25,6 +27,7 @@ Before finalising a presentation.
 - [ ] No more text than needed
 - [ ] Consistent font sizes and styles
 - [ ] Readable on a large screen
+- [ ] Every visual has a stated purpose
 
 ## Speaker Materials
 
@@ -33,6 +36,7 @@ Before finalising a presentation.
 - [ ] Backup data is prepared (if questions arise)
 - [ ] Transition between slides is smooth
 - [ ] Q&A section has prepared answers
+- [ ] Presenter can explain all numbers and assumptions
 
 ## Professional Standards
 
@@ -52,3 +56,5 @@ Before finalising a presentation.
 ---
 
 A good presentation tells a story, not just displays slides.
+
+For deeper scoring, use [slide-deck-rubric.md](../rubrics/slide-deck-rubric.md).

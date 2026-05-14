@@ -1,5 +1,7 @@
 # Quick Start Guide
 
+For the fastest task-to-artefact route, start with [START-HERE.md](START-HERE.md). Use this page if you are new to the catalogue and want the basic workflow.
+
 ## 5 minutes to your first document
 
 ### Step 1: Choose Your Style (1 minute)
@@ -27,12 +29,7 @@ Navigate to `prompt-templates/` and find your document type:
 
 Copy the entire prompt from the file. It includes:
 
-```
-[STYLE]
-[STRUCTURE]
-[TONE]
-[VARIABLES TO FILL IN]
-```
+Good templates include role, audience, purpose, context, input, output format, tone, constraints, assumptions, and review criteria.
 
 ### Step 4: Customise and Submit (2 minutes)
 
@@ -82,6 +79,9 @@ Before publishing, scan the relevant checklist in `checklists/`:
 ## Getting Help
 
 - **Confused about which style to use?** → [STYLE-SELECTION-GUIDE.md](STYLE-SELECTION-GUIDE.md)
+- **Need to know where everything lives?** → [REPO-MAP.md](REPO-MAP.md)
+- **Need to improve a prompt or draft?** → [meta-prompts/](meta-prompts/)
+- **Need to score output quality?** → [rubrics/](rubrics/)
 - **Want to see a real example?** → [examples/](examples/)
 - **Need to validate output?** → [checklists/](checklists/)
 - **Looking for a reference?** → [reference/](reference/)
