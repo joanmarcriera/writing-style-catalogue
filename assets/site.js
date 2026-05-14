@@ -127,6 +127,38 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function scrollToPanel(selector) {
+  const panel = $(selector);
+  if (!panel) return;
+  window.requestAnimationFrame(() => {
+    panel.scrollIntoView({ behavior: "auto", block: "start" });
+  });
+}
+
+function scrollPreviewWhenStacked() {
+  if (window.matchMedia("(max-width: 1280px)").matches) {
+    scrollToPanel(".preview");
+  }
+}
+
+function setActiveNav(kind) {
+  document.querySelectorAll("[data-section-link]").forEach(link => {
+    link.classList.toggle("active", link.dataset.sectionLink === kind);
+  });
+}
+
+function showCatalogueKind(kind, options = {}) {
+  activeKind = kind;
+  activeQuery = "";
+  $("#site-search").value = "";
+  renderSections();
+  renderResults();
+  setActiveNav(kind);
+  if (options.scroll) {
+    scrollToPanel("#catalogue");
+  }
+}
+
 function renderSections() {
   const container = $("#section-list");
   const allButton = sectionButton({ label: "All files", count: DATA.items.length, kind: "all" });
@@ -144,11 +176,7 @@ function sectionButton(section) {
     <span class="section-count">${escapeHtml(section.count)}</span>
   `;
   button.addEventListener("click", () => {
-    activeKind = section.kind;
-    activeQuery = "";
-    $("#site-search").value = "";
-    renderSections();
-    renderResults();
+    showCatalogueKind(section.kind, { scroll: true });
   });
   return button;
 }
@@ -171,6 +199,7 @@ function renderWorkflows() {
       selectedWorkflow = workflow;
       renderWorkflows();
       renderPreview();
+      scrollPreviewWhenStacked();
     });
     return button;
   }));
@@ -241,6 +270,7 @@ function renderResults() {
         section: item.section,
         prompt: `${item.title}\n\n${item.description}\n\nSource: ${item.path}`,
       });
+      scrollPreviewWhenStacked();
     });
     return card;
   }));
@@ -253,6 +283,7 @@ function bindSearch() {
     activeKind = "all";
     renderSections();
     renderResults();
+    setActiveNav("all");
   });
 
   document.addEventListener("keydown", (event) => {
@@ -297,14 +328,14 @@ function bindToggles() {
 
 function bindNav() {
   document.querySelectorAll("[data-section-link]").forEach(link => {
-    link.addEventListener("click", () => {
-      document.querySelectorAll("[data-section-link]").forEach(item => item.classList.remove("active"));
-      link.classList.add("active");
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
       const target = link.dataset.sectionLink;
-      if (target !== "workflows") {
-        activeKind = target;
-        renderSections();
-        renderResults();
+      setActiveNav(target);
+      if (target === "workflows") {
+        scrollToPanel("#workflows");
+      } else {
+        showCatalogueKind(target, { scroll: true });
       }
     });
   });

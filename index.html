@@ -18,10 +18,10 @@
       </a>
       <nav class="nav" aria-label="Primary">
         <a class="nav-link active" href="#workflows" data-section-link="workflows">Workflows</a>
-        <a class="nav-link" href="#styles" data-section-link="style">Styles</a>
-        <a class="nav-link" href="#skills" data-section-link="skill">Skills</a>
-        <a class="nav-link" href="#templates" data-section-link="template">Templates</a>
-        <a class="nav-link" href="#reference" data-section-link="reference">Reference</a>
+        <a class="nav-link" href="#catalogue" data-section-link="style">Styles</a>
+        <a class="nav-link" href="#catalogue" data-section-link="skill">Skills</a>
+        <a class="nav-link" href="#catalogue" data-section-link="template">Templates</a>
+        <a class="nav-link" href="#catalogue" data-section-link="reference">Reference</a>
       </nav>
       <div class="top-actions">
         <label class="search-shell" for="site-search">
@@ -53,8 +53,9 @@
 
         <section class="repo-card">
           <h2>Get the repo</h2>
-          <p>Publish from the repository root or the included GitHub Pages workflow. Replace the URL with your GitHub remote after creating the repository.</p>
-          <code>git clone &lt;repository-url&gt;</code>
+          <p>Clone the public repository or use the included GitHub Pages workflow to publish updates.</p>
+          <a class="repo-link" href="https://github.com/joanmarcriera/writing-style-catalogue">Open GitHub repository</a>
+          <code>git clone https://github.com/joanmarcriera/writing-style-catalogue.git</code>
           <code>python3 scripts/generate_site_data.py</code>
         </section>
       </aside>
@@ -87,7 +88,7 @@
               <p class="eyeline">Catalogue</p>
               <h2 id="catalogue-title">All files</h2>
             </div>
-            <p id="catalogue-summary">Search or choose a section to narrow the repository.</p>
+            <p id="catalogue-summary" aria-live="polite">Search or choose a section to narrow the repository.</p>
           </div>
           <div class="result-grid" id="result-grid"></div>
         </section>

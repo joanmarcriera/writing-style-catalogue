@@ -43,10 +43,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   background:
@@ -329,8 +325,22 @@ kbd {
   line-height: 1.5;
 }
 
+.repo-link {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .repo-card code {
   display: block;
+  overflow: auto;
   margin-top: 6px;
   padding: 7px 9px;
   border: 1px solid var(--hair);
@@ -339,6 +349,7 @@ kbd {
   color: var(--ink-soft);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 11px;
+  white-space: nowrap;
 }
 
 .content {
@@ -352,6 +363,12 @@ kbd {
   border-radius: var(--radius-md);
   background: color-mix(in srgb, var(--paper) 94%, transparent);
   box-shadow: var(--shadow);
+}
+
+.hero,
+.panel,
+.preview {
+  scroll-margin-top: 76px;
 }
 
 .hero {
@@ -609,12 +626,23 @@ kbd {
     order: 1;
   }
 
+  .shell > * {
+    width: 100%;
+    min-width: 0;
+  }
+
   .preview {
     order: 2;
   }
 
   .sidebar {
     order: 3;
+  }
+
+  .hero,
+  .panel,
+  .preview {
+    scroll-margin-top: 150px;
   }
 
   .sidebar,
