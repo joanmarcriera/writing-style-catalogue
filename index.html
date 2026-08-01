@@ -3,8 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A workflow-first catalogue of professional writing styles, prompt templates, skills, patterns, rubrics, and examples.">
-    <title>Writing Catalogue</title>
+    <meta name="description" content="Professional writing bundles with source packets, complete prompts, output examples, and review rubrics for consequential documents.">
+    <link rel="canonical" href="https://p.riera.co.uk/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Writing Catalogue">
+    <meta property="og:title" content="Professional prompts are bundles, not magic sentences">
+    <meta property="og:description" content="Start with the artefact, supply the facts, generate the draft, and stop it unless the review rubric passes.">
+    <meta property="og:url" content="https://p.riera.co.uk/">
+    <meta property="og:image" content="https://p.riera.co.uk/assets/social-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Writing Catalogue showing a professional prompt bundle with brief, prompt, output, and review stages">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional prompts are bundles, not magic sentences">
+    <meta name="twitter:description" content="Source packet, complete prompt, output example, and review gate in one public catalogue.">
+    <meta name="twitter:image" content="https://p.riera.co.uk/assets/social-card.png">
+    <title>Professional Writing Prompt Bundles | Writing Catalogue</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/site.css">
   </head>
@@ -17,7 +31,7 @@
         <span>Writing Catalogue</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a class="nav-link active" href="#workflows" data-section-link="workflows">Workflows</a>
+        <a class="nav-link active" href="#bundles" data-section-link="bundles">Bundles</a>
         <a class="nav-link" href="#catalogue" data-section-link="style">Styles</a>
         <a class="nav-link" href="#catalogue" data-section-link="skill">Skills</a>
         <a class="nav-link" href="#catalogue" data-section-link="template">Templates</a>
@@ -62,24 +76,24 @@
 
       <section class="content">
         <section class="hero" id="top">
-          <p class="eyeline">Pick what you are writing today</p>
-          <h1>Style, prompt, skill, and rubric in one place.</h1>
-          <p class="lede">A workflow-first navigator for turning rough notes into professional artefacts: board papers, tax notes, executive updates, PDFs, slide decks, runbooks, and ADRs.</p>
+          <p class="eyeline">Start with the artefact, not a blank chat</p>
+          <h1>Professional prompts are bundles.</h1>
+          <p class="lede">Source facts, a complete prompt, a worked output, and a review gate—together. Twelve auditable examples for board, executive, technical, tax, website, and social writing.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#workflows">Browse workflows</a>
+            <a class="btn btn-primary" href="#bundles">Browse worked bundles</a>
             <a class="btn" href="START-HERE.md">Open start guide</a>
           </div>
         </section>
 
-        <section class="panel" id="workflows">
+        <section class="panel" id="bundles">
           <div class="section-heading">
             <div>
-              <p class="eyeline">Workflow reel</p>
-              <h2>Common artefacts</h2>
+              <p class="eyeline">Twelve worked examples</p>
+              <h2>Choose the artefact</h2>
             </div>
-            <p>Each workflow bundles a style, a pattern, a prompt template, a skill, and a review standard.</p>
+            <p>Inspect the evidence boundary, copy the complete prompt, compare the output, then apply the review gate.</p>
           </div>
-          <div class="workflow-list" id="workflow-list"></div>
+          <div class="workflow-list" id="bundle-list"></div>
         </section>
 
         <section class="panel" id="catalogue">
@@ -94,16 +108,18 @@
         </section>
       </section>
 
-      <aside class="preview" aria-label="Selected workflow preview">
+      <aside class="preview" aria-label="Selected professional prompt bundle">
         <div class="preview-card">
           <p class="eyeline">Selected bundle</p>
-          <h2 id="preview-title">Board paper</h2>
-          <p id="preview-description">Full governance paper on a major decision, with options, risk, financials, recommendation, and resolution wording.</p>
+          <h2 id="preview-title">Professional bundle</h2>
+          <p id="preview-description">Select an artefact to inspect its evidence, prompt, output, and review gate.</p>
+          <p class="preview-audience" id="preview-audience"></p>
           <div class="bundle-chain" id="bundle-chain"></div>
-          <pre class="prompt-preview" id="prompt-preview" tabindex="0"></pre>
+          <div class="bundle-tabs" id="bundle-tabs" role="tablist" aria-label="Bundle stages"></div>
+          <div class="bundle-stage" id="bundle-stage" role="tabpanel" tabindex="0"></div>
           <div class="preview-actions">
             <button class="btn btn-primary" id="copy-prompt" type="button">Copy prompt</button>
-            <a class="btn" id="open-source" href="prompt-templates/board-paper-prompts.md">Open source</a>
+            <a class="btn" id="open-source" href="examples/">Open worked example</a>
           </div>
         </div>
       </aside>

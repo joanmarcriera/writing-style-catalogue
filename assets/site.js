@@ -1,134 +1,28 @@
-const DATA = window.CATALOGUE_DATA || { sections: [], items: [] };
-
-const workflows = [
-  {
-    id: "board-paper",
-    title: "Board paper",
-    audience: "Board, committee, non-executive directors",
-    time: "2-4 hrs",
-    description: "Full governance paper on a major decision, with options, risk, financials, recommendation, and resolution wording.",
-    source: "prompt-templates/board-paper-prompts.md",
-    chain: [
-      ["style", "Board Paper"],
-      ["pattern", "Context / Analysis / Options / Recommendation"],
-      ["template", "board-paper-prompts"],
-      ["skill", "create-board-pack"],
-      ["rubric", "board-paper-rubric"],
-    ],
-    prompt: "You are preparing a board paper for [BOARD]. The decision is [DECISION]. Context: [CONTEXT]. Use Context / Analysis / Options / Recommendation. Include financials, risks, assumptions, proposed resolution, and British English. Review against the board-paper rubric.",
-  },
-  {
-    id: "tax-note",
-    title: "Tax technical note",
-    audience: "Tax team, finance director, adviser review",
-    time: "3-6 hrs",
-    description: "Structured tax analysis that separates facts, assumptions, law, conclusion, confidence, caveats, and next steps.",
-    source: "prompt-templates/tax-note-prompts.md",
-    chain: [
-      ["style", "Tax Advisory"],
-      ["pattern", "Question / Facts / Analysis / Conclusion"],
-      ["template", "tax-note-prompts"],
-      ["skill", "create-tax-technical-note"],
-      ["rubric", "tax-note-rubric"],
-    ],
-    prompt: "You are drafting a UK tax technical note. Question: [QUESTION]. Facts: [FACTS]. Applicable law supplied for verification: [LAW]. Separate confirmed facts from assumptions. Do not invent references. State confidence level, caveats, next steps, and qualified adviser review requirement. Use British English.",
-  },
-  {
-    id: "slide-deck",
-    title: "Slide deck",
-    audience: "Board, ExCo, client, internal leadership",
-    time: "60-120 min",
-    description: "Slide-by-slide outline with message titles, visual direction, speaker notes, and a clear final ask.",
-    source: "prompt-templates/presentation-prompts.md",
-    chain: [
-      ["style", "Consulting Style"],
-      ["pattern", "Problem / Evidence / Recommendation / Action"],
-      ["template", "presentation-prompts"],
-      ["skill", "create-slide-deck"],
-      ["rubric", "slide-deck-rubric"],
-    ],
-    prompt: "Create a slide deck outline for [AUDIENCE] on [TOPIC]. Purpose: [DECISION OR ACTION]. Use one idea per slide, message titles, 2-4 bullets, visual suggestion, and substantive speaker notes. End with a clear call to action, not just Q&A. Use British English.",
-  },
-  {
-    id: "pdf-report",
-    title: "PDF-ready report",
-    audience: "Client, regulator, board, internal stakeholders",
-    time: "90-180 min",
-    description: "Markdown-first formal document with title page, table of contents, executive summary, sections, appendices, and export guidance.",
-    source: "prompt-templates/pdf-document-prompts.md",
-    chain: [
-      ["style", "Executive Briefing"],
-      ["pattern", "Context / Analysis / Recommendation"],
-      ["template", "pdf-document-prompts"],
-      ["skill", "create-pdf"],
-      ["rubric", "executive-communication-rubric"],
-    ],
-    prompt: "Write a PDF-ready Markdown document for [AUDIENCE]. Purpose: [PURPOSE]. Include title page elements, table of contents, executive summary, numbered sections, tables where useful, appendices, and page-break hints. Separate facts and assumptions. Use British English.",
-  },
-  {
-    id: "website-seo-audit",
-    title: "Website SEO audit",
-    audience: "Founder, marketing lead, product owner, technical team",
-    time: "2-6 hrs",
-    description: "URL-led marketing and SEO report with current-state diagnosis, conversion issues, content gaps, technical fixes, and a 30/60/90-day plan.",
-    source: "prompt-templates/website-marketing-seo-prompts.md",
-    chain: [
-      ["style", "Executive Briefing"],
-      ["style", "Consulting Style"],
-      ["template", "website-marketing-seo-prompts"],
-      ["skill", "create-website-marketing-seo-audit"],
-      ["rubric", "website-marketing-seo-rubric"],
-    ],
-    prompt: "Audit [URL] for [BUSINESS CONTEXT] and [TARGET AUDIENCE]. Goal: [COMMERCIAL GOAL]. Inspect public pages and any supplied analytics/Search Console evidence. Separate Observed, Inferred, and Not observed findings. Do not invent traffic, rankings, conversion rate, backlinks, or keyword volume. Produce an executive summary, current-state scorecard, prioritised recommendations, 30/60/90-day plan, and implementation backlog. Use British English.",
-  },
-  {
-    id: "runbook",
-    title: "Operational runbook",
-    audience: "On-call engineer, service owner, support lead",
-    time: "45-90 min",
-    description: "Incident response procedure with detection, triage, commands, escalation, verification, and post-incident actions.",
-    source: "skills/create-runbook.md",
-    chain: [
-      ["style", "Technical Documentation"],
-      ["pattern", "Objective / Scope / Procedure / Exceptions"],
-      ["template", "technical-documentation-prompts"],
-      ["skill", "create-runbook"],
-      ["rubric", "technical-documentation-rubric"],
-    ],
-    prompt: "Write a runbook for [INCIDENT TYPE]. Audience: [ON-CALL ROLE]. Include detection triggers, first-five-minute triage, response steps, exact commands where supplied, escalation triggers, resolution verification, and post-incident actions. Use British English.",
-  },
-  {
-    id: "adr",
-    title: "Architecture decision record",
-    audience: "Engineers, architects, future maintainers",
-    time: "30-60 min",
-    description: "Permanent record of a technical decision, the alternatives considered, rationale, consequences, and status.",
-    source: "skills/create-adr.md",
-    chain: [
-      ["style", "ADR"],
-      ["pattern", "Decision / Rationale / Consequences"],
-      ["template", "decision-record-prompts"],
-      ["skill", "create-adr"],
-      ["rubric", "technical-documentation-rubric"],
-    ],
-    prompt: "Write an ADR for [DECISION]. Context: [CONTEXT]. Alternatives: [OPTIONS]. State status, decision, rationale, consequences, trade-offs, and related decisions. Keep it concise, factual, and in British English.",
-  },
-];
+const DATA = window.CATALOGUE_DATA || { sections: [], items: [], bundles: [] };
+const bundles = DATA.bundles || [];
 
 const kindLabels = {
-  "style": "St",
-  "pattern": "Pt",
-  "template": "Pr",
+  style: "St",
+  pattern: "Pt",
+  template: "Pr",
   "meta-prompt": "Mp",
-  "skill": "Sk",
-  "workflow": "Wf",
-  "example": "Ex",
-  "checklist": "Ch",
-  "rubric": "Rb",
-  "reference": "Rf",
+  skill: "Sk",
+  workflow: "Wf",
+  example: "Ex",
+  checklist: "Ch",
+  rubric: "Rb",
+  reference: "Rf",
 };
 
-let selectedWorkflow = workflows[0];
+const stageDefinitions = [
+  { id: "brief", label: "Brief" },
+  { id: "prompt", label: "Prompt" },
+  { id: "output", label: "Output" },
+  { id: "review", label: "Review" },
+];
+
+let selectedBundle = bundles[0] || null;
+let selectedStage = "brief";
 let activeKind = "all";
 let activeQuery = "";
 
@@ -143,16 +37,27 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function stripMarkdown(value) {
+  return String(value ?? "")
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/^[-*]\s+/gm, "• ")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .trim();
+}
+
+function basename(path) {
+  return String(path || "").split("/").pop().replace(/\.md$/, "");
+}
+
 function scrollToPanel(selector) {
   const panel = $(selector);
   if (!panel) return;
-  window.requestAnimationFrame(() => {
-    panel.scrollIntoView({ behavior: "auto", block: "start" });
-  });
+  window.requestAnimationFrame(() => panel.scrollIntoView({ behavior: "auto", block: "start" }));
 }
 
 function scrollPreviewWhenStacked() {
-  if (window.matchMedia("(max-width: 1280px)").matches) {
+  if (window.matchMedia("(max-width: 1180px)").matches) {
     scrollToPanel(".preview");
   }
 }
@@ -170,15 +75,12 @@ function showCatalogueKind(kind, options = {}) {
   renderSections();
   renderResults();
   setActiveNav(kind);
-  if (options.scroll) {
-    scrollToPanel("#catalogue");
-  }
+  if (options.scroll) scrollToPanel("#catalogue");
 }
 
 function renderSections() {
-  const container = $("#section-list");
   const allButton = sectionButton({ label: "All files", count: DATA.items.length, kind: "all" });
-  container.replaceChildren(allButton, ...DATA.sections.map(sectionButton));
+  $("#section-list").replaceChildren(allButton, ...DATA.sections.map(sectionButton));
 }
 
 function sectionButton(section) {
@@ -191,54 +93,140 @@ function sectionButton(section) {
     <span>${escapeHtml(section.folder || section.label)}</span>
     <span class="section-count">${escapeHtml(section.count)}</span>
   `;
-  button.addEventListener("click", () => {
-    showCatalogueKind(section.kind, { scroll: true });
-  });
+  button.addEventListener("click", () => showCatalogueKind(section.kind, { scroll: true }));
   return button;
 }
 
-function renderWorkflows() {
-  const container = $("#workflow-list");
-  container.replaceChildren(...workflows.map((workflow, index) => {
+function renderBundles() {
+  const cards = bundles.map((bundle, index) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `workflow-card ${workflow.id === selectedWorkflow.id ? "active" : ""}`;
+    button.className = `workflow-card ${selectedBundle?.id === bundle.id ? "active" : ""}`;
+    button.setAttribute("aria-pressed", String(selectedBundle?.id === bundle.id));
     button.innerHTML = `
       <span class="workflow-number">${escapeHtml(String(index + 1).padStart(2, "0"))}</span>
       <span>
-        <h3>${escapeHtml(workflow.title)}</h3>
-        <p>${escapeHtml(workflow.description)} &middot; ${escapeHtml(workflow.audience)}</p>
+        <h3>${escapeHtml(bundle.artefact)}</h3>
+        <p>${escapeHtml(bundle.description)} · ${escapeHtml(bundle.audience)}</p>
       </span>
-      <span class="workflow-time">${escapeHtml(workflow.time)}</span>
+      <span class="workflow-time">4 stages</span>
     `;
     button.addEventListener("click", () => {
-      selectedWorkflow = workflow;
-      renderWorkflows();
+      selectedBundle = bundle;
+      selectedStage = "brief";
+      renderBundles();
       renderPreview();
       scrollPreviewWhenStacked();
     });
     return button;
-  }));
+  });
+  $("#bundle-list").replaceChildren(...cards);
 }
 
-function renderPreview(item = selectedWorkflow) {
-  $("#preview-title").textContent = item.title;
-  $("#preview-description").textContent = item.description || item.audience || "";
-  $("#prompt-preview").textContent = item.prompt || `${item.title}\n\n${item.description || ""}`;
-  $("#open-source").href = item.source || item.path || "START-HERE.md";
+function renderTabs() {
+  const tabs = stageDefinitions.map(stage => {
+    const button = document.createElement("button");
+    const selected = selectedStage === stage.id;
+    button.type = "button";
+    button.className = `bundle-tab ${selected ? "active" : ""}`;
+    button.id = `tab-${stage.id}`;
+    button.dataset.stage = stage.id;
+    button.setAttribute("role", "tab");
+    button.setAttribute("aria-selected", String(selected));
+    button.setAttribute("aria-controls", "bundle-stage");
+    button.tabIndex = selected ? 0 : -1;
+    button.textContent = stage.label;
+    button.addEventListener("click", () => selectStage(stage.id, true));
+    button.addEventListener("keydown", handleTabKeydown);
+    return button;
+  });
+  $("#bundle-tabs").replaceChildren(...tabs);
+}
 
-  const chain = item.chain || [[item.kind || "reference", item.section || "Catalogue"]];
-  $("#bundle-chain").replaceChildren(...chain.map(([kind, label]) => {
-    const tag = document.createElement("span");
-    tag.className = `tag tag-${kind}`;
-    tag.textContent = `${kind} · ${label}`;
-    return tag;
-  }));
+function handleTabKeydown(event) {
+  if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+  event.preventDefault();
+  const current = stageDefinitions.findIndex(stage => stage.id === selectedStage);
+  let next = current;
+  if (event.key === "ArrowRight") next = (current + 1) % stageDefinitions.length;
+  if (event.key === "ArrowLeft") next = (current - 1 + stageDefinitions.length) % stageDefinitions.length;
+  if (event.key === "Home") next = 0;
+  if (event.key === "End") next = stageDefinitions.length - 1;
+  selectStage(stageDefinitions[next].id, true);
+}
+
+function selectStage(stage, focusTab = false) {
+  selectedStage = stage;
+  renderTabs();
+  renderStage();
+  if (focusTab) $(`#tab-${stage}`)?.focus();
+}
+
+function renderScorecard(bundle) {
+  const rows = bundle.scorecard.map(row => `
+    <tr>
+      <th scope="row">${escapeHtml(row.criterion)}</th>
+      <td><span class="score">${escapeHtml(row.score)}/5</span></td>
+      <td>${escapeHtml(row.evidence)}</td>
+      <td><span class="gate gate-${escapeHtml(row.gate.toLowerCase().replaceAll(" ", "-"))}">${escapeHtml(row.gate)}</span></td>
+    </tr>
+  `).join("");
+  return `
+    <div class="review-summary">
+      <table class="scorecard">
+        <thead><tr><th>Criterion</th><th>Score</th><th>Evidence</th><th>Gate</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <h3>Human review before use</h3>
+      <pre class="stage-copy stage-copy-short">${escapeHtml(stripMarkdown(bundle.humanReview))}</pre>
+    </div>
+  `;
+}
+
+function renderStage() {
+  if (!selectedBundle) return;
+  const panel = $("#bundle-stage");
+  panel.setAttribute("aria-labelledby", `tab-${selectedStage}`);
+  if (selectedStage === "brief") {
+    panel.innerHTML = `
+      <p class="stage-label">Professional context</p>
+      <div class="stage-context">${escapeHtml(stripMarkdown(selectedBundle.context))}</div>
+      <p class="stage-label">Source packet</p>
+      <pre class="stage-copy">${escapeHtml(selectedBundle.sourcePacket)}</pre>
+    `;
+  } else if (selectedStage === "prompt") {
+    panel.innerHTML = `<pre class="stage-copy">${escapeHtml(selectedBundle.prompt)}</pre>`;
+  } else if (selectedStage === "output") {
+    panel.innerHTML = `<pre class="stage-copy">${escapeHtml(selectedBundle.output)}</pre>`;
+  } else {
+    panel.innerHTML = renderScorecard(selectedBundle);
+  }
+}
+
+function renderPreview() {
+  if (!selectedBundle) {
+    $("#preview-title").textContent = "Bundle data unavailable";
+    return;
+  }
+  $("#preview-title").textContent = selectedBundle.artefact;
+  $("#preview-description").textContent = selectedBundle.description;
+  $("#preview-audience").textContent = `For ${selectedBundle.audience}`;
+  $("#open-source").href = selectedBundle.sourcePath;
+  const links = selectedBundle.links.map(link => {
+    const anchor = document.createElement("a");
+    anchor.className = `tag tag-${link.kind}`;
+    anchor.href = link.path;
+    anchor.title = link.path;
+    anchor.textContent = `${link.label} · ${basename(link.path)}`;
+    return anchor;
+  });
+  $("#bundle-chain").replaceChildren(...links);
+  renderTabs();
+  renderStage();
 }
 
 function filteredItems() {
-  const q = activeQuery.trim().toLowerCase();
-  const terms = q.split(/\s+/).filter(Boolean);
+  const terms = activeQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
   return DATA.items.filter(item => {
     const kindMatch = activeKind === "all" || item.kind === activeKind;
     const haystack = `${item.title} ${item.description} ${item.section} ${item.category} ${item.path}`.toLowerCase();
@@ -257,18 +245,15 @@ function renderResults() {
   if (!items.length) {
     const empty = document.createElement("div");
     empty.className = "result-card empty";
-    empty.innerHTML = `
-      <h3>No matches</h3>
-      <p>Try a broader term such as board, tax, slide, runbook, ADR, briefing, SEO, website, or prompt.</p>
-    `;
+    empty.innerHTML = "<h3>No matches</h3><p>Try board, tax, slide, runbook, ADR, briefing, SEO, website, or prompt.</p>";
     $("#result-grid").replaceChildren(empty);
     return;
   }
 
-  $("#result-grid").replaceChildren(...items.slice(0, 24).map(item => {
-    const card = document.createElement("button");
-    card.type = "button";
+  const cards = items.slice(0, 24).map(item => {
+    const card = document.createElement("a");
     card.className = "result-card";
+    card.href = item.path;
     card.innerHTML = `
       <div class="result-meta">
         <span class="tag tag-${escapeHtml(item.kind)}">${escapeHtml(item.kind)}</span>
@@ -277,20 +262,20 @@ function renderResults() {
       <h3>${escapeHtml(item.title)}</h3>
       <p>${escapeHtml(item.description)}</p>
     `;
-    card.addEventListener("click", () => {
-      renderPreview({
-        title: item.title,
-        description: item.description,
-        source: item.path,
-        path: item.path,
-        kind: item.kind,
-        section: item.section,
-        prompt: `${item.title}\n\n${item.description}\n\nSource: ${item.path}`,
+    const bundle = bundles.find(candidate => candidate.sourcePath === item.path);
+    if (bundle) {
+      card.addEventListener("click", event => {
+        event.preventDefault();
+        selectedBundle = bundle;
+        selectedStage = "brief";
+        renderBundles();
+        renderPreview();
+        scrollPreviewWhenStacked();
       });
-      scrollPreviewWhenStacked();
-    });
+    }
     return card;
-  }));
+  });
+  $("#result-grid").replaceChildren(...cards);
 }
 
 function bindSearch() {
@@ -302,8 +287,7 @@ function bindSearch() {
     renderResults();
     setActiveNav("all");
   });
-
-  document.addEventListener("keydown", (event) => {
+  document.addEventListener("keydown", event => {
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
       event.preventDefault();
       input.focus();
@@ -311,57 +295,75 @@ function bindSearch() {
   });
 }
 
-function bindToggles() {
-  $("#theme-toggle").addEventListener("click", (event) => {
+async function copyText(text) {
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // Fall through for browsers or origins that deny the async clipboard API.
+    }
+  }
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.append(textarea);
+  textarea.select();
+  const copied = document.execCommand("copy");
+  textarea.remove();
+  return copied;
+}
+
+function bindControls() {
+  $("#theme-toggle").addEventListener("click", event => {
     const root = document.documentElement;
     const dark = root.dataset.theme !== "dark";
     root.dataset.theme = dark ? "dark" : "light";
     event.currentTarget.textContent = dark ? "Light" : "Dark";
     event.currentTarget.setAttribute("aria-pressed", String(dark));
   });
-
-  $("#density-toggle").addEventListener("click", (event) => {
+  $("#density-toggle").addEventListener("click", event => {
     const root = document.documentElement;
-    const compact = root.dataset.density !== "regular";
-    root.dataset.density = compact ? "regular" : "compact";
-    event.currentTarget.textContent = compact ? "Regular" : "Compact";
+    const regular = root.dataset.density !== "regular";
+    root.dataset.density = regular ? "regular" : "compact";
+    event.currentTarget.textContent = regular ? "Compact" : "Regular";
   });
-
-  $("#copy-prompt").addEventListener("click", async (event) => {
-    const text = $("#prompt-preview").textContent;
+  $("#copy-prompt").addEventListener("click", async event => {
+    if (!selectedBundle) return;
     const original = event.currentTarget.textContent;
     try {
-      await navigator.clipboard.writeText(text);
-      event.currentTarget.textContent = "Copied";
+      const copied = await copyText(selectedBundle.prompt);
+      if (!copied) throw new Error("Clipboard copy was rejected");
+      event.currentTarget.textContent = "Copied full prompt";
     } catch {
-      event.currentTarget.textContent = "Select text";
-      $("#prompt-preview").focus();
+      selectedStage = "prompt";
+      renderTabs();
+      renderStage();
+      $("#bundle-stage").focus();
+      event.currentTarget.textContent = "Select prompt text";
     }
-    setTimeout(() => {
-      event.currentTarget.textContent = original;
-    }, 1200);
+    window.setTimeout(() => { event.currentTarget.textContent = original; }, 1600);
   });
 }
 
 function bindNav() {
   document.querySelectorAll("[data-section-link]").forEach(link => {
-    link.addEventListener("click", (event) => {
+    link.addEventListener("click", event => {
       event.preventDefault();
       const target = link.dataset.sectionLink;
       setActiveNav(target);
-      if (target === "workflows") {
-        scrollToPanel("#workflows");
-      } else {
-        showCatalogueKind(target, { scroll: true });
-      }
+      if (target === "bundles") scrollToPanel("#bundles");
+      else showCatalogueKind(target, { scroll: true });
     });
   });
 }
 
 renderSections();
-renderWorkflows();
+renderBundles();
 renderPreview();
 renderResults();
 bindSearch();
-bindToggles();
+bindControls();
 bindNav();

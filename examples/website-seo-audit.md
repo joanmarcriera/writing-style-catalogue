@@ -1,97 +1,88 @@
 ---
-title: Website SEO Audit Example
+title: Website Audit — Specialist Consultancy
 category: Example
-description: Illustrative excerpt of a website marketing and SEO audit report with evidence labels and prioritised actions.
+description: A worked website-audit bundle that separates observed evidence, hypotheses, missing private data, and prioritised actions.
+bundle_id: website-seo-audit
+artefact: Website marketing and SEO audit
+audience: Founder, marketing lead, and web delivery team
+scenario: labelled-composite
+style_path: styles/consulting-style.md
+pattern_path: patterns/problem-impact-recommendation-next-steps.md
+prompt_path: prompt-templates/website-marketing-seo-prompts.md
+skill_path: skills/create-website-marketing-seo-audit.md
+rubric_path: rubrics/website-marketing-seo-rubric.md
 ---
 
-# Example: Website Marketing and SEO Audit
+# Website Audit — Specialist Consultancy
 
-This is an illustrative excerpt only. It uses `https://example.com` as a placeholder URL and does not claim to describe a real business.
+## Professional context
 
-## Input
+A founder needs an actionable public-site review. The auditor has page observations but no analytics, Search Console, CRM, keyword-volume, or conversion data, so the output must not manufacture performance findings.
+
+## Source packet
 
 ```text
-PRIMARY_URL: https://example.com
-BUSINESS_CONTEXT: B2B cyber security consultancy selling incident response retainers to UK mid-market organisations.
-TARGET_AUDIENCE: CIOs, CFOs, Heads of Risk, and IT Directors.
-COMMERCIAL_GOAL: Increase qualified enquiries for incident response retainers.
-GEOGRAPHY: United Kingdom.
-KNOWN_COMPETITORS: Two named consultancy sites supplied by the user.
-ACCESS_AVAILABLE: Public URL only.
-CONSTRAINTS: No analytics, Search Console, CRM, or keyword tool data supplied.
+SCENARIO: Labelled composite; example.test is not a real audited website.
+BUSINESS: UK specialist cloud-cost consultancy serving organisations with 200–2,000 staff.
+GOAL: Qualified discovery-call enquiries.
+PUBLIC PAGES INSPECTED: homepage, services, two case studies, about, contact, privacy, robots.txt, sitemap.xml.
+OBSERVED: Homepage headline says “Transform your cloud journey”; no buyer, problem, or outcome named. One primary navigation CTA says “Get in touch”. Two case studies name the work but contain no quantified result. Contact form asks for nine fields. Service pages have unique titles and one H1 each. Sitemap contains 17 URLs. Robots.txt does not block public content.
+NOT OBSERVED: pricing guidance, delivery process, qualification criteria, client quotations, author biographies on articles.
+NOT AVAILABLE: analytics, Search Console, CRM outcomes, rankings, backlinks, keyword volume, Core Web Vitals field data, form completion.
+CONSTRAINT: Two-person team can deliver no more than six material page changes per month.
 ```
 
-## Executive Summary
+## Completed prompt
 
-The website is credible but under-specific. It explains cyber security capability in broad terms, but it does not make the incident response retainer offer clear enough for a time-poor CIO or CFO to understand the commercial value quickly.
+```text
+You are a senior website marketing, technical SEO, and conversion auditor. Produce an evidence-led audit for the founder, marketing lead, and web delivery team using only the SOURCE PACKET.
 
-The highest-value next actions are:
+Do not invent traffic, rankings, conversions, search demand, backlinks, technical performance, revenue, customer opinions, competitor evidence, or CMS behaviour. Label every finding Observed, Inferred, or Not available. An inference must identify the observation that supports it and the data needed to test it. If inspected pages, business goal, access limits, or team capacity are missing, return MISSING INFORMATION rather than a prioritised plan.
 
-1. Create a dedicated incident response retainer landing page with clear scope, response times, proof, and a direct enquiry path.
-2. Rewrite the homepage hero to state the audience, problem, outcome, and primary action within the first screen.
-3. Add proof assets: response process, anonymised case examples, credentials, service levels, and client-risk scenarios.
-4. Set up measurement for retainer enquiries, form starts, form completions, CTA clicks, and phone/email clicks.
+Use British English. Structure: Executive summary; Scope and evidence; Current-state scorecard; Findings by positioning, trust, conversion, content, technical SEO, and measurement; Prioritised recommendations; 30/60/90-day plan; Delivery backlog; Missing evidence. Give every action an owner role, impact, effort, confidence, dependency, and testable acceptance criterion. Respect the limit of six material page changes per month. Do not score a private performance dimension without data. Keep the audit between 1,200 and 1,600 words. Output only the audit.
 
-## Scope and Evidence Inspected
+Before finalising, apply the Website Marketing and SEO Rubric. Evidence discipline, commercial alignment, prioritisation, acceptance criteria, and missing-information honesty are critical gates.
 
-| Evidence | Status |
-|---|---|
-| Homepage | Observed |
-| Services overview page | Observed |
-| Contact page | Observed |
-| robots.txt and sitemap | Observed |
-| Analytics | Not observed - requires analytics access |
-| Search Console | Not observed - requires Search Console access |
-| Keyword rankings and volume | Not observed - requires SEO tool or Search Console data |
-| Backlink profile | Not observed - requires backlink tool data |
+SOURCE PACKET:
+[Paste the complete source packet above here.]
+```
 
-## Current-State Scorecard
+## Output excerpt
 
-| Area | Score | Evidence |
-|---|---:|---|
-| Positioning and value proposition | 2/5 | Observed: the site describes "trusted cyber security services" but does not specify the retainer offer above the fold. |
-| Audience and search intent fit | 3/5 | Inferred: service pages address security buyers, but the content is not mapped to urgent incident-response intent. |
-| On-page SEO | 3/5 | Observed: key pages have titles and headings, but titles are generic and do not consistently include the service category. |
-| Conversion path | 2/5 | Observed: the main CTA is "Contact us", with no dedicated retainer enquiry path or qualifying context. |
-| Trust and proof | 2/5 | Observed: credentials are mentioned, but there are no case examples, response process, or quantified service levels. |
-| Measurement readiness | 1/5 | Not observed: no analytics or conversion tracking evidence supplied. |
+```text
+Executive summary
+The public site explains that cloud consulting is offered but does not yet help the target buyer recognise whether the service fits their organisation or what outcome to expect. This is an Observed messaging gap, not evidence of poor conversion: analytics and form-completion data were not available.
 
-## Prioritised Recommendations
+Priority 1 — Replace the generic homepage proposition
+Evidence: Observed headline “Transform your cloud journey” names neither the 200–2,000-person buyer nor the cloud-cost problem.
+Action: Marketing lead drafts and tests a proposition naming audience, problem, and evidence-backed outcome.
+Acceptance: one H1 names the target organisation and problem; supporting copy contains no unsupported result; CTA describes a discovery-call outcome.
 
-| Priority | Area | Issue | Evidence | Recommendation | Owner | Impact | Effort | Confidence | Dependency |
-|---:|---|---|---|---|---|---|---|---|---|
-| 1 | Conversion | Retainer offer is not clear | Observed homepage and services copy | Build a dedicated "Incident response retainer" page with scope, response time, what is included, onboarding process, proof, FAQ, and primary CTA | Marketing + SME | High | Medium | High | SME input |
-| 2 | Measurement | Cannot assess performance | Not observed analytics/search data | Configure events for CTA clicks, form starts, form completions, email clicks, phone clicks, and qualified enquiry tags | Analytics | High | Low | High | Analytics access |
-| 3 | Messaging | Homepage hero is generic | Observed above-the-fold copy | Rewrite hero to name the audience, risk, outcome, and action: "Incident response support for UK organisations that need expert help before, during, and after a breach" | Marketing | Medium | Low | Medium | Brand review |
-| 4 | Content | Missing proof assets | Observed absence of case/process proof | Add response process, anonymised scenarios, service levels, credentials, and risk-led CFO/CIO FAQ | Content + SME | High | Medium | Medium | SME review |
-| 5 | Technical SEO | Metadata is generic | Observed page titles | Rewrite page titles and meta descriptions around service categories and UK buyer intent | Marketing + web | Medium | Low | Medium | Page map |
+Priority 2 — Reduce untested form friction
+Evidence: Observed nine-field contact form. Inference: field count may discourage enquiries; no completion data is available.
+Acceptance: instrument start/completion events before changing fields, then compare a six-field variant for four weeks.
+```
 
-## 30/60/90-Day Plan
+## Review scorecard
 
-### Days 1-30
+| Criterion | Score | Evidence | Gate |
+|---|---:|---|---|
+| Evidence discipline | 5 | Observations, inferences, and unavailable data remain distinct. | Pass |
+| Commercial alignment | 5 | Recommendations serve qualified discovery calls. | Pass |
+| Prioritisation | 5 | Work respects the six-change monthly capacity. | Pass |
+| Technical integrity | 4 | Public technical facts are bounded to inspected artefacts. | Human check |
+| Actionability | 5 | Owners and acceptance criteria define completion. | Pass |
 
-- Configure measurement for enquiry events and CTA clicks.
-- Rewrite homepage hero, service page title tags, and main CTAs.
-- Draft the incident response retainer landing page brief.
-- Gather proof assets: credentials, process, service levels, anonymised examples.
+## Human review before use
 
-### Days 31-60
+- Reinspect the live pages and capture dated evidence before issuing a client report.
+- Connect analytics, Search Console, CRM, and performance data before making outcome claims.
+- Validate accessibility, legal, brand, and implementation constraints with responsible owners.
 
-- Publish the incident response retainer landing page.
-- Add internal links from homepage, services, cyber incident content, and footer.
-- Add FAQ content addressing response time, retainer scope, pricing approach, escalation, and confidentiality.
-- Review Search Console coverage and queries once data is available.
+## Reuse this bundle
 
-### Days 61-90
-
-- Produce supporting content: "What to do in the first hour of a cyber incident", "Incident response retainer checklist", and "CFO guide to breach response costs".
-- Test CTA wording and form length once baseline conversion data exists.
-- Build monthly reporting around qualified enquiries, source/medium, landing page, and assisted conversions.
-
-## Missing Information
-
-- Organic search queries and rankings: not observed.
-- Conversion rates: not observed.
-- Lead quality and sales outcomes: not observed.
-- Backlink profile: not observed.
-- Actual Core Web Vitals field data: not observed.
+- [Consulting Style](../styles/consulting-style.md)
+- [Problem / Impact / Recommendation / Next Steps Pattern](../patterns/problem-impact-recommendation-next-steps.md)
+- [Website Marketing and SEO Prompts](../prompt-templates/website-marketing-seo-prompts.md)
+- [Create Website Marketing and SEO Audit Skill](../skills/create-website-marketing-seo-audit.md)
+- [Website Marketing and SEO Rubric](../rubrics/website-marketing-seo-rubric.md)

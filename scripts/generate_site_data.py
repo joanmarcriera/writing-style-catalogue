@@ -5,6 +5,8 @@ import json
 import re
 from pathlib import Path
 
+from bundle_contract import load_bundles
+
 
 BASE_PATH = Path(__file__).parent.parent
 OUTPUT_PATH = BASE_PATH / "assets" / "catalogue-data.js"
@@ -103,6 +105,7 @@ def main():
         "generatedFrom": "scripts/generate_site_data.py",
         "sections": sections,
         "items": items,
+        "bundles": load_bundles(BASE_PATH),
     }
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)

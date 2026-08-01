@@ -123,17 +123,18 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 
 ## Examples
 
-- [Architecture Decision Record Example](examples/architecture-decision-record.md)
-- [BLUF Email Example](examples/bluf-email.md)
-- [Board Paper Example (Condensed)](examples/board-paper.md) — A condensed board paper showing decision request, options analysis, risks, financials, and resolution wording.
-- [Executive Update Example](examples/executive-update.md)
-- [Incident Report Example](examples/incident-report.md)
-- [Minto Recommendation Example](examples/minto-recommendation.md)
-- [Slide Deck Outline Example](examples/slide-deck-outline.md) — A slide-by-slide executive deck outline with message titles, visual suggestions, and speaker notes.
-- [Smart Brevity Example](examples/smart-brevity-update.md)
-- [Tax Note Example](examples/tax-note.md) — An illustrative tax technical note showing question, facts, assumptions, analysis, confidence, caveats, and next steps.
-- [Technical Runbook Example](examples/technical-runbook.md) — A practical operational runbook with detection, triage, response, escalation, verification, and post-incident actions.
-- [Website SEO Audit Example](examples/website-seo-audit.md) — Illustrative excerpt of a website marketing and SEO audit report with evidence labels and prioritised actions.
+- [Architecture Decision Record — Primary Data Store](examples/architecture-decision-record.md) — A worked ADR bundle that traces a database decision from supplied constraints to a reviewable record.
+- [BLUF Approval Email — Supplier Renewal](examples/bluf-email.md) — A worked executive email bundle with a precise approval request, deadline, commercial facts, and fallback.
+- [Board Paper — Identity Platform Decision](examples/board-paper.md) — A worked governance bundle with comparable options, financial assumptions, risks, and resolution wording.
+- [Executive Update — Customer Migration Programme](examples/executive-update.md) — A worked leadership update that separates delivery evidence, forecast, risks, and the decision needed.
+- [Incident Report — Checkout API Degradation](examples/incident-report.md) — A worked incident-review bundle with an evidence-bounded timeline, causal analysis, and testable actions.
+- [LinkedIn Post — Professional Prompt Bundles](examples/linkedin-catalogue-launch.md) — A real public-project bundle showing how verified repository facts become an understated launch post.
+- [Minto Recommendation — Service Desk Consolidation](examples/minto-recommendation.md) — A worked recommendation bundle that leads with one answer and supports it with mutually exclusive reasons.
+- [Slide Deck Outline — Cloud Exit Decision](examples/slide-deck-outline.md) — A worked executive-deck bundle with message titles, visual evidence, speaker caveats, and a precise ask.
+- [Smart Brevity Update — Release Readiness](examples/smart-brevity-update.md) — A worked short update that makes status, consequence, owner, and next checkpoint visible in under a minute.
+- [Tax Note — Imported SaaS and UK Reverse Charge](examples/tax-note.md) — A worked tax-analysis bundle that separates facts, supplied authority, assumptions, conclusion, and adviser checks.
+- [Technical Runbook — API Connection Pool Exhaustion](examples/technical-runbook.md) — A worked operational bundle with bounded diagnostics, approval gates, rollback, escalation, and measurable recovery.
+- [Website Audit — Specialist Consultancy](examples/website-seo-audit.md) — A worked website-audit bundle that separates observed evidence, hypotheses, missing private data, and prioritised actions.
 
 ## Checklists
 
@@ -152,7 +153,10 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 
 - [Rubrics](rubrics/README.md) — Scoring guides for judging whether an LLM-generated or human-written output is ready for professional use.
 - [Board Paper Rubric](rubrics/board-paper-rubric.md) — Scores whether a board paper is decision-ready, balanced, and defensible as a governance record.
+- [Decision Record Rubric](rubrics/decision-record-rubric.md) — Scores whether a decision record preserves the context, alternatives, rationale, consequences, and revisit conditions future readers need.
 - [Executive Communication Rubric](rubrics/executive-communication-rubric.md) — Scores whether an executive update, briefing, or approval request is clear enough for a CIO, CFO, CEO, or board sponsor.
+- [Incident Report Rubric](rubrics/incident-report-rubric.md) — Scores whether an incident report is evidence-led, blameless, operationally useful, and accountable for prevention work.
+- [LinkedIn Post Rubric](rubrics/linkedin-post-rubric.md) — Scores whether a professional LinkedIn post is specific, credible, useful, readable on mobile, and ready to carry the author's name.
 - [LLM Output Quality Rubric](rubrics/llm-output-quality-rubric.md) — Scores whether a generated draft is safe, useful, and ready for human editing.
 - [Slide Deck Rubric](rubrics/slide-deck-rubric.md) — Scores whether a slide deck outline has a strong narrative, useful speaker notes, and decision-ready content.
 - [Tax Note Rubric](rubrics/tax-note-rubric.md) — Scores whether a tax technical note is structured, fact-led, appropriately caveated, and ready for qualified adviser review.
@@ -165,6 +169,7 @@ Run `python3 scripts/generate_index.py` after adding new files to update this in
 - [Glossary](reference/glossary.md)
 - [Good vs. Bad Prompts](reference/good-vs-bad-prompts.md)
 - [LLM Prompting Principles](reference/llm-prompting-principles.md)
+- [Professional Prompt Bundle Standard](reference/professional-prompt-bundle-standard.md) — The source, prompt, output, and review contract used by every worked example in the catalogue.
 - [Recommended Resources](reference/recommended-resources.md)
 - [Structure Patterns](reference/structure-patterns.md)
 - [Tone Spectrum](reference/tone-spectrum.md)

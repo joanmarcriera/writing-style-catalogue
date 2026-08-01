@@ -1,125 +1,94 @@
 ---
-title: Technical Runbook Example
+title: Technical Runbook — API Connection Pool Exhaustion
 category: Example
-description: A practical operational runbook with detection, triage, response, escalation, verification, and post-incident actions.
+description: A worked operational bundle with bounded diagnostics, approval gates, rollback, escalation, and measurable recovery.
+bundle_id: technical-runbook
+artefact: Production incident runbook
+audience: Authorised on-call engineers and service owners
+scenario: labelled-composite
+style_path: styles/technical-documentation.md
+pattern_path: patterns/objective-scope-procedure-exceptions.md
+prompt_path: prompt-templates/technical-documentation-prompts.md
+skill_path: skills/create-runbook.md
+rubric_path: rubrics/technical-documentation-rubric.md
 ---
 
-# Technical Runbook Example
+# Technical Runbook — API Connection Pool Exhaustion
 
-## Runbook: API Connection Pool Exhaustion
+## Professional context
 
-**Severity:** P2 unless customer-facing outage exceeds 15 minutes
-**Owner:** Platform Operations
-**Last tested:** 14 May 2026
-**Systems:** `orders-api`, managed PostgreSQL database, application load balancer
+An authorised on-call engineer needs safe triage and recovery guidance. Commands are illustrative placeholders and the runbook must stop operators from running an untested restart or rollback blindly.
 
-## 1. Detection
+## Source packet
 
-Use this runbook when any of the following triggers occur:
-
-- Alert: `orders-api-db-pool-utilisation > 90% for 5 minutes`
-- Application log pattern: `Timeout waiting for connection from pool`
-- API error rate above 5% with database timeout errors
-- Customer support reports intermittent checkout failures
-
-## 2. Initial Triage (first 5 minutes)
-
-1. Confirm the alert is current, not a delayed notification.
-
-```bash
-kubectl -n production get deploy orders-api
-kubectl -n production get pods -l app=orders-api
+```text
+SCENARIO: Labelled composite; commands and identifiers are illustrative and must be tested locally.
+SERVICE: orders-api in Kubernetes namespace production.
+TRIGGER: pool utilisation above 90% for five minutes plus “Timeout waiting for connection from pool”.
+READ-ONLY COMMANDS APPROVED: kubectl -n production get deploy orders-api; kubectl -n production get pods -l app=orders-api; kubectl -n production rollout history deploy/orders-api.
+BASELINE: API error rate below 1%; pool utilisation below 70%.
+CHANGE GATE: Restart or rollback requires active incident ticket, incident commander approval, confirmed rollback target, and operator authorisation.
+RECOVERY OPTIONS: pause order-reconciliation CronJob; restart deployment; roll back latest deployment. Exact write commands must be taken from the locally tested command register, not generated.
+ESCALATE: checkout failures exceed 15 minutes; database CPU above 85%; rollback fails; cause unknown after 20 minutes.
+RESOLUTION: baselines hold for ten minutes; synthetic checkout passes; paused jobs restored or explicitly tracked.
+OWNER: Platform Operations. LAST TESTED: not supplied.
 ```
 
-2. Check current API error rate in the monitoring dashboard.
+## Completed prompt
 
-Expected baseline: error rate below 1%.
+```text
+You are a senior site-reliability engineer writing a runbook for authorised on-call staff. Use only the SOURCE PACKET to document connection-pool exhaustion for orders-api.
 
-3. Check whether a deployment occurred in the last 60 minutes.
+Do not invent commands, dashboards, database queries, contacts, rollback revisions, timings, permissions, or success evidence. Include the three approved read-only commands verbatim. For any state-changing step, describe the gate and write “use the locally tested command register”; never generate a kubectl patch, restart, or rollback command. If authorisation, change gate, escalation path, recovery threshold, or last-tested evidence is missing, return MISSING INFORMATION for that part and do not present the runbook as production-ready.
 
-```bash
-kubectl -n production rollout history deploy/orders-api
+Use British English and structure: Purpose; Scope and authority; Detection; First five minutes; Decision tree; State-changing recovery gates; Escalation; Resolution verification; Restoration; Post-incident actions; Ownership and test record. Make stop conditions explicit. State at the top that LAST TESTED is missing and the document cannot be approved for production until a tabletop or staging test is recorded. Keep it between 800 and 1,050 words. Output only the runbook.
+
+Before finalising, apply the Technical Documentation Rubric for accuracy, prerequisites, safety, decision branches, verification, rollback, escalation, and maintainability. Treat an unverified command as a critical failure.
+
+SOURCE PACKET:
+[Paste the complete source packet above here.]
 ```
 
-4. Check database connection count and active queries using the approved database console.
+## Output excerpt
 
-If active connections are above 90% and most are from `orders-api`, continue to Section 3.
+```text
+Approval status: NOT PRODUCTION-READY — no last-tested date is supplied.
 
-If active connections are normal, stop and use the generic API degradation runbook.
+First five minutes
+1. Confirm the alert is current and open or join the active incident ticket.
+2. Run only the approved read-only checks:
+   kubectl -n production get deploy orders-api
+   kubectl -n production get pods -l app=orders-api
+   kubectl -n production rollout history deploy/orders-api
+3. Confirm both the pool alert and timeout log pattern. If either is absent, stop and use the generic API-degradation runbook.
 
-## 3. Response Steps
+State-changing recovery
+Do not restart, roll back, or pause a job unless the incident commander approves the change, the operator is authorised, and the locally tested command register identifies the exact command and rollback target.
 
-1. Pause non-critical scheduled jobs that call `orders-api`.
-
-```bash
-kubectl -n production patch cronjob order-reconciliation -p '{"spec":{"suspend":true}}'
+Resolution requires ten continuous minutes below 1% API errors and 70% pool utilisation, a passing synthetic checkout, and restoration or explicit tracking of every paused job.
 ```
 
-Record the change in the incident ticket. Do not leave the cron job suspended after resolution.
+## Review scorecard
 
-2. Restart one `orders-api` pod to clear leaked connections.
+| Criterion | Score | Evidence | Gate |
+|---|---:|---|---|
+| Accuracy | 4 | Only approved read-only commands are reproduced. | Human check |
+| Safety | 5 | All state changes require authority and a tested command register. | Pass |
+| Decision branches | 5 | Stop, continue, escalate, and resolve conditions are measurable. | Pass |
+| Verification | 5 | Recovery requires sustained metrics and a synthetic transaction. | Pass |
+| Maintainability | 3 | Ownership exists, but last-tested evidence is missing. | Revise |
 
-```bash
-kubectl -n production rollout restart deploy/orders-api
-```
+## Human review before use
 
-3. Wait 3 minutes, then check error rate and connection count.
+- Platform Operations must replace illustrative identifiers with locally verified values.
+- An authorised engineer must test every command in staging and record the date and evidence.
+- Security and change-management owners must approve permissions and state-changing gates.
+- The runbook cannot be marked production-ready while the maintainability gate remains `Revise`.
 
-If error rate falls below 1% and pool utilisation falls below 70%, go to Section 5.
+## Reuse this bundle
 
-If error rate remains above 5%, continue to Step 4.
-
-4. Roll back the most recent deployment if it occurred within the last 60 minutes and correlates with the alert.
-
-```bash
-kubectl -n production rollout undo deploy/orders-api
-```
-
-5. If rollback is not appropriate or does not recover service within 10 minutes, escalate.
-
-## 4. Escalation
-
-Escalate immediately if:
-
-- customer-facing checkout failure exceeds 15 minutes;
-- database CPU is above 85% as well as connection exhaustion;
-- rollback fails;
-- you cannot confirm the cause within 20 minutes.
-
-Escalation path:
-
-| Role | Contact method | Information to provide |
-|---|---|---|
-| Platform Operations Lead | PagerDuty: `platform-lead` | Alert time, current error rate, actions taken |
-| Database Administrator | PagerDuty: `database-on-call` | Connection count, active query summary, CPU |
-| Incident Manager | Teams channel: `#incident-command` | Customer impact, severity recommendation |
-
-## 5. Resolution Verification
-
-Declare resolved only when all conditions hold for 10 consecutive minutes:
-
-- API error rate below 1%.
-- Database connection pool utilisation below 70%.
-- No new `Timeout waiting for connection from pool` errors.
-- Checkout synthetic monitor passing.
-- Paused scheduled jobs either re-enabled or tracked in the incident ticket.
-
-## 6. Post-Incident Actions
-
-1. Update the incident ticket with timeline, commands run, and current service state.
-2. Re-enable any paused scheduled jobs.
-
-```bash
-kubectl -n production patch cronjob order-reconciliation -p '{"spec":{"suspend":false}}'
-```
-3. If severity was P1 or P2, schedule a post-incident review within 2 working days.
-4. Add any missing alert, dashboard, or command improvements to the platform backlog.
-5. If a deployment caused the issue, link the incident to the release ticket and require a regression test before redeployment.
-
-## Why this example works
-
-- The trigger is specific.
-- The responder has exact commands where appropriate.
-- Decision branches tell the responder when to continue, roll back, or escalate.
-- Resolution criteria are measurable.
-- Post-incident actions preserve learning and accountability.
+- [Technical Documentation Style](../styles/technical-documentation.md)
+- [Objective / Scope / Procedure / Exceptions Pattern](../patterns/objective-scope-procedure-exceptions.md)
+- [Technical Documentation Prompts](../prompt-templates/technical-documentation-prompts.md)
+- [Create Runbook Skill](../skills/create-runbook.md)
+- [Technical Documentation Rubric](../rubrics/technical-documentation-rubric.md)

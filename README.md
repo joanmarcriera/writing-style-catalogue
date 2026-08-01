@@ -2,7 +2,7 @@
 
 Live site: **[p.riera.co.uk](https://p.riera.co.uk/)**
 
-Use this catalogue when you need to write a professional document with an LLM and want the right style, prompt, skill, and review checklist quickly.
+Use this catalogue when you need to write a professional document with an LLM and want the evidence boundary, complete prompt, worked output, and review gate in one place.
 
 How it works:
 
@@ -23,10 +23,10 @@ It is a static GitHub Pages site built from [index.html](index.html), [assets/si
 The intended user flow is simple:
 
 1. **Choose a workflow** — start with the artefact you need, not a blank LLM prompt.
-2. **Review the bundle** — each workflow combines a style, structure pattern, prompt template, skill, and rubric.
-3. **Copy the prompt** — paste it into your LLM and replace the placeholders with real context.
-4. **Follow the skill** — use the linked skill file when the output needs a reliable production process.
-5. **Review before sending** — use the rubric or checklist to catch missing facts, weak structure, invented claims, or tone problems.
+2. **Inspect the worked bundle** — see the source packet, completed prompt, output excerpt, and review score together.
+3. **Copy the complete prompt** — replace the example source packet with your verified facts.
+4. **Follow the linked production skill** — use it when the artefact requires a repeatable delivery process.
+5. **Apply the review gate** — do not release the draft while a critical rubric criterion fails or a required human check is unresolved.
 
 ![Desktop preview of the Writing Catalogue GitHub Pages site](assets/screenshots/writing-catalogue-desktop.png)
 
@@ -164,7 +164,7 @@ writing-style-catalogue/
 ├── meta-prompts/         prompts for improving prompts and drafts
 ├── skills/              26 document-generation processes
 ├── personal-workflows/   9 end-to-end worked workflows
-├── examples/            11 realistic output samples
+├── examples/            12 source → prompt → output → review bundles
 ├── checklists/           quick quality review checklists
 ├── rubrics/              scoring guides for professional review
 ├── reference/            reference guides (tone, structure, prompting)
@@ -198,10 +198,11 @@ writing-style-catalogue/
 1. **New style** — Copy any file from `styles/`, rename it, complete all 10 sections and the YAML frontmatter
 2. **New prompt template** — Copy from `prompt-templates/`, complete all 6 sections including example input and output
 3. **New skill** — Copy from `skills/`, complete all 8 sections
-4. **New pattern, meta-prompt, or rubric** — Keep it short, operational, and copy-paste ready
-5. **Regenerate the Pages data** — Run `python3 scripts/generate_site_data.py` from the repo root
-6. **Update the index** — Run `python3 scripts/generate_index.py` from the repo root
-7. **Validate links** — Run `python3 scripts/validate_links.py` from the repo root
+4. **New worked example** — Follow [Professional Prompt Bundle Standard](reference/professional-prompt-bundle-standard.md)
+5. **New pattern, meta-prompt, or rubric** — Keep it short, operational, and copy-paste ready
+6. **Validate bundles** — Run `python3 scripts/validate_bundles.py` from the repo root
+7. **Regenerate the Pages data and index** — Run both generator scripts from the repo root
+8. **Validate links** — Run `python3 scripts/validate_links.py` from the repo root
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 

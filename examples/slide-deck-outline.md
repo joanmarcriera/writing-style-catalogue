@@ -1,147 +1,90 @@
 ---
-title: Slide Deck Outline Example
+title: Slide Deck Outline — Cloud Exit Decision
 category: Example
-description: A slide-by-slide executive deck outline with message titles, visual suggestions, and speaker notes.
+description: A worked executive-deck bundle with message titles, visual evidence, speaker caveats, and a precise ask.
+bundle_id: slide-deck-outline
+artefact: Executive slide deck outline
+audience: Investment committee deciding whether to fund discovery
+scenario: labelled-composite
+style_path: styles/consulting-style.md
+pattern_path: patterns/problem-impact-recommendation-next-steps.md
+prompt_path: prompt-templates/presentation-prompts.md
+skill_path: skills/create-slide-deck.md
+rubric_path: rubrics/slide-deck-rubric.md
 ---
 
-# Slide Deck Outline Example
+# Slide Deck Outline — Cloud Exit Decision
 
-**Presentation:** Cloud Migration Business Case
-**Audience:** Board of Directors
-**Purpose:** Secure approval for Phase 1 funding
-**Duration:** 15 minutes plus discussion
-**Tone:** Formal, clear, non-technical
+## Professional context
 
-## Deck summary
+An investment committee needs a seven-slide decision narrative. The ask is permission to fund discovery, not approval of a migration programme that has not yet been costed.
 
-Narrative arc: current infrastructure risk -> options assessed -> financial case -> risk mitigation -> decision required.
+## Source packet
 
-## Slide 1: We need to decide before the lease deadline controls us
+```text
+SCENARIO: Labelled composite.
+DECISION: Approve £95,000 and eight weeks for discovery of data-centre exit options.
+DRIVER: Primary co-location lease ends 30 September 2028; renewal terms are available only 12 months before expiry.
+CURRENT COST: £1.26m per year excluding internal staff.
+KNOWN CONDITION: 74 applications; 19 have unsupported operating-system components; dependency mapping incomplete for 28 applications.
+OPTIONS FOR DISCOVERY: renew/modernise in place; hybrid migration; cloud-first migration.
+NOT YET KNOWN: validated five-year cost, migration schedule, vendor selection, application-by-application disposition.
+DISCOVERY OUTPUTS: dependency map, option cost model, delivery risk assessment, sourcing recommendation, decision paper.
+SUCCESS GATE: committee receives an assured options case by 15 December 2026.
+```
 
-**Slide copy**
+## Completed prompt
 
-- Primary data centre lease expires in 36 months
-- Renewal would commit £3.6M over five years
-- Current platform cannot scale for planned growth
+```text
+You are an executive presentation strategist. Create a seven-slide outline for an investment committee deciding whether to approve £95,000 and eight weeks of discovery for data-centre exit options.
 
-**Visual**
+Use only the SOURCE PACKET. Do not invent savings, target architecture, vendor preference, migration duration, regulatory drivers, application disposition, or a preferred exit option. Do not turn the lease expiry into false immediate urgency. If the decision, amount, timebox, known estate facts, unknowns, or discovery outputs are missing, return MISSING INFORMATION rather than a deck.
 
-Timeline showing lease expiry, hardware support deadlines, and decision window.
+For each slide provide: a message title that states the conclusion; two to four evidence bullets; a visual specification using only supplied data; and speaker notes that preserve caveats. Use this narrative: decision and timing; current estate; why evidence is insufficient; three options to investigate; discovery scope; governance and success gate; decision requested. Use British English. Keep slide text sparse and speaker notes substantive. The final slide must ask for discovery funding only. Output only the slide-by-slide outline.
 
-**Speaker notes**
+Before finalising, apply the Slide Deck Rubric for decision clarity, narrative, evidence, visual usefulness, speaker notes, restraint, and final ask. Any invented business case is a failure.
 
-The decision is time-bound. If we wait until the lease negotiation window, we lose negotiating leverage and compress the migration timetable. The question today is not whether cloud is interesting; it is whether we approve the controlled first phase so the organisation has a viable route before the lease deadline.
+SOURCE PACKET:
+[Paste the complete source packet above here.]
+```
 
-## Slide 2: The technical assessment is complete
+## Output excerpt
 
-**Slide copy**
+```text
+Slide 1 — We need evidence before the 2028 lease deadline becomes a constraint
+• Decision today: £95,000 for an eight-week discovery.
+• The lease ends 30 September 2028; renewal terms arrive only 12 months before expiry.
+Visual: horizontal timeline from discovery to lease expiry, with no invented programme dates.
+Speaker note: This is not a request to approve migration or select cloud. It buys the evidence needed for that later decision.
 
-- 147 workloads assessed
-- 112 ready to migrate with minimal change
-- 23 need moderate refactoring
-- 12 should be decommissioned
+Slide 3 — The current estate is not understood well enough to price an exit
+• 74 applications.
+• 19 contain unsupported operating-system components.
+• Dependency mapping is incomplete for 28 applications.
+Visual: three-number estate diagnostic, explicitly labelled as current known facts.
+```
 
-**Visual**
+## Review scorecard
 
-Stacked bar showing workload categories.
+| Criterion | Score | Evidence | Gate |
+|---|---:|---|---|
+| Decision clarity | 5 | Funding, duration, and discovery scope are explicit. | Pass |
+| Narrative | 5 | Each slide advances the evidence-to-decision story. | Pass |
+| Evidence | 5 | Visuals use only supplied dates, counts, and cost. | Pass |
+| Speaker notes | 5 | Caveats prevent discovery from becoming programme approval. | Pass |
+| Final ask | 5 | The ask is bounded to £95,000 and eight weeks. | Pass |
 
-**Speaker notes**
+## Human review before use
 
-The programme is not starting from speculation. The infrastructure team has completed the workload assessment. Most workloads can move with limited change, and the 12 legacy systems identified for decommissioning are already outside strategic target architecture.
+- Finance must verify the current cost and discovery budget.
+- Estate owners must reconcile application and dependency counts.
+- The committee secretary must confirm decision wording and meeting time.
+- A designer must check legibility and accessibility in the rendered deck.
 
-## Slide 3: Three options were assessed
+## Reuse this bundle
 
-**Slide copy**
-
-- Do nothing: renew leases and refresh hardware
-- Hybrid: migrate selected workloads, retain one data centre
-- Full migration: move eligible workloads and exit leases
-
-**Visual**
-
-Three-column comparison table with cost, risk, and strategic fit.
-
-**Speaker notes**
-
-The board paper sets out the options in detail. The key point is that do nothing is not free; it is an active choice to renew cost and risk. Hybrid reduces some risk but preserves operational complexity. Full migration is the only option that resolves the lease issue and modernises the estate.
-
-## Slide 4: The financial case is positive even under downside assumptions
-
-**Slide copy**
-
-- Phase 1 funding request: £600k
-- Full programme estimate: £3.2M
-- Annual savings from Year 3: £1.8M
-- Payback: 26 months
-
-**Visual**
-
-Five-year cumulative cash-flow chart with base case and downside case.
-
-**Speaker notes**
-
-The case does not depend on optimistic assumptions. The base case pays back in 26 months. Under a downside scenario where benefits are 20% lower and costs are 20% higher, the programme remains positive over five years, although payback extends.
-
-## Slide 5: The main risks are known and manageable
-
-**Slide copy**
-
-- Data continuity: phased migration and rollback
-- Capability gap: training and managed support
-- Regulatory assurance: compliance review before scale
-
-**Visual**
-
-Risk matrix with the three material risks and mitigation status.
-
-**Speaker notes**
-
-The most material risk is data continuity during migration. The mitigation is a phased approach with rollback gates. The second risk is capability; we address it through training and a managed service during transition. Regulatory assurance is built into the phase gates rather than treated as a final check.
-
-## Slide 6: Phase 1 creates the evidence for the full programme
-
-**Slide copy**
-
-- Pilot non-critical workloads
-- Validate migration tooling
-- Confirm operating model and support process
-- Return with full programme approval pack
-
-**Visual**
-
-Four-step phase diagram.
-
-**Speaker notes**
-
-Phase 1 is designed to prove delivery, not to commit the company irreversibly to full migration. It lets the team validate tooling, support, controls, and costs on lower-risk workloads before the board approves the full programme.
-
-## Slide 7: The decision requested today is Phase 1 approval
-
-**Slide copy**
-
-- Approve £600k Phase 1 budget
-- Authorise procurement of delivery partner
-- Require September board update
-
-**Visual**
-
-Decision card with the proposed resolution.
-
-**Speaker notes**
-
-The requested decision is specific: approve Phase 1 funding, authorise procurement, and require the team to return in September with evidence and a full programme approval pack. This preserves board control while keeping the timetable viable.
-
-## Appendix slides
-
-- Detailed financial model
-- Workload assessment by business unit
-- Risk register
-- Regulatory compliance checklist
-
-## Why this example works
-
-- Slide titles are message statements.
-- Each slide has one idea.
-- Detail sits in speaker notes.
-- The final main slide states the decision required.
-- Appendix slides support discussion without distracting from the core narrative.
+- [Consulting Style](../styles/consulting-style.md)
+- [Problem / Impact / Recommendation / Next Steps Pattern](../patterns/problem-impact-recommendation-next-steps.md)
+- [Presentation Prompts](../prompt-templates/presentation-prompts.md)
+- [Create Slide Deck Skill](../skills/create-slide-deck.md)
+- [Slide Deck Rubric](../rubrics/slide-deck-rubric.md)

@@ -1,134 +1,87 @@
 ---
-title: Board Paper Example (Condensed)
+title: Board Paper — Identity Platform Decision
 category: Example
-description: A condensed board paper showing decision request, options analysis, risks, financials, and resolution wording.
+description: A worked governance bundle with comparable options, financial assumptions, risks, and resolution wording.
+bundle_id: board-paper
+artefact: Board decision paper
+audience: Board directors and non-executive directors
+scenario: labelled-composite
+style_path: styles/board-paper-style.md
+pattern_path: patterns/context-analysis-options-recommendation.md
+prompt_path: prompt-templates/board-paper-prompts.md
+skill_path: skills/create-board-pack.md
+rubric_path: rubrics/board-paper-rubric.md
 ---
 
-# Board Paper Example (Condensed)
+# Board Paper — Identity Platform Decision
 
-**Company:** Northstar Software Group Ltd
-**Meeting:** Board of Directors, 18 June 2026
-**Paper:** BP-2026-07
-**Subject:** Identity and Access Management Platform Renewal or Replacement
-**Author:** Chief Information Officer
-**Status:** For decision
-**Classification:** Confidential
+## Professional context
 
-## 1. Executive Summary
+A board must select one of three identity-platform options. The paper must compare options on the same basis and retain the uncertainty in cost estimates and delivery capacity.
 
-The Company's identity and access management (IAM) platform contract expires on 31 December 2026. The Board is asked to approve Option B: migrate to a cloud-native IAM platform over 12 months at a five-year total cost of £620,000. This option resolves two audit findings, satisfies enterprise client security requirements due from January 2027, and costs £220,000 less than renewing the current platform with custom remediation.
+## Source packet
 
-Three options have been assessed:
+```text
+SCENARIO: Labelled composite; all organisations, figures, and findings are fictional.
+DECISION: Select an identity-platform option and authorise the associated five-year envelope.
+DEADLINE: Current contract ends 31 December 2027.
+OPTION A — RENEW: five-year cost £840,000; lowest transition risk; two control gaps require separate remediation.
+OPTION B — MANAGED CLOUD: five-year cost £620,000; migration estimate includes £260,000 one-off and £72,000 annual licence; addresses both control gaps; 12-month migration; delivery confidence medium.
+OPTION C — INTERNAL BUILD: five-year cost £1,420,000; 18-month estimate; engineering capacity not allocated; delivery confidence low.
+ASSUMPTIONS: Costs exclude VAT and internal staff time. Option B estimate is based on an indicative quote, not a final tender.
+TOP RISKS FOR B: migration delay; access-data integrity; user disruption; vendor dependency.
+RECOMMENDATION: Option B, subject to competitive procurement, an independent migration assurance plan, and quarterly board reporting.
+FUNDING: Technology capital reserve has £700,000 uncommitted.
+```
 
-| Option | Description | Five-year cost | Assessment |
-|---|---|---:|---|
-| A | Renew current platform and customise controls | £840,000 | Lowest change risk, but does not fully resolve audit issues |
-| B | Migrate to cloud-native IAM platform | £620,000 | Recommended: best balance of compliance, cost, and delivery risk |
-| C | Build internal IAM capability | £1.4M | Rejected: cost and delivery risk are disproportionate |
+## Completed prompt
 
-**The Board is asked to approve Option B and authorise a five-year budget of £620,000, funded from the IT capital reserve and operating technology budget.**
+```text
+You are a board-governance writer. Prepare a condensed but decision-ready board paper for directors and non-executive directors on the identity-platform decision in the SOURCE PACKET.
 
-## 2. Background
+Use only supplied facts. Do not invent legal requirements, audit clauses, vendor capabilities, savings, implementation dates, staffing, or certainty. Label assumptions and unresolved procurement evidence. If the decision, comparable costs, recommendation, funding source, or material risks are absent or contradictory, stop and return MISSING INFORMATION rather than producing a paper.
 
-The current IAM platform was implemented in 2017 and has received no major functional upgrade since 2021. It supports single sign-on, multi-factor authentication, and privileged access workflows for 1,850 staff and 340 applications.
+Use: Executive Summary; Decision Required; Background; Comparable Options Table; Recommendation and Rationale; Financial Analysis and Assumptions; Governance and Risk; Implementation Gates; Proposed Resolution. Present all three options using identical criteria before recommending one. State that Option B pricing is indicative and excludes VAT and internal staff time. Give each risk a consequence, control, owner role, and review gate, but do not invent named individuals. Use formal, neutral British English and no more than 1,400 words. Output only the board paper.
 
-The December 2025 external audit identified two control weaknesses:
+Before finalising, apply the Board Paper Rubric. Decision clarity, options analysis, financial analysis, risk, and evidence separation are critical gates. Preserve the conditions attached to the recommendation in the proposed resolution.
 
-- access certification reviews are manual and not consistently evidenced;
-- anomalous access activity is not detected in real time.
+SOURCE PACKET:
+[Paste the complete source packet above here.]
+```
 
-Three enterprise clients, representing 34% of annual recurring revenue, have updated their supplier security questionnaires to require automated access certification and conditional access controls from 1 January 2027. Failure to meet these requirements would create renewal risk during the 2027 client review cycle.
+## Output excerpt
 
-## 3. Options Analysis
+```text
+Executive Summary
+The Board is asked to select an identity-platform option and authorise the associated five-year expenditure envelope. Three options were assessed on cost, control coverage, delivery confidence, and transition risk.
 
-### Option A: Renew current platform
+Option B, a managed cloud platform, is recommended at an estimated five-year cost of £620,000. This is an indicative estimate excluding VAT and internal staff time, not a final tender price. It addresses both identified control gaps, but carries medium delivery confidence and material migration risks.
 
-The incumbent supplier has offered a 24-month renewal at £168,000 per annum. The audit findings would require bespoke development estimated at £95,000.
+Proposed resolution
+The Board approves Option B and authorises expenditure up to £620,000 over five years, subject to competitive procurement confirming value within that envelope, approval of an independent migration-assurance plan, and quarterly progress and risk reporting to the Board.
+```
 
-**Advantages**
+## Review scorecard
 
-- No migration required.
-- Existing administrators already know the platform.
-- Lowest short-term operational disruption.
+| Criterion | Score | Evidence | Gate |
+|---|---:|---|---|
+| Decision required | 5 | The ask and conditional resolution are explicit. | Pass |
+| Options analysis | 4 | Three genuine options use consistent criteria. | Pass |
+| Financial analysis | 4 | Comparable costs and exclusions are visible. | Human check |
+| Risk | 4 | Named risks and governance conditions survive the summary. | Pass |
+| Evidence and assumptions | 5 | Indicative pricing and exclusions are not presented as facts. | Pass |
 
-**Disadvantages**
+## Human review before use
 
-- Custom remediation does not provide real-time anomaly detection without further tooling.
-- The platform remains near end of vendor support.
-- Five-year cost is higher than Option B.
+- Finance must reconcile every figure with the approved model and confirm funding authority.
+- Procurement must validate the tender condition and commercial sensitivity.
+- Legal, security, and the executive sponsor must approve their respective sections.
+- The company secretary must confirm that the resolution wording fits the board's authority.
 
-### Option B: Migrate to cloud-native IAM platform (recommended)
+## Reuse this bundle
 
-The preferred supplier provides automated access certification, conditional access, anomaly detection, and standard integration with the Company's Microsoft estate.
-
-**Advantages**
-
-- Resolves both audit findings using native functionality.
-- Satisfies client questionnaire requirements before January 2027.
-- Reduces five-year cost by £220,000 compared with Option A.
-- Aligns with the Board-approved cloud-first technology strategy.
-
-**Disadvantages**
-
-- Requires a 12-month migration programme.
-- Creates short-term training and change management requirements.
-- Introduces dependency on a new supplier.
-
-### Option C: Build internal IAM capability
-
-The engineering team assessed an internal build covering access certification, workflow automation, anomaly detection, and reporting.
-
-**Advantages**
-
-- Maximum design control.
-- Potential long-term reuse across internal platforms.
-
-**Disadvantages**
-
-- Estimated five-year cost of £1.4M.
-- Delivery would divert engineering capacity from committed product roadmap work.
-- Independent assurance would still be required before audit reliance.
-
-## 4. Recommendation
-
-The Board is recommended to approve Option B.
-
-Option B provides the strongest combination of compliance coverage, cost, and execution feasibility. Option A is cheaper in the first year but does not fully resolve the control weaknesses. Option C is not proportionate given cost, time, and internal capacity constraints.
-
-Success will be measured by:
-
-- closure of both audit findings before the November 2026 recertification review;
-- completion of client questionnaire evidence packs by 31 December 2026;
-- migration delivered within approved budget tolerance of plus or minus 10%;
-- privileged access review cycle reduced from 11 days to 2 days.
-
-## 5. Risk Assessment
-
-| Risk | Likelihood | Impact | Mitigation | Owner |
-|---|---|---|---|---|
-| Migration delay beyond December 2026 | Medium | High | Phased plan; external delivery partner; monthly programme board | CIO |
-| Data integrity issue during migration | Low | Critical | Parallel running; reconciliation at each phase gate; rollback plan | Head of Security |
-| User disruption at cutover | Medium | Medium | Pilot rollout; enhanced service desk cover; targeted communications | IT Operations |
-| Supplier dependency | Low | Medium | Contract exit provisions; documented data export process; annual supplier review | Procurement |
-
-## 6. Financial Summary
-
-| Option | Year 1 | Years 2-5 (per year) | Five-year total |
-|---|---:|---:|---:|
-| A: Renew | £358,000 | £168,000 | £840,000 |
-| B: Migrate | £332,000 | £72,000 | £620,000 |
-| C: Build | £480,000 | £185,000 | £1,420,000 |
-
-Assumptions: figures are based on supplier proposals and internal effort estimates as at May 2026. Finance has reviewed the model for arithmetic consistency; procurement due diligence remains outstanding.
-
-## 7. Proposed Resolution
-
-The Board resolves to approve Option B, the migration to a cloud-native identity and access management platform, and authorises expenditure of up to £620,000 over five years, subject to final procurement approval and quarterly programme reporting to the Board.
-
-## Why this example works
-
-- The decision required is visible in the executive summary.
-- Options are compared on the same basis.
-- Recommendation follows the options analysis, not before it.
-- Risks have owners and mitigations.
-- Resolution wording is ready for minutes.
+- [Board Paper Style](../styles/board-paper-style.md)
+- [Context / Analysis / Options / Recommendation Pattern](../patterns/context-analysis-options-recommendation.md)
+- [Board Paper Prompts](../prompt-templates/board-paper-prompts.md)
+- [Create Board Pack Skill](../skills/create-board-pack.md)
+- [Board Paper Rubric](../rubrics/board-paper-rubric.md)

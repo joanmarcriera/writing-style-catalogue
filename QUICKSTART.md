@@ -43,13 +43,15 @@ Replace the placeholder variables with your content:
 
 Paste into Claude or your LLM of choice and submit.
 
-### Step 5: Review Against Checklist (Optional)
+### Step 5: Apply the Review Gate
 
-Before publishing, scan the relevant checklist in `checklists/`:
+Before publishing, score the draft with the linked rubric and complete the relevant checklist. A professional draft is not ready while a critical criterion scores below 4, any criterion scores below 3, or a required human check remains unresolved.
 
 - Executive Readiness Checklist
 - Clarity Checklist
 - AI Output Review Checklist
+
+To see the complete sequence first, open any worked bundle in `examples/`: professional context, source packet, completed prompt, output excerpt, scorecard, and human-review requirements.
 
 ---
 

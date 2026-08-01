@@ -209,9 +209,9 @@ kbd {
 
 .shell {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr) 360px;
+  grid-template-columns: 250px minmax(0, 1fr) 420px;
   gap: var(--gap);
-  max-width: 1440px;
+  max-width: 1600px;
   min-height: calc(100vh - 56px);
   margin: 0 auto;
   padding: var(--gap);
@@ -458,6 +458,11 @@ kbd {
   box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
 }
 
+.workflow-card.active {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--hair));
+  background: color-mix(in srgb, var(--accent-soft) 42%, var(--paper));
+}
+
 .workflow-number {
   color: var(--muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -490,6 +495,11 @@ kbd {
   padding: var(--pad);
 }
 
+.preview-audience {
+  font-size: 12px;
+  font-weight: 650;
+}
+
 .bundle-chain {
   display: flex;
   flex-wrap: wrap;
@@ -501,6 +511,12 @@ kbd {
   min-height: 24px;
   padding: 0 8px;
   gap: 6px;
+}
+
+a.tag:hover,
+a.tag:focus-visible {
+  border-color: currentColor;
+  outline: none;
 }
 
 .tag-style {
@@ -523,20 +539,136 @@ kbd {
   color: var(--rubric);
 }
 
-.prompt-preview {
+.bundle-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  margin-bottom: 8px;
+  padding: 4px;
+  border: 1px solid var(--hair);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+}
+
+.bundle-tab {
+  min-height: 34px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bundle-tab:hover,
+.bundle-tab:focus-visible {
+  color: var(--ink);
+  outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  outline-offset: -2px;
+}
+
+.bundle-tab.active {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+}
+
+.bundle-stage {
   overflow: auto;
-  min-height: 220px;
-  max-height: 360px;
+  min-height: 300px;
+  max-height: 500px;
   margin: 0;
   padding: 14px;
   border: 1px solid var(--hair);
   border-radius: var(--radius-sm);
   background: var(--bg);
   color: var(--ink-soft);
+}
+
+.stage-label {
+  margin: 0 0 8px !important;
+  color: var(--muted) !important;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.stage-label + .stage-context,
+.stage-context + .stage-label {
+  margin-top: 0;
+}
+
+.stage-context {
+  margin-bottom: 18px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.stage-copy {
+  margin: 0;
+  color: var(--ink-soft);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 12px;
   line-height: 1.55;
   white-space: pre-wrap;
+}
+
+.stage-copy-short {
+  font-family: inherit;
+}
+
+.review-summary h3 {
+  margin: 18px 0 8px;
+  font-size: 14px;
+}
+
+.scorecard {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.scorecard th,
+.scorecard td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--hair);
+  text-align: left;
+  vertical-align: top;
+}
+
+.scorecard thead th {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.score {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.gate {
+  display: inline-flex;
+  padding: 2px 5px;
+  border: 1px solid var(--hair-strong);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.gate-pass {
+  color: var(--template);
+}
+
+.gate-revise {
+  color: var(--skill);
+}
+
+.gate-human-check {
+  color: var(--rubric);
 }
 
 .preview-actions {
@@ -569,7 +701,7 @@ kbd {
   margin-bottom: 10px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1180px) {
   .shell {
     grid-template-columns: 230px minmax(0, 1fr);
   }
@@ -578,6 +710,10 @@ kbd {
     position: static;
     grid-column: 2;
     max-height: none;
+  }
+
+  .bundle-stage {
+    max-height: 620px;
   }
 }
 
@@ -657,7 +793,18 @@ kbd {
   }
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 38px;
+    line-height: .96;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 28px 20px;
+  }
+
+  .lede {
+    font-size: 17px;
+    overflow-wrap: anywhere;
   }
 
   .section-heading,
@@ -665,8 +812,23 @@ kbd {
     display: block;
   }
 
+  .section-heading p,
+  .workflow-card p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
   .result-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bundle-stage {
+    min-height: 260px;
+    max-height: none;
+  }
+
+  .scorecard {
+    font-size: 10.5px;
   }
 
   .workflow-time {

@@ -23,12 +23,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validate professional bundles
+        run: python3 scripts/validate_bundles.py
+      - name: Run catalogue tests
+        run: python3 -m unittest discover -s tests -v
       - name: Generate catalogue data
         run: python3 scripts/generate_site_data.py
       - name: Generate index
         run: python3 scripts/generate_index.py
+      - name: Check generated files are current
+        run: git diff --exit-code -- INDEX.md assets/catalogue-data.js
       - name: Validate links
         run: python3 scripts/validate_links.py
+      - name: Validate browser JavaScript
+        run: node --check assets/site.js
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site

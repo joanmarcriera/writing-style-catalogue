@@ -6,7 +6,9 @@ description: The shortest path from a writing problem to the right style, prompt
 
 # Start Here
 
-Use this page when you have a writing task and need to know what to copy first.
+Use this page when you have a writing task and need to know what evidence to supply, what to copy, and how to decide whether the draft is safe to use.
+
+The public site includes twelve worked bundles. Each one shows the professional context, source packet, completed prompt, output excerpt, rubric scorecard, and checks that still require a human.
 
 ## The 60-second route
 
@@ -71,6 +73,6 @@ Use this page when you have a writing task and need to know what to copy first.
 
 Do not start with the LLM. Start with the intended artefact:
 
-**Audience -> decision or purpose -> style -> pattern -> prompt -> skill -> rubric.**
+**Audience -> decision or purpose -> source packet -> style -> pattern -> prompt -> output -> rubric -> human approval.**
 
 That sequence prevents the common failure mode: a fluent draft that looks polished but does not answer the real professional need.

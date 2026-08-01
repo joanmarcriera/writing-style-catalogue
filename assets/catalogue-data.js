@@ -41,7 +41,7 @@ window.CATALOGUE_DATA = {
       "folder": "examples",
       "label": "Examples",
       "kind": "example",
-      "count": 11
+      "count": 12
     },
     {
       "folder": "checklists",
@@ -53,13 +53,13 @@ window.CATALOGUE_DATA = {
       "folder": "rubrics",
       "label": "Rubrics",
       "kind": "rubric",
-      "count": 8
+      "count": 11
     },
     {
       "folder": "reference",
       "label": "Reference",
       "kind": "reference",
-      "count": 8
+      "count": 9
     }
   ],
   "items": [
@@ -1054,113 +1054,123 @@ window.CATALOGUE_DATA = {
       "templateType": ""
     },
     {
-      "title": "Architecture Decision Record Example",
+      "title": "Architecture Decision Record — Primary Data Store",
       "path": "examples/architecture-decision-record.md",
       "section": "Examples",
       "kind": "example",
-      "description": "Architecture Decision Record Example ADR 0042: Use PostgreSQL for Primary Data Store Status: Accepted (Date: 15 June 2025) Context We needed to select a primary database for our new analytics platform. Requirements:...",
+      "description": "A worked ADR bundle that traces a database decision from supplied constraints to a reviewable record.",
       "category": "Example",
-      "audience": "",
+      "audience": "Software engineers, platform operators, architects, and future maintainers",
       "templateType": ""
     },
     {
-      "title": "BLUF Email Example",
+      "title": "BLUF Approval Email — Supplier Renewal",
       "path": "examples/bluf-email.md",
       "section": "Examples",
       "kind": "example",
-      "description": "BLUF Email Example Subject: Approval Needed – Cloud Migration Investment (£600k) We should approve a £600k investment in cloud infrastructure migration. This delivers £1.5M in annual savings starting Year 2 and reduces...",
+      "description": "A worked executive email bundle with a precise approval request, deadline, commercial facts, and fallback.",
       "category": "Example",
-      "audience": "",
+      "audience": "Chief financial officer approving a time-sensitive supplier renewal",
       "templateType": ""
     },
     {
-      "title": "Board Paper Example (Condensed)",
+      "title": "Board Paper — Identity Platform Decision",
       "path": "examples/board-paper.md",
       "section": "Examples",
       "kind": "example",
-      "description": "A condensed board paper showing decision request, options analysis, risks, financials, and resolution wording.",
+      "description": "A worked governance bundle with comparable options, financial assumptions, risks, and resolution wording.",
       "category": "Example",
-      "audience": "",
+      "audience": "Board directors and non-executive directors",
       "templateType": ""
     },
     {
-      "title": "Executive Update Example",
+      "title": "Executive Update — Customer Migration Programme",
       "path": "examples/executive-update.md",
       "section": "Examples",
       "kind": "example",
-      "description": "Executive Update Example Q2 2026 Executive Update – Strong Growth with Rising Competition Financial Performance • Revenue: £3.2M (23% above forecast; 40% YoY growth) • Gross margin: 70% (up 2 points YoY) • Churn: 1.2%...",
+      "description": "A worked leadership update that separates delivery evidence, forecast, risks, and the decision needed.",
       "category": "Example",
-      "audience": "",
+      "audience": "Executive committee members sponsoring a customer migration programme",
       "templateType": ""
     },
     {
-      "title": "Incident Report Example",
+      "title": "Incident Report — Checkout API Degradation",
       "path": "examples/incident-report.md",
       "section": "Examples",
       "kind": "example",
-      "description": "Incident Report Example Incident Report: Payment Processing Outage – 15 May 2026 Summary Payment processing API was unavailable for 47 minutes (14:20–15:07 GMT), affecting approximately 2,000 transactions. Estimated...",
+      "description": "A worked incident-review bundle with an evidence-bounded timeline, causal analysis, and testable actions.",
       "category": "Example",
-      "audience": "",
+      "audience": "Engineering, service ownership, risk, and customer-support leadership",
       "templateType": ""
     },
     {
-      "title": "Minto Recommendation Example",
+      "title": "LinkedIn Post — Professional Prompt Bundles",
+      "path": "examples/linkedin-catalogue-launch.md",
+      "section": "Examples",
+      "kind": "example",
+      "description": "A real public-project bundle showing how verified repository facts become an understated launch post.",
+      "category": "Example",
+      "audience": "Senior technology, writing, knowledge-management, and AI practitioners",
+      "templateType": ""
+    },
+    {
+      "title": "Minto Recommendation — Service Desk Consolidation",
       "path": "examples/minto-recommendation.md",
       "section": "Examples",
       "kind": "example",
-      "description": "Minto Pyramid Recommendation Example RECOMMENDATION We should migrate engineering to a four day work week and consolidate to a single office location. Why This Is Right Reason 1: Cost Efficiency Current split between...",
+      "description": "A worked recommendation bundle that leads with one answer and supports it with mutually exclusive reasons.",
       "category": "Example",
-      "audience": "",
+      "audience": "Chief operating officer and technology leadership team",
       "templateType": ""
     },
     {
-      "title": "Slide Deck Outline Example",
+      "title": "Slide Deck Outline — Cloud Exit Decision",
       "path": "examples/slide-deck-outline.md",
       "section": "Examples",
       "kind": "example",
-      "description": "A slide-by-slide executive deck outline with message titles, visual suggestions, and speaker notes.",
+      "description": "A worked executive-deck bundle with message titles, visual evidence, speaker caveats, and a precise ask.",
       "category": "Example",
-      "audience": "",
+      "audience": "Investment committee deciding whether to fund discovery",
       "templateType": ""
     },
     {
-      "title": "Smart Brevity Example",
+      "title": "Smart Brevity Update — Release Readiness",
       "path": "examples/smart-brevity-update.md",
       "section": "Examples",
       "kind": "example",
-      "description": "Smart Brevity Update Example Q2 Performance Summary – Revenue 23% Above Target • Q2 revenue: £3.2M (23% above forecast) • Gross margin: 70% (up 2 points YoY) • New customers: 18 (net addition: 15) • Churn: 1.2% (down...",
+      "description": "A worked short update that makes status, consequence, owner, and next checkpoint visible in under a minute.",
       "category": "Example",
-      "audience": "",
+      "audience": "Product and engineering leadership",
       "templateType": ""
     },
     {
-      "title": "Tax Note Example",
+      "title": "Tax Note — Imported SaaS and UK Reverse Charge",
       "path": "examples/tax-note.md",
       "section": "Examples",
       "kind": "example",
-      "description": "An illustrative tax technical note showing question, facts, assumptions, analysis, confidence, caveats, and next steps.",
+      "description": "A worked tax-analysis bundle that separates facts, supplied authority, assumptions, conclusion, and adviser checks.",
       "category": "Example",
-      "audience": "",
+      "audience": "UK finance director and qualified VAT adviser",
       "templateType": ""
     },
     {
-      "title": "Technical Runbook Example",
+      "title": "Technical Runbook — API Connection Pool Exhaustion",
       "path": "examples/technical-runbook.md",
       "section": "Examples",
       "kind": "example",
-      "description": "A practical operational runbook with detection, triage, response, escalation, verification, and post-incident actions.",
+      "description": "A worked operational bundle with bounded diagnostics, approval gates, rollback, escalation, and measurable recovery.",
       "category": "Example",
-      "audience": "",
+      "audience": "Authorised on-call engineers and service owners",
       "templateType": ""
     },
     {
-      "title": "Website SEO Audit Example",
+      "title": "Website Audit — Specialist Consultancy",
       "path": "examples/website-seo-audit.md",
       "section": "Examples",
       "kind": "example",
-      "description": "Illustrative excerpt of a website marketing and SEO audit report with evidence labels and prioritised actions.",
+      "description": "A worked website-audit bundle that separates observed evidence, hypotheses, missing private data, and prioritised actions.",
       "category": "Example",
-      "audience": "",
+      "audience": "Founder, marketing lead, and web delivery team",
       "templateType": ""
     },
     {
@@ -1284,11 +1294,41 @@ window.CATALOGUE_DATA = {
       "templateType": ""
     },
     {
+      "title": "Decision Record Rubric",
+      "path": "rubrics/decision-record-rubric.md",
+      "section": "Rubrics",
+      "kind": "rubric",
+      "description": "Scores whether a decision record preserves the context, alternatives, rationale, consequences, and revisit conditions future readers need.",
+      "category": "Rubric",
+      "audience": "",
+      "templateType": ""
+    },
+    {
       "title": "Executive Communication Rubric",
       "path": "rubrics/executive-communication-rubric.md",
       "section": "Rubrics",
       "kind": "rubric",
       "description": "Scores whether an executive update, briefing, or approval request is clear enough for a CIO, CFO, CEO, or board sponsor.",
+      "category": "Rubric",
+      "audience": "",
+      "templateType": ""
+    },
+    {
+      "title": "Incident Report Rubric",
+      "path": "rubrics/incident-report-rubric.md",
+      "section": "Rubrics",
+      "kind": "rubric",
+      "description": "Scores whether an incident report is evidence-led, blameless, operationally useful, and accountable for prevention work.",
+      "category": "Rubric",
+      "audience": "",
+      "templateType": ""
+    },
+    {
+      "title": "LinkedIn Post Rubric",
+      "path": "rubrics/linkedin-post-rubric.md",
+      "section": "Rubrics",
+      "kind": "rubric",
+      "description": "Scores whether a professional LinkedIn post is specific, credible, useful, readable on mobile, and ready to carry the author's name.",
       "category": "Rubric",
       "audience": "",
       "templateType": ""
@@ -1384,6 +1424,16 @@ window.CATALOGUE_DATA = {
       "templateType": ""
     },
     {
+      "title": "Professional Prompt Bundle Standard",
+      "path": "reference/professional-prompt-bundle-standard.md",
+      "section": "Reference",
+      "kind": "reference",
+      "description": "The source, prompt, output, and review contract used by every worked example in the catalogue.",
+      "category": "Reference",
+      "audience": "",
+      "templateType": ""
+    },
+    {
       "title": "Recommended Resources",
       "path": "reference/recommended-resources.md",
       "section": "Reference",
@@ -1422,6 +1472,929 @@ window.CATALOGUE_DATA = {
       "category": "Reference",
       "audience": "",
       "templateType": ""
+    }
+  ],
+  "bundles": [
+    {
+      "id": "architecture-decision-record",
+      "title": "Architecture Decision Record — Primary Data Store",
+      "artefact": "Architecture decision record",
+      "audience": "Software engineers, platform operators, architects, and future maintainers",
+      "scenario": "labelled-composite",
+      "description": "A worked ADR bundle that traces a database decision from supplied constraints to a reviewable record.",
+      "sourcePath": "examples/architecture-decision-record.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/architecture-decision-record-style.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/decision-rationale-consequences.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/architecture-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-adr.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/architecture-decision-record.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/decision-record-rubric.md"
+        }
+      ],
+      "context": "A platform architecture group must record why a new analytics service will use PostgreSQL. The record must remain useful after the original team has moved on and must not turn estimates into proven limits.",
+      "sourcePacket": "SCENARIO: Labelled composite; no real company or benchmark is represented.\nDECISION DATE: 15 June 2026\nSTATUS: Accepted\nSYSTEM: New operational analytics service\nCONFIRMED REQUIREMENTS: transactional writes; strong consistency; relational queries joining 4–6 entities; managed backup and point-in-time recovery; EU region; team already operates PostgreSQL.\nOPTIONS ASSESSED: managed PostgreSQL, MongoDB Atlas, DynamoDB.\nDECISION CRITERIA: consistency, query fit, operating capability, reversible migration path, five-year cost envelope.\nCONFIRMED FINDING: PostgreSQL meets every mandatory requirement. MongoDB and DynamoDB would require redesign of the current relational query model.\nASSUMPTION: Dataset remains below 8 TB during the first three years.\nUNKNOWN: Validated workload benchmark at peak ingestion rate.\nCONSEQUENCE: Benchmarking is required before production approval; scaling design is reviewed at 5 TB or 18 months, whichever comes first.",
+      "prompt": "You are a principal architect preparing ADR-0042 for engineers, platform operators, architects, and future maintainers. Write a concise architecture decision record whose purpose is to preserve why managed PostgreSQL was selected for the operational analytics service.\n\nUse only the SOURCE PACKET below. Do not invent benchmarks, prices, service capabilities, dates, requirements, or rejection reasons. Separate confirmed requirements, the stated assumption, and the unresolved benchmark. If any information essential to the decision is absent or contradictory, stop and return a heading named MISSING INFORMATION with a precise list; do not produce the ADR.\n\nStructure the record as: Title; Status and date; Context; Decision; Decision criteria; Alternatives considered; Rationale; Positive consequences; Negative consequences and risks; Validation and review triggers. Explain that the 8 TB figure is an assumption, not a proven product limit. Do not claim that an alternative is technically incapable when the source only says it requires redesign. Use neutral, durable language and British English. Keep the record between 550 and 750 words. Output only the ADR.\n\nBefore finalising, check it against the Decision Record Rubric: decision clarity, evidence boundary, genuine alternatives, rationale, consequences, ownership/timing, and future usefulness. Preserve every caveat from the source.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "ADR-0042: Use managed PostgreSQL for the operational analytics service\nStatus: Accepted — 15 June 2026\n\nDecision\nThe service will use managed PostgreSQL as its primary transactional data store.\n\nRationale\nPostgreSQL meets the mandatory consistency, relational-query, recovery, regional-hosting, and team-operability requirements. MongoDB Atlas and DynamoDB remain viable technologies, but adopting either would require redesign of the current 4–6-entity relational query model. No workload benchmark has yet validated peak ingestion performance.\n\nConsequences and review triggers\nThe team can reuse existing PostgreSQL operating capability and retains a conventional migration path. It must complete peak-load benchmarking before production approval. The assumption that data remains below 8 TB for three years will be reviewed when storage reaches 5 TB or after 18 months, whichever occurs first.",
+      "scorecard": [
+        {
+          "criterion": "Decision clarity",
+          "score": 5,
+          "evidence": "Technology, scope, status, and date are explicit.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Evidence boundary",
+          "score": 5,
+          "evidence": "The capacity figure and missing benchmark remain labelled.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Alternatives",
+          "score": 4,
+          "evidence": "Viable alternatives and the actual redesign trade-off are retained.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Consequences",
+          "score": 5,
+          "evidence": "Benefits, required benchmark, and review triggers are actionable.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Future usefulness",
+          "score": 4,
+          "evidence": "A later maintainer can reconstruct the decision from the record.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- The service owner must confirm that the source packet reflects the approved architecture assessment.\n- Platform engineering must run and retain the peak-load benchmark before production approval.\n- The decision owner must confirm the review thresholds and record any superseding ADR."
+    },
+    {
+      "id": "bluf-approval-email",
+      "title": "BLUF Approval Email — Supplier Renewal",
+      "artefact": "BLUF approval email",
+      "audience": "Chief financial officer approving a time-sensitive supplier renewal",
+      "scenario": "labelled-composite",
+      "description": "A worked executive email bundle with a precise approval request, deadline, commercial facts, and fallback.",
+      "sourcePath": "examples/bluf-email.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/bluf-bottom-line-up-front.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/bluf.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/email-prompts.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/bluf-email.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/executive-communication-rubric.md"
+        }
+      ],
+      "context": "A technology director needs a decision from the CFO without hiding the deadline, cost increase, or fallback. The email must be ready to send after commercial figures are checked.",
+      "sourcePacket": "SCENARIO: Labelled composite.\nSENDER: Technology Director\nRECIPIENT: Chief Financial Officer\nDECISION: Approve a 12-month monitoring-platform renewal at £186,000 excluding VAT.\nDEADLINE: 16:00 on 21 August 2026; the quoted price expires then.\nCURRENT ANNUAL COST: £174,000 excluding VAT.\nCHANGE: £12,000 / 6.9% increase.\nBUDGET: Approved operations budget contains £190,000 for this service.\nPROCUREMENT: Commercial and security reviews complete; legal review complete with no material exceptions.\nFALLBACK: A one-month extension is available for £18,000, but written confirmation is required by the same deadline.\nUNKNOWN: None material to the approval request.",
+      "prompt": "You are an executive communications adviser. Draft a BLUF email from the Technology Director to the Chief Financial Officer requesting one decision: approval of the 12-month monitoring-platform renewal.\n\nUse only the supplied SOURCE PACKET. Do not invent savings, service risks, negotiation outcomes, vendor claims, approvals, or urgency. If the amount, deadline, budget position, review status, or fallback is missing or contradictory, return MISSING INFORMATION and list the exact gap instead of drafting the email.\n\nWrite a specific subject line. In the first sentence state the decision, amount, term, and deadline. Then give no more than four short bullets covering: price movement; budget position; completed assurance; fallback and its cost. Close with the precise response required. Keep the email between 130 and 190 words, use British English, and use £ figures consistently with “excluding VAT”. Do not add pleasantries, background history, or an invented consequence of non-renewal. Output only the subject line and email body.\n\nBefore finalising, check instruction fit, factual integrity, specificity, structure, professional tone, risk awareness, and usefulness against the Executive Communication Rubric. Preserve the fallback caveat exactly.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Subject: Approval required by 16:00, 21 August — £186,000 monitoring renewal\n\nPlease approve the 12-month monitoring-platform renewal at £186,000 excluding VAT by 16:00 on 21 August 2026.\n\n• The price is £12,000 (6.9%) above the current annual cost of £174,000.\n• The approved operations budget contains £190,000 for this service.\n• Procurement, security, and legal reviews are complete, with no material legal exceptions.\n• If approval cannot be given, a one-month extension costs £18,000 and must be confirmed by the same deadline.\n\nPlease reply “approved” or identify the remaining question before the deadline.",
+      "scorecard": [
+        {
+          "criterion": "Instruction fit",
+          "score": 5,
+          "evidence": "The requested decision, length, and format are followed.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Factual integrity",
+          "score": 5,
+          "evidence": "Every amount and status maps to the source packet.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Structure",
+          "score": 5,
+          "evidence": "The decision is first and supporting facts are scannable.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Professional tone",
+          "score": 4,
+          "evidence": "Direct without becoming abrupt or promotional.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Usefulness",
+          "score": 5,
+          "evidence": "The recipient knows exactly how and when to respond.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- Finance must confirm the budget and VAT treatment.\n- Procurement must confirm the quote and fallback remain open at send time.\n- The sender must verify names, deadline, and approval authority."
+    },
+    {
+      "id": "board-paper",
+      "title": "Board Paper — Identity Platform Decision",
+      "artefact": "Board decision paper",
+      "audience": "Board directors and non-executive directors",
+      "scenario": "labelled-composite",
+      "description": "A worked governance bundle with comparable options, financial assumptions, risks, and resolution wording.",
+      "sourcePath": "examples/board-paper.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/board-paper-style.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/context-analysis-options-recommendation.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/board-paper-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-board-pack.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/board-paper.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/board-paper-rubric.md"
+        }
+      ],
+      "context": "A board must select one of three identity-platform options. The paper must compare options on the same basis and retain the uncertainty in cost estimates and delivery capacity.",
+      "sourcePacket": "SCENARIO: Labelled composite; all organisations, figures, and findings are fictional.\nDECISION: Select an identity-platform option and authorise the associated five-year envelope.\nDEADLINE: Current contract ends 31 December 2027.\nOPTION A — RENEW: five-year cost £840,000; lowest transition risk; two control gaps require separate remediation.\nOPTION B — MANAGED CLOUD: five-year cost £620,000; migration estimate includes £260,000 one-off and £72,000 annual licence; addresses both control gaps; 12-month migration; delivery confidence medium.\nOPTION C — INTERNAL BUILD: five-year cost £1,420,000; 18-month estimate; engineering capacity not allocated; delivery confidence low.\nASSUMPTIONS: Costs exclude VAT and internal staff time. Option B estimate is based on an indicative quote, not a final tender.\nTOP RISKS FOR B: migration delay; access-data integrity; user disruption; vendor dependency.\nRECOMMENDATION: Option B, subject to competitive procurement, an independent migration assurance plan, and quarterly board reporting.\nFUNDING: Technology capital reserve has £700,000 uncommitted.",
+      "prompt": "You are a board-governance writer. Prepare a condensed but decision-ready board paper for directors and non-executive directors on the identity-platform decision in the SOURCE PACKET.\n\nUse only supplied facts. Do not invent legal requirements, audit clauses, vendor capabilities, savings, implementation dates, staffing, or certainty. Label assumptions and unresolved procurement evidence. If the decision, comparable costs, recommendation, funding source, or material risks are absent or contradictory, stop and return MISSING INFORMATION rather than producing a paper.\n\nUse: Executive Summary; Decision Required; Background; Comparable Options Table; Recommendation and Rationale; Financial Analysis and Assumptions; Governance and Risk; Implementation Gates; Proposed Resolution. Present all three options using identical criteria before recommending one. State that Option B pricing is indicative and excludes VAT and internal staff time. Give each risk a consequence, control, owner role, and review gate, but do not invent named individuals. Use formal, neutral British English and no more than 1,400 words. Output only the board paper.\n\nBefore finalising, apply the Board Paper Rubric. Decision clarity, options analysis, financial analysis, risk, and evidence separation are critical gates. Preserve the conditions attached to the recommendation in the proposed resolution.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Executive Summary\nThe Board is asked to select an identity-platform option and authorise the associated five-year expenditure envelope. Three options were assessed on cost, control coverage, delivery confidence, and transition risk.\n\nOption B, a managed cloud platform, is recommended at an estimated five-year cost of £620,000. This is an indicative estimate excluding VAT and internal staff time, not a final tender price. It addresses both identified control gaps, but carries medium delivery confidence and material migration risks.\n\nProposed resolution\nThe Board approves Option B and authorises expenditure up to £620,000 over five years, subject to competitive procurement confirming value within that envelope, approval of an independent migration-assurance plan, and quarterly progress and risk reporting to the Board.",
+      "scorecard": [
+        {
+          "criterion": "Decision required",
+          "score": 5,
+          "evidence": "The ask and conditional resolution are explicit.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Options analysis",
+          "score": 4,
+          "evidence": "Three genuine options use consistent criteria.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Financial analysis",
+          "score": 4,
+          "evidence": "Comparable costs and exclusions are visible.",
+          "gate": "Human check"
+        },
+        {
+          "criterion": "Risk",
+          "score": 4,
+          "evidence": "Named risks and governance conditions survive the summary.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Evidence and assumptions",
+          "score": 5,
+          "evidence": "Indicative pricing and exclusions are not presented as facts.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- Finance must reconcile every figure with the approved model and confirm funding authority.\n- Procurement must validate the tender condition and commercial sensitivity.\n- Legal, security, and the executive sponsor must approve their respective sections.\n- The company secretary must confirm that the resolution wording fits the board's authority."
+    },
+    {
+      "id": "executive-update",
+      "title": "Executive Update — Customer Migration Programme",
+      "artefact": "Executive programme update",
+      "audience": "Executive committee members sponsoring a customer migration programme",
+      "scenario": "labelled-composite",
+      "description": "A worked leadership update that separates delivery evidence, forecast, risks, and the decision needed.",
+      "sourcePath": "examples/executive-update.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/executive-briefing.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/what-so-what-now-what.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/project-status-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-one-page-brief.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/executive-update.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/executive-communication-rubric.md"
+        }
+      ],
+      "context": "An executive committee needs the current delivery position, not a progress narrative. The update must expose the difference between achieved results and forecast outcomes and end with one decision.",
+      "sourcePacket": "SCENARIO: Labelled composite.\nREPORTING DATE: 31 July 2026\nOVERALL STATUS: Amber\nSCOPE: Migrate 120 enterprise customers by 30 November 2026.\nDELIVERED: 46 customers migrated; 44 passed acceptance first time; 2 required data correction and then passed.\nFORECAST: 112–120 customers by deadline, depending on specialist partner capacity from September.\nBUDGET: £1.84m spent of £3.20m approved; current forecast £3.05m–£3.28m.\nRISKS: partner capacity unconfirmed after 1 September; eight customers have unresolved data-retention requirements.\nDECISION REQUIRED BY 7 AUGUST: reserve £180,000 contingency for a second migration partner. Spending still requires procurement approval.\nNEXT MILESTONES: partner commitment by 14 August; retention decisions by 21 August; 75 customers migrated by 30 September.",
+      "prompt": "You are a chief-of-staff writer preparing a one-page executive update for the sponsors of a customer migration programme. The readers need to understand current performance, forecast uncertainty, material risks, and one decision.\n\nUse only the SOURCE PACKET. Do not invent causes, savings, customer sentiment, partner commitments, mitigations, or confidence. Keep actual results, ranges, forecasts, and unresolved requirements visibly distinct. If reporting date, scope, achieved results, forecast, budget, risks, or decision are missing or inconsistent, return MISSING INFORMATION and do not draft the update.\n\nUse British English and this order: Bottom line; What has happened; So what; Decision required; Next 30 days. Keep it between 300 and 450 words. Lead with Amber status and the forecast range. State both the £3.05m–£3.28m forecast and the £3.20m approval; do not call the programme within budget. Explain that reserving contingency does not itself authorise spending. Use short paragraphs and a compact table only if it improves comparison. Output only the update.\n\nBefore finalising, review instruction fit, factual integrity, specificity, structure, tone, risk awareness, and usefulness against the Executive Communication Rubric. Preserve every uncertainty and deadline.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Bottom line — Amber\nForty-six of 120 enterprise customers have migrated. The programme forecasts 112–120 completions by 30 November, but the upper end depends on specialist partner capacity that is not confirmed after 1 September.\n\nBudget\n£1.84m of £3.20m has been spent. The current forecast is £3.05m–£3.28m, so the downside case exceeds the approved envelope.\n\nDecision required by 7 August\nReserve £180,000 contingency for a second migration partner. This reservation does not authorise expenditure; any engagement remains subject to procurement approval.\n\nNext 30 days\nConfirm partner capacity by 14 August, resolve eight data-retention decisions by 21 August, and protect the 75-customer milestone due 30 September.",
+      "scorecard": [
+        {
+          "criterion": "Factual integrity",
+          "score": 5,
+          "evidence": "Actuals, forecast range, budget, and deadlines map to source.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Structure",
+          "score": 5,
+          "evidence": "Status, implication, decision, and next actions are immediately visible.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Risk awareness",
+          "score": 5,
+          "evidence": "Partner and retention uncertainty remain explicit.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Professional tone",
+          "score": 4,
+          "evidence": "Direct and non-defensive without overstating control.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Usefulness",
+          "score": 5,
+          "evidence": "The committee has one dated decision and three milestones.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- The programme director must confirm actuals and forecast at the reporting cut-off.\n- Finance must confirm spend and forecast ranges.\n- Procurement must confirm the wording around contingency and spending authority."
+    },
+    {
+      "id": "incident-report",
+      "title": "Incident Report — Checkout API Degradation",
+      "artefact": "Blameless incident report",
+      "audience": "Engineering, service ownership, risk, and customer-support leadership",
+      "scenario": "labelled-composite",
+      "description": "A worked incident-review bundle with an evidence-bounded timeline, causal analysis, and testable actions.",
+      "sourcePath": "examples/incident-report.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/incident-report-style.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/issue-risk-control-owner-date.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/incident-report-prompts.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/incident-report.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/incident-report-rubric.md"
+        }
+      ],
+      "context": "The service team needs a defensible record of a 47-minute checkout incident. The report must distinguish observed evidence from the still-unproven reason a deployment increased database connection use.",
+      "sourcePacket": "SCENARIO: Labelled composite.\nINCIDENT: INC-2026-081; severity P2.\nWINDOW: 14:20–15:07 UTC on 15 July 2026.\nIMPACT: 1,842 checkout attempts returned HTTP 503; 1,307 were retried successfully within 24 hours; no evidence of data loss or unauthorised access; revenue impact not calculated.\n14:20: error-rate alert fired. 14:23: on-call acknowledged. 14:28: database connection saturation confirmed. 14:36: deployment 2026.07.15.2 identified as the only production change in the previous hour. 14:45: rollback began. 14:52: error rate below 1%. 15:07: ten-minute stability gate passed.\nCONFIRMED TECHNICAL CAUSE: application instances exhausted their database connection pools after the deployment.\nUNPROVEN CONTRIBUTING HYPOTHESIS: a changed retry path retained connections longer; code-level verification pending.\nCONTROL GAP: release test did not measure connection duration under retry load.\nACTIONS: add retry-load connection test (Platform Engineering, 29 July); add pool-saturation deployment gate (SRE, 5 August); verify retry-path hypothesis and attach evidence to INC-2026-081 (Application Team, 22 July).",
+      "prompt": "You are a senior incident-review facilitator. Write a blameless incident report for engineering, service ownership, risk, and customer-support leadership using only the SOURCE PACKET.\n\nDo not invent revenue impact, customer behaviour, log evidence, code defects, security conclusions, detection delays, or action status. Keep the confirmed connection-pool exhaustion separate from the unproven retry-path hypothesis. “No evidence of” must not become “there was no”. If the impact window, evidence, recovery gate, causal status, or action ownership is missing or contradictory, return MISSING INFORMATION instead of a report.\n\nUse British English and structure the report as: Executive summary; Customer and business impact; Detection and response timeline; Confirmed technical cause; Contributing hypotheses and evidence gaps; What worked; What delayed certainty; Corrective actions; Closure and follow-up. Use UTC consistently. Each corrective action must retain its owner role, due date, acceptance evidence, and incident reference. Keep the report between 750 and 1,000 words. Output only the incident report.\n\nBefore finalising, apply the Incident Report Rubric. Impact, timeline, causal analysis, corrective actions, and factual integrity are critical gates. Do not call the hypothesis a root cause until the named verification action is complete.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Executive summary\nCheckout API degradation between 14:20 and 15:07 UTC caused 1,842 HTTP 503 responses. Of those checkout attempts, 1,307 were retried successfully within 24 hours. Revenue impact has not been calculated. There is no evidence in the supplied incident record of data loss or unauthorised access.\n\nCausal analysis\nThe confirmed technical cause was exhaustion of application database connection pools after deployment 2026.07.15.2. The team has not yet proved why the deployment increased connection duration. A changed retry path is the current hypothesis and remains subject to code-level verification by 22 July.\n\nClosure condition\nService recovery was accepted at 15:07 after the error rate remained below 1% for ten minutes. INC-2026-081 remains open for corrective-action evidence.",
+      "scorecard": [
+        {
+          "criterion": "Impact",
+          "score": 5,
+          "evidence": "Duration, failed attempts, retries, and evidence limits are explicit.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Timeline",
+          "score": 5,
+          "evidence": "Detection, diagnosis, rollback, recovery, and stability gate align.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Causal analysis",
+          "score": 5,
+          "evidence": "Confirmed mechanism and unproven hypothesis are separate.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Corrective actions",
+          "score": 4,
+          "evidence": "Owners, dates, and expected evidence are retained.",
+          "gate": "Human check"
+        },
+        {
+          "criterion": "Factual integrity",
+          "score": 5,
+          "evidence": "The excerpt does not add revenue or security certainty.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- The incident commander must reconcile timestamps with monitoring and ticket records.\n- Security must approve the wording about data loss and unauthorised access.\n- Action owners must confirm dates and attach acceptance evidence before closure."
+    },
+    {
+      "id": "linkedin-catalogue-launch",
+      "title": "LinkedIn Post — Professional Prompt Bundles",
+      "artefact": "Professional LinkedIn launch post",
+      "audience": "Senior technology, writing, knowledge-management, and AI practitioners",
+      "scenario": "verified-public-project",
+      "description": "A real public-project bundle showing how verified repository facts become an understated launch post.",
+      "sourcePath": "examples/linkedin-catalogue-launch.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/social-media-style.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/what-so-what-now-what.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/linkedin-prompts.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/linkedin-catalogue-launch.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/linkedin-post-rubric.md"
+        }
+      ],
+      "context": "The author is announcing a public professional-writing catalogue. The post should lead with the working principle learned from building it, then give readers evidence they can inspect themselves.",
+      "sourcePacket": "SCENARIO: Verified public project; facts must be rechecked against the live release before publication.\nAUTHOR VIEW: The most useful part of a writing prompt is often the review checklist attached to it.\nLIVE URL: https://p.riera.co.uk/\nSOURCE URL: https://github.com/joanmarcriera/writing-style-catalogue\nVERIFIED RELEASE CLAIM: The catalogue publishes 12 interactive worked bundles.\nBUNDLE STAGES: professional context and source packet; completed copy-paste prompt; output excerpt; rubric scorecard and human-review requirements.\nARTEFACT EXAMPLES: board paper, decision record, operational runbook, executive report, LinkedIn post.\nOBSERVED FAILURE MODES: missing facts, invented claims, flattened nuance, and register that does not fit the audience.\nAUTHOR RULE: A draft is not complete when the model stops; it is complete when the relevant rubric passes and a human accepts the remaining checks.\nTONE: Understated, evidence-first, direct; no emojis or engagement claims.\nCALL TO CONVERSATION: Ask practitioners what is on their own pre-release checklist.",
+      "prompt": "You are editing a LinkedIn launch post for a senior AI and cloud architect. Write for technology leaders, professional writers, knowledge-management practitioners, and people who use LLMs for consequential documents.\n\nUse only the SOURCE PACKET. Do not invent adoption, traffic, user feedback, performance, catalogue counts, professional endorsements, or claims about all LLMs. If the live URL, source URL, bundle count, bundle stages, or author rule has not been verified against the deployed release, return MISSING INFORMATION and do not write the post.\n\nPreserve this hook: “The most useful part of a writing prompt is not the prompt. It’s the review checklist attached to it.” Explain the catalogue through three bullets: artefact structure; facts-only prompt placeholders; review rubric. State the observed failure modes as lessons from building the catalogue, not universal research findings. Use short mobile-readable paragraphs, British English, no emojis, no hype, and 260–360 words. End with the supplied specific question, then the two URLs and no more than five relevant hashtags. Output only plain post text.\n\nBefore finalising, apply the LinkedIn Post Rubric. Evidence, insight, voice, mobile readability, links, and publication integrity are critical gates. Preserve nuance even if a sharper claim would sound more viral.\n\nSOURCE PACKET:\n[Paste the verified source packet above here.]",
+      "output": "The most useful part of a writing prompt is not the prompt. It’s the review checklist attached to it.\n\nI keep a public catalogue of professional writing workflows at p.riera.co.uk: board papers, decision records, runbooks, reports, and LinkedIn posts. The worked examples show the whole bundle, because the bundle is the point:\n\n• A style definition and structure pattern, so you start from the artefact you need rather than a blank chat window.\n• A copy-paste prompt with explicit placeholders for the facts only you have.\n• A review rubric that gates the draft before it goes anywhere.\n\nMy rule: the draft is not done when the model stops. It is done when the rubric passes—and when a human accepts the checks the model cannot perform.",
+      "scorecard": [
+        {
+          "criterion": "Hook",
+          "score": 5,
+          "evidence": "The first two lines state a precise counter-intuitive principle.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Evidence",
+          "score": 5,
+          "evidence": "Catalogue features and links map to the verified release packet.",
+          "gate": "Human check"
+        },
+        {
+          "criterion": "Professional insight",
+          "score": 5,
+          "evidence": "The post gives readers a transferable release rule.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Voice",
+          "score": 5,
+          "evidence": "Direct, understated, and free of invented success claims.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Publication integrity",
+          "score": 4,
+          "evidence": "Counts and URLs require one final live check before scheduling.",
+          "gate": "Human check"
+        }
+      ],
+      "humanReview": "- Recheck the live bundle count, labels, links, and social preview after deployment.\n- Read the final post aloud for personal voice and confirm every public claim.\n- The author, not the model, decides when and where to schedule it."
+    },
+    {
+      "id": "minto-recommendation",
+      "title": "Minto Recommendation — Service Desk Consolidation",
+      "artefact": "Structured executive recommendation",
+      "audience": "Chief operating officer and technology leadership team",
+      "scenario": "labelled-composite",
+      "description": "A worked recommendation bundle that leads with one answer and supports it with mutually exclusive reasons.",
+      "sourcePath": "examples/minto-recommendation.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/minto-pyramid-principle.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/situation-complication-question-answer.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/strategy-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-executive-memo.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/minto-recommendation.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/executive-communication-rubric.md"
+        }
+      ],
+      "context": "Leadership must decide whether to consolidate three regional service desks. The recommendation should be persuasive because its logic is explicit, not because alternatives are caricatured.",
+      "sourcePacket": "SCENARIO: Labelled composite.\nSITUATION: Three regional service desks use separate queues, reporting, and overnight cover.\nEVIDENCE: 18% of tickets are transferred between regions; median resolution is 14.2 hours; annual operating cost is £2.4m.\nCOMPLICATION: A single global tool is already contracted, but operating processes and ownership remain regional.\nOPTIONS: retain regional model; consolidate queues only; create one follow-the-sun operating model.\nRECOMMENDATION: Follow-the-sun model, phased over six months.\nSUPPORTING REASONS: one accountable queue owner; continuous cover using existing shifts; one reporting model.\nESTIMATE: implementation cost £310,000; expected annual saving £420,000 from contractor and duplicate-tool retirement.\nASSUMPTIONS: No redundancies; shifts remain within existing contracts; savings estimate has not passed finance assurance.\nRISK: regional knowledge may be lost during transition.\nDECISION: Approve detailed design and finance validation, not full implementation.",
+      "prompt": "You are a strategy director writing a Minto-style recommendation for the Chief Operating Officer and technology leadership team. The decision is whether to approve detailed design and finance validation for a follow-the-sun service desk model.\n\nUse only the SOURCE PACKET. Do not invent customer satisfaction, staffing reductions, regulatory benefits, validated savings, implementation dependencies, or option scores. Present the £420,000 saving as an unassured estimate and preserve the no-redundancy and employment-contract assumptions. If the decision, viable alternatives, evidence, financial estimate, or material risk is absent, return MISSING INFORMATION rather than a recommendation.\n\nWrite in British English. Lead with the answer in one sentence. Support it with three mutually exclusive reasons: accountability, coverage, and management information. Then use Situation, Complication, Question, Answer; Evidence; Alternatives and trade-offs; Financial assumptions; Risk and mitigation; Decision requested. Explain why queue-only consolidation and the status quo were not selected without dismissing them. Keep it between 600 and 850 words and output only the recommendation.\n\nBefore finalising, test factual integrity, logical grouping, option fairness, caveat preservation, decision clarity, and executive usefulness against the Executive Communication Rubric.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Recommendation\nApprove detailed design and finance validation for a six-month transition to one follow-the-sun service desk operating model.\n\nWhy this is the right next decision\n1. Accountability: one queue owner removes ambiguous hand-offs across three regional teams.\n2. Coverage: existing regional shifts can provide continuous cover, subject to confirmation that current employment terms permit the design.\n3. Management information: one reporting model makes transfer rate, ageing, and resolution performance comparable.\n\nThe estimated £420,000 annual saving has not passed finance assurance. Approval therefore covers detailed design and validation of the £310,000 implementation estimate—not full implementation.",
+      "scorecard": [
+        {
+          "criterion": "Instruction fit",
+          "score": 5,
+          "evidence": "The recommendation asks for design and validation only.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Factual integrity",
+          "score": 5,
+          "evidence": "Estimates and employment assumptions remain qualified.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Structure",
+          "score": 5,
+          "evidence": "One answer is supported by three non-overlapping reasons.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Risk awareness",
+          "score": 4,
+          "evidence": "Regional knowledge and contract assumptions remain visible.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Usefulness",
+          "score": 5,
+          "evidence": "Leaders can approve a bounded next step without approving delivery.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- Finance must assure the cost and saving model.\n- HR and legal must validate shift and employment assumptions.\n- Regional service owners must validate the knowledge-transfer risk and proposed controls."
+    },
+    {
+      "id": "slide-deck-outline",
+      "title": "Slide Deck Outline — Cloud Exit Decision",
+      "artefact": "Executive slide deck outline",
+      "audience": "Investment committee deciding whether to fund discovery",
+      "scenario": "labelled-composite",
+      "description": "A worked executive-deck bundle with message titles, visual evidence, speaker caveats, and a precise ask.",
+      "sourcePath": "examples/slide-deck-outline.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/consulting-style.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/problem-impact-recommendation-next-steps.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/presentation-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-slide-deck.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/slide-deck-outline.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/slide-deck-rubric.md"
+        }
+      ],
+      "context": "An investment committee needs a seven-slide decision narrative. The ask is permission to fund discovery, not approval of a migration programme that has not yet been costed.",
+      "sourcePacket": "SCENARIO: Labelled composite.\nDECISION: Approve £95,000 and eight weeks for discovery of data-centre exit options.\nDRIVER: Primary co-location lease ends 30 September 2028; renewal terms are available only 12 months before expiry.\nCURRENT COST: £1.26m per year excluding internal staff.\nKNOWN CONDITION: 74 applications; 19 have unsupported operating-system components; dependency mapping incomplete for 28 applications.\nOPTIONS FOR DISCOVERY: renew/modernise in place; hybrid migration; cloud-first migration.\nNOT YET KNOWN: validated five-year cost, migration schedule, vendor selection, application-by-application disposition.\nDISCOVERY OUTPUTS: dependency map, option cost model, delivery risk assessment, sourcing recommendation, decision paper.\nSUCCESS GATE: committee receives an assured options case by 15 December 2026.",
+      "prompt": "You are an executive presentation strategist. Create a seven-slide outline for an investment committee deciding whether to approve £95,000 and eight weeks of discovery for data-centre exit options.\n\nUse only the SOURCE PACKET. Do not invent savings, target architecture, vendor preference, migration duration, regulatory drivers, application disposition, or a preferred exit option. Do not turn the lease expiry into false immediate urgency. If the decision, amount, timebox, known estate facts, unknowns, or discovery outputs are missing, return MISSING INFORMATION rather than a deck.\n\nFor each slide provide: a message title that states the conclusion; two to four evidence bullets; a visual specification using only supplied data; and speaker notes that preserve caveats. Use this narrative: decision and timing; current estate; why evidence is insufficient; three options to investigate; discovery scope; governance and success gate; decision requested. Use British English. Keep slide text sparse and speaker notes substantive. The final slide must ask for discovery funding only. Output only the slide-by-slide outline.\n\nBefore finalising, apply the Slide Deck Rubric for decision clarity, narrative, evidence, visual usefulness, speaker notes, restraint, and final ask. Any invented business case is a failure.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Slide 1 — We need evidence before the 2028 lease deadline becomes a constraint\n• Decision today: £95,000 for an eight-week discovery.\n• The lease ends 30 September 2028; renewal terms arrive only 12 months before expiry.\nVisual: horizontal timeline from discovery to lease expiry, with no invented programme dates.\nSpeaker note: This is not a request to approve migration or select cloud. It buys the evidence needed for that later decision.\n\nSlide 3 — The current estate is not understood well enough to price an exit\n• 74 applications.\n• 19 contain unsupported operating-system components.\n• Dependency mapping is incomplete for 28 applications.\nVisual: three-number estate diagnostic, explicitly labelled as current known facts.",
+      "scorecard": [
+        {
+          "criterion": "Decision clarity",
+          "score": 5,
+          "evidence": "Funding, duration, and discovery scope are explicit.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Narrative",
+          "score": 5,
+          "evidence": "Each slide advances the evidence-to-decision story.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Evidence",
+          "score": 5,
+          "evidence": "Visuals use only supplied dates, counts, and cost.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Speaker notes",
+          "score": 5,
+          "evidence": "Caveats prevent discovery from becoming programme approval.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Final ask",
+          "score": 5,
+          "evidence": "The ask is bounded to £95,000 and eight weeks.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- Finance must verify the current cost and discovery budget.\n- Estate owners must reconcile application and dependency counts.\n- The committee secretary must confirm decision wording and meeting time.\n- A designer must check legibility and accessibility in the rendered deck."
+    },
+    {
+      "id": "smart-brevity-update",
+      "title": "Smart Brevity Update — Release Readiness",
+      "artefact": "Smart Brevity leadership update",
+      "audience": "Product and engineering leadership",
+      "scenario": "labelled-composite",
+      "description": "A worked short update that makes status, consequence, owner, and next checkpoint visible in under a minute.",
+      "sourcePath": "examples/smart-brevity-update.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/axios-smart-brevity.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/what-so-what-now-what.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/executive-summary-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-one-page-brief.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/smart-brevity-update.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/executive-communication-rubric.md"
+        }
+      ],
+      "context": "Leaders need a 30-second readiness update that does not disguise a conditional launch as green. The output must keep status logic and the exact go/no-go checkpoint.",
+      "sourcePacket": "SCENARIO: Labelled composite.\nRELEASE: Customer reporting v2; target 18 August 2026.\nSTATUS: Amber until performance gate passes.\nREADY: security review complete; support guide approved; rollback rehearsal passed in staging.\nOPEN: peak-load test at 2,000 concurrent report requests; test scheduled 13 August, owned by Performance Engineering.\nTHRESHOLD: p95 response below 2.5 seconds and error rate below 1% for 30 minutes.\nCONSEQUENCE: failing either threshold moves launch to 25 August; no executive exception path.\nNEXT CHECKPOINT: go/no-go meeting at 14:00 on 14 August.\nUNKNOWN: Peak-load result.",
+      "prompt": "You are writing a Smart Brevity release-readiness update for product and engineering leadership. Produce a 30-second read using only the SOURCE PACKET.\n\nDo not invent test results, customer impact, confidence, mitigations, dependencies, or executive discretion. The release remains Amber until both supplied performance thresholds pass. If the target date, status logic, open gate, owner, threshold, consequence, or checkpoint is missing, return MISSING INFORMATION rather than an update.\n\nUse British English and this format: one-line headline; Why it matters; Ready; Still open; What happens next. Keep it between 120 and 170 words. Use short labels and no more than five bullets. State the 25 August fallback and that there is no exception path. Do not describe completed security or rollback work as proof of performance. Output only the update.\n\nBefore finalising, review factual integrity, signal-to-noise, status clarity, owner/date visibility, caveat preservation, and actionability against the Executive Communication Rubric. A fluent update that implies Green is a failed draft.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Customer reporting v2 remains Amber pending one performance gate.\n\nWhy it matters: The 18 August launch depends on evidence that peak reporting load meets the agreed service threshold.\n\nReady\n• Security review, support guide, and staging rollback rehearsal are complete.\n\nStill open\n• Performance Engineering will test 2,000 concurrent report requests on 13 August.\n• Pass = p95 below 2.5 seconds and errors below 1% for 30 minutes.\n\nWhat happens next: Go/no-go is 14:00 on 14 August. Failure of either threshold moves launch to 25 August; there is no executive exception path.",
+      "scorecard": [
+        {
+          "criterion": "Factual integrity",
+          "score": 5,
+          "evidence": "No test result or confidence is invented.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Structure",
+          "score": 5,
+          "evidence": "Status, gate, threshold, consequence, and checkpoint scan quickly.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Professional tone",
+          "score": 5,
+          "evidence": "Direct, calm, and free of launch theatre.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Risk awareness",
+          "score": 5,
+          "evidence": "Amber status and the non-negotiable fallback remain clear.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Usefulness",
+          "score": 5,
+          "evidence": "Leaders know the owner, test, date, and decision point.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- The release manager must confirm current status immediately before distribution.\n- Performance Engineering must verify the threshold and test schedule.\n- The meeting owner must confirm the go/no-go time and attendee list."
+    },
+    {
+      "id": "tax-technical-note",
+      "title": "Tax Note — Imported SaaS and UK Reverse Charge",
+      "artefact": "UK VAT technical note",
+      "audience": "UK finance director and qualified VAT adviser",
+      "scenario": "labelled-composite",
+      "description": "A worked tax-analysis bundle that separates facts, supplied authority, assumptions, conclusion, and adviser checks.",
+      "sourcePath": "examples/tax-note.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/tax-advisory-style.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/context-analysis-options-recommendation.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/tax-note-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-tax-technical-note.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/tax-note.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/tax-note-rubric.md"
+        }
+      ],
+      "context": "A finance director needs a provisional treatment for imported SaaS before a qualified VAT adviser signs it off. The prompt is constrained to supplied HMRC material and must not invent statutory references or overseas tax consequences.",
+      "sourcePacket": "SCENARIO: Labelled composite; not tax advice.\nAS-OF DATE: 1 August 2026.\nCUSTOMER: UK-established, VAT-registered trading company using the service for taxable business activity.\nSUPPLIER: US-established company with no UK establishment stated in the contract.\nSUPPLY: Annual access to standard cloud-hosted project-management software; invoice £24,000; invoice shows no UK VAT.\nASSUMPTIONS: Customer and supplier act in business capacities; no special place-of-supply rule applies; no private use; supplied contract facts are complete.\nQUESTION: Does the UK customer account for VAT using the reverse charge, and what records should finance retain?\nSUPPLIED AUTHORITY: HMRC, “Place of supply of services (VAT Notice 741A)”, current page checked 1 August 2026: https://www.gov.uk/guidance/vat-place-of-supply-of-services-notice-741a . Section 1.3 identifies VAT Act 1994 section 7A as covering the general B2B rule, section 8 as covering the reverse-charge mechanism for services received from outside the UK, and section 9 as covering where a person belongs.\nLIMIT: The packet does not reproduce the full notice or test special rules. A qualified adviser must confirm the conclusion against the current notice and transaction documents.",
+      "prompt": "You are assisting a qualified UK VAT adviser. Draft a provisional technical note for the finance director on the imported SaaS invoice described in the SOURCE PACKET.\n\nUse only the supplied facts and authority. Do not invent legislation, HMRC paragraphs, cases, rates, filing boxes, overseas tax treatment, supplier status, or special-rule analysis. Do not quote material that is not in the packet. Keep facts, assumptions, supplied authority, analysis, provisional conclusion, and adviser checks separate. If business status, establishment, use, invoice amount, authority, or the assumption about special rules is missing or contradictory, return MISSING INFORMATION rather than a conclusion.\n\nUse British English and structure the note as: Question; Facts; Assumptions; Authority supplied; Analysis; Provisional conclusion; Records to retain; Adviser verification required. Explain the logical route from the supplied B2B, belonging, and reverse-charge references without claiming that the packet contains a complete legal review. Do not calculate a VAT amount because no current rate is supplied. Keep the note between 650 and 850 words. Output only the note.\n\nBefore finalising, apply the Tax Note Rubric. Factual accuracy, authority integrity, assumption visibility, reasoning, caveats, and review requirements are critical gates. State prominently that the note is illustrative and not tax advice.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Provisional conclusion\nOn the supplied facts and assumptions, the transaction should be tested under the general B2B place-of-supply and UK reverse-charge provisions identified in VAT Notice 741A. The customer is UK-established and VAT-registered; the supplier is stated to be US-established with no UK establishment; and the software is used for taxable business activity.\n\nThe packet is not sufficient to state the accounting amount or return entries. It supplies no VAT rate and does not reproduce the detailed HMRC rules or test whether a special provision applies. Finance should not post the final treatment until a qualified VAT adviser has checked the current notice, contract, invoice, establishment evidence, business-use evidence, and applicable rate.",
+      "scorecard": [
+        {
+          "criterion": "Facts and assumptions",
+          "score": 5,
+          "evidence": "Business status, establishments, use, and special-rule assumption are separate.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Authority",
+          "score": 4,
+          "evidence": "The note uses one verified HMRC page without fabricating paragraphs.",
+          "gate": "Human check"
+        },
+        {
+          "criterion": "Analysis",
+          "score": 4,
+          "evidence": "Reasoning follows the supplied B2B, belonging, and reverse-charge route.",
+          "gate": "Human check"
+        },
+        {
+          "criterion": "Conclusion and caveats",
+          "score": 5,
+          "evidence": "The conclusion is provisional and refuses an unsupported calculation.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Professional usefulness",
+          "score": 4,
+          "evidence": "Finance receives a concrete adviser-verification list.",
+          "gate": "Human check"
+        }
+      ],
+      "humanReview": "- A qualified VAT adviser must verify the current law, special rules, VAT rate, and return treatment.\n- Finance must retain the contract, invoice, supplier-establishment evidence, business-purpose evidence, and adviser approval.\n- The as-of date must be refreshed whenever the note is reused."
+    },
+    {
+      "id": "technical-runbook",
+      "title": "Technical Runbook — API Connection Pool Exhaustion",
+      "artefact": "Production incident runbook",
+      "audience": "Authorised on-call engineers and service owners",
+      "scenario": "labelled-composite",
+      "description": "A worked operational bundle with bounded diagnostics, approval gates, rollback, escalation, and measurable recovery.",
+      "sourcePath": "examples/technical-runbook.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/technical-documentation.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/objective-scope-procedure-exceptions.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/technical-documentation-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-runbook.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/technical-runbook.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/technical-documentation-rubric.md"
+        }
+      ],
+      "context": "An authorised on-call engineer needs safe triage and recovery guidance. Commands are illustrative placeholders and the runbook must stop operators from running an untested restart or rollback blindly.",
+      "sourcePacket": "SCENARIO: Labelled composite; commands and identifiers are illustrative and must be tested locally.\nSERVICE: orders-api in Kubernetes namespace production.\nTRIGGER: pool utilisation above 90% for five minutes plus “Timeout waiting for connection from pool”.\nREAD-ONLY COMMANDS APPROVED: kubectl -n production get deploy orders-api; kubectl -n production get pods -l app=orders-api; kubectl -n production rollout history deploy/orders-api.\nBASELINE: API error rate below 1%; pool utilisation below 70%.\nCHANGE GATE: Restart or rollback requires active incident ticket, incident commander approval, confirmed rollback target, and operator authorisation.\nRECOVERY OPTIONS: pause order-reconciliation CronJob; restart deployment; roll back latest deployment. Exact write commands must be taken from the locally tested command register, not generated.\nESCALATE: checkout failures exceed 15 minutes; database CPU above 85%; rollback fails; cause unknown after 20 minutes.\nRESOLUTION: baselines hold for ten minutes; synthetic checkout passes; paused jobs restored or explicitly tracked.\nOWNER: Platform Operations. LAST TESTED: not supplied.",
+      "prompt": "You are a senior site-reliability engineer writing a runbook for authorised on-call staff. Use only the SOURCE PACKET to document connection-pool exhaustion for orders-api.\n\nDo not invent commands, dashboards, database queries, contacts, rollback revisions, timings, permissions, or success evidence. Include the three approved read-only commands verbatim. For any state-changing step, describe the gate and write “use the locally tested command register”; never generate a kubectl patch, restart, or rollback command. If authorisation, change gate, escalation path, recovery threshold, or last-tested evidence is missing, return MISSING INFORMATION for that part and do not present the runbook as production-ready.\n\nUse British English and structure: Purpose; Scope and authority; Detection; First five minutes; Decision tree; State-changing recovery gates; Escalation; Resolution verification; Restoration; Post-incident actions; Ownership and test record. Make stop conditions explicit. State at the top that LAST TESTED is missing and the document cannot be approved for production until a tabletop or staging test is recorded. Keep it between 800 and 1,050 words. Output only the runbook.\n\nBefore finalising, apply the Technical Documentation Rubric for accuracy, prerequisites, safety, decision branches, verification, rollback, escalation, and maintainability. Treat an unverified command as a critical failure.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Approval status: NOT PRODUCTION-READY — no last-tested date is supplied.\n\nFirst five minutes\n1. Confirm the alert is current and open or join the active incident ticket.\n2. Run only the approved read-only checks:\n   kubectl -n production get deploy orders-api\n   kubectl -n production get pods -l app=orders-api\n   kubectl -n production rollout history deploy/orders-api\n3. Confirm both the pool alert and timeout log pattern. If either is absent, stop and use the generic API-degradation runbook.\n\nState-changing recovery\nDo not restart, roll back, or pause a job unless the incident commander approves the change, the operator is authorised, and the locally tested command register identifies the exact command and rollback target.\n\nResolution requires ten continuous minutes below 1% API errors and 70% pool utilisation, a passing synthetic checkout, and restoration or explicit tracking of every paused job.",
+      "scorecard": [
+        {
+          "criterion": "Accuracy",
+          "score": 4,
+          "evidence": "Only approved read-only commands are reproduced.",
+          "gate": "Human check"
+        },
+        {
+          "criterion": "Safety",
+          "score": 5,
+          "evidence": "All state changes require authority and a tested command register.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Decision branches",
+          "score": 5,
+          "evidence": "Stop, continue, escalate, and resolve conditions are measurable.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Verification",
+          "score": 5,
+          "evidence": "Recovery requires sustained metrics and a synthetic transaction.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Maintainability",
+          "score": 3,
+          "evidence": "Ownership exists, but last-tested evidence is missing.",
+          "gate": "Revise"
+        }
+      ],
+      "humanReview": "- Platform Operations must replace illustrative identifiers with locally verified values.\n- An authorised engineer must test every command in staging and record the date and evidence.\n- Security and change-management owners must approve permissions and state-changing gates.\n- The runbook cannot be marked production-ready while the maintainability gate remains `Revise`."
+    },
+    {
+      "id": "website-seo-audit",
+      "title": "Website Audit — Specialist Consultancy",
+      "artefact": "Website marketing and SEO audit",
+      "audience": "Founder, marketing lead, and web delivery team",
+      "scenario": "labelled-composite",
+      "description": "A worked website-audit bundle that separates observed evidence, hypotheses, missing private data, and prioritised actions.",
+      "sourcePath": "examples/website-seo-audit.md",
+      "links": [
+        {
+          "kind": "style",
+          "label": "Style",
+          "path": "styles/consulting-style.md"
+        },
+        {
+          "kind": "pattern",
+          "label": "Pattern",
+          "path": "patterns/problem-impact-recommendation-next-steps.md"
+        },
+        {
+          "kind": "template",
+          "label": "Prompt",
+          "path": "prompt-templates/website-marketing-seo-prompts.md"
+        },
+        {
+          "kind": "skill",
+          "label": "Skill",
+          "path": "skills/create-website-marketing-seo-audit.md"
+        },
+        {
+          "kind": "example",
+          "label": "Example",
+          "path": "examples/website-seo-audit.md"
+        },
+        {
+          "kind": "rubric",
+          "label": "Rubric",
+          "path": "rubrics/website-marketing-seo-rubric.md"
+        }
+      ],
+      "context": "A founder needs an actionable public-site review. The auditor has page observations but no analytics, Search Console, CRM, keyword-volume, or conversion data, so the output must not manufacture performance findings.",
+      "sourcePacket": "SCENARIO: Labelled composite; example.test is not a real audited website.\nBUSINESS: UK specialist cloud-cost consultancy serving organisations with 200–2,000 staff.\nGOAL: Qualified discovery-call enquiries.\nPUBLIC PAGES INSPECTED: homepage, services, two case studies, about, contact, privacy, robots.txt, sitemap.xml.\nOBSERVED: Homepage headline says “Transform your cloud journey”; no buyer, problem, or outcome named. One primary navigation CTA says “Get in touch”. Two case studies name the work but contain no quantified result. Contact form asks for nine fields. Service pages have unique titles and one H1 each. Sitemap contains 17 URLs. Robots.txt does not block public content.\nNOT OBSERVED: pricing guidance, delivery process, qualification criteria, client quotations, author biographies on articles.\nNOT AVAILABLE: analytics, Search Console, CRM outcomes, rankings, backlinks, keyword volume, Core Web Vitals field data, form completion.\nCONSTRAINT: Two-person team can deliver no more than six material page changes per month.",
+      "prompt": "You are a senior website marketing, technical SEO, and conversion auditor. Produce an evidence-led audit for the founder, marketing lead, and web delivery team using only the SOURCE PACKET.\n\nDo not invent traffic, rankings, conversions, search demand, backlinks, technical performance, revenue, customer opinions, competitor evidence, or CMS behaviour. Label every finding Observed, Inferred, or Not available. An inference must identify the observation that supports it and the data needed to test it. If inspected pages, business goal, access limits, or team capacity are missing, return MISSING INFORMATION rather than a prioritised plan.\n\nUse British English. Structure: Executive summary; Scope and evidence; Current-state scorecard; Findings by positioning, trust, conversion, content, technical SEO, and measurement; Prioritised recommendations; 30/60/90-day plan; Delivery backlog; Missing evidence. Give every action an owner role, impact, effort, confidence, dependency, and testable acceptance criterion. Respect the limit of six material page changes per month. Do not score a private performance dimension without data. Keep the audit between 1,200 and 1,600 words. Output only the audit.\n\nBefore finalising, apply the Website Marketing and SEO Rubric. Evidence discipline, commercial alignment, prioritisation, acceptance criteria, and missing-information honesty are critical gates.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "output": "Executive summary\nThe public site explains that cloud consulting is offered but does not yet help the target buyer recognise whether the service fits their organisation or what outcome to expect. This is an Observed messaging gap, not evidence of poor conversion: analytics and form-completion data were not available.\n\nPriority 1 — Replace the generic homepage proposition\nEvidence: Observed headline “Transform your cloud journey” names neither the 200–2,000-person buyer nor the cloud-cost problem.\nAction: Marketing lead drafts and tests a proposition naming audience, problem, and evidence-backed outcome.\nAcceptance: one H1 names the target organisation and problem; supporting copy contains no unsupported result; CTA describes a discovery-call outcome.\n\nPriority 2 — Reduce untested form friction\nEvidence: Observed nine-field contact form. Inference: field count may discourage enquiries; no completion data is available.\nAcceptance: instrument start/completion events before changing fields, then compare a six-field variant for four weeks.",
+      "scorecard": [
+        {
+          "criterion": "Evidence discipline",
+          "score": 5,
+          "evidence": "Observations, inferences, and unavailable data remain distinct.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Commercial alignment",
+          "score": 5,
+          "evidence": "Recommendations serve qualified discovery calls.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Prioritisation",
+          "score": 5,
+          "evidence": "Work respects the six-change monthly capacity.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Technical integrity",
+          "score": 4,
+          "evidence": "Public technical facts are bounded to inspected artefacts.",
+          "gate": "Human check"
+        },
+        {
+          "criterion": "Actionability",
+          "score": 5,
+          "evidence": "Owners and acceptance criteria define completion.",
+          "gate": "Pass"
+        }
+      ],
+      "humanReview": "- Reinspect the live pages and capture dated evidence before issuing a client report.\n- Connect analytics, Search Console, CRM, and performance data before making outcome claims.\n- Validate accessibility, legal, brand, and implementation constraints with responsible owners."
     }
   ]
 };
