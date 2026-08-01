@@ -17,9 +17,9 @@ Upgrade the public catalogue so each worked example visibly demonstrates a profe
 
 ## Current implementation state
 
-- The implementation is locally complete and ready to commit to `main`.
+- The professional bundle release is deployed from commit `5ad2de7` and verified at `https://p.riera.co.uk/`.
 - No social post has been created or scheduled.
-- Production deployment and live-domain verification remain the final release gate.
+- The paste-ready LinkedIn copy has been prepared for manual publication.
 
 ## Files changed
 
@@ -39,12 +39,16 @@ Upgrade the public catalogue so each worked example visibly demonstrates a profe
 - `git diff --check`: passed.
 - Re-running both generators produced byte-identical `INDEX.md` and `assets/catalogue-data.js` hashes.
 - Local browser walkthrough: passed for all 12 bundles; each exposed 4 tabs, at least 5 component links, 5 score rows, and valid gate labels. Desktop and 390px layouts had no horizontal overflow or broken images.
+- GitHub Pages workflow `30694125883`: passed every validation and deployment step for commit `5ad2de7`.
+- Live hash comparison: `index.html`, `assets/catalogue-data.js`, `assets/site.js`, and `assets/social-card.png` matched the local release byte for byte.
+- Live browser walkthrough: passed all 12 bundles at desktop size and at 390×844; no failed bundle checks, broken images, or horizontal overflow.
 
 ## Unresolved defects or risks
 
 - The contract intentionally expects exactly 12 examples; adding another example requires updating `EXPECTED_BUNDLE_COUNT` as an explicit release decision.
 - External readers must still perform the stated human review before using any output, especially the tax note and untested runbook.
 - The local Ollama review wrapper failed before returning findings; authoritative validation and review were completed in the primary agent instead.
+- The successful Pages run reported a non-blocking GitHub Actions warning that several upstream actions still target the deprecated Node.js 20 runtime and were forced onto Node.js 24.
 
 ## Known blockers
 
@@ -52,4 +56,4 @@ Upgrade the public catalogue so each worked example visibly demonstrates a profe
 
 ## Next recommended action
 
-Commit and push the release, wait for GitHub Pages, then verify the live custom domain and record the deployment evidence.
+Monitor the upstream GitHub Pages actions and update their major versions when Node.js 24-native releases are available.

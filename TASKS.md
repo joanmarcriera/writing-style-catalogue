@@ -14,7 +14,7 @@
   - Completion: canonical/Open Graph metadata is present and the social preview is 1200×630.
 - [x] Add automated tests and CI gates.
   - Completion: parser, schema, links, generation, JavaScript, and stale-generated-file checks pass locally and in GitHub Actions.
-- [ ] Deploy and verify the public release.
+- [x] Deploy and verify the public release.
   - Completion: `main` is pushed, GitHub Pages succeeds, and live desktop/mobile checks show the new bundle experience with no runtime errors.
-- [ ] Return the final LinkedIn copy.
+- [x] Return the final LinkedIn copy.
   - Completion: paste-ready text reflects only live, verified catalogue claims; no external post is created or scheduled.
