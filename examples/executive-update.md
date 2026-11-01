@@ -43,7 +43,7 @@ Use only the SOURCE PACKET. Do not invent causes, savings, customer sentiment, p
 
 Use British English and this order: Bottom line; What has happened; So what; Decision required; Next 30 days. Keep it between 300 and 450 words. Lead with Amber status and the forecast range. State both the £3.05m–£3.28m forecast and the £3.20m approval; do not call the programme within budget. Explain that reserving contingency does not itself authorise spending. Use short paragraphs and a compact table only if it improves comparison. Output only the update.
 
-Before finalising, review instruction fit, factual integrity, specificity, structure, tone, risk awareness, and usefulness against the Executive Communication Rubric. Preserve every uncertainty and deadline.
+Before finalising, review bottom line, audience fit, evidence, decision clarity, risk and caveats, brevity, and tone against the Executive Communication Rubric. Preserve every uncertainty and deadline.
 
 SOURCE PACKET:
 [Paste the complete source packet above here.]
@@ -69,11 +69,13 @@ Confirm partner capacity by 14 August, resolve eight data-retention decisions by
 
 | Criterion | Score | Evidence | Gate |
 |---|---:|---|---|
-| Factual integrity | 5 | Actuals, forecast range, budget, and deadlines map to source. | Pass |
-| Structure | 5 | Status, implication, decision, and next actions are immediately visible. | Pass |
-| Risk awareness | 5 | Partner and retention uncertainty remain explicit. | Pass |
-| Professional tone | 4 | Direct and non-defensive without overstating control. | Pass |
-| Usefulness | 5 | The committee has one dated decision and three milestones. | Pass |
+| Bottom line | 5 | Amber status, completions to date, and the forecast range lead the update. | Pass |
+| Audience fit | 4 | Written for sponsors' budget and decision rights; first-time acceptance results are left out. | Pass |
+| Evidence | 5 | Actuals, forecast range, budget, and deadlines map to source. | Pass |
+| Decision clarity | 4 | The decision and 7 August deadline are explicit; the consequence of not reserving contingency is not stated. | Pass |
+| Risk and caveats | 5 | Partner and retention uncertainty, and the downside budget case, remain explicit. | Pass |
+| Brevity | 5 | Four short blocks with no progress narrative. | Pass |
+| Tone | 4 | Direct and non-defensive without overstating control. | Pass |
 
 ## Human review before use
 
