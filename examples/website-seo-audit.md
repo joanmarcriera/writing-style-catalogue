@@ -67,10 +67,10 @@ Acceptance: instrument start/completion events before changing fields, then comp
 
 | Criterion | Score | Evidence | Gate |
 |---|---:|---|---|
-| Evidence discipline | 5 | Observations, inferences, and unavailable data remain distinct. | Pass |
-| Commercial alignment | 5 | Recommendations serve qualified discovery calls. | Pass |
+| Fact integrity | 5 | Observations, inferences, and unavailable data remain distinct. | Pass |
+| Business relevance | 5 | Recommendations serve qualified discovery calls. | Pass |
 | Prioritisation | 5 | Work respects the six-change monthly capacity. | Pass |
-| Technical integrity | 4 | Public technical facts are bounded to inspected artefacts. | Human check |
+| Technical SEO accuracy | 4 | Public technical facts are bounded to inspected artefacts. | Human check |
 | Actionability | 5 | Owners and acceptance criteria define completion. | Pass |
 
 ## Human review before use

@@ -72,10 +72,10 @@ Resolution requires ten continuous minutes below 1% API errors and 70% pool util
 
 | Criterion | Score | Evidence | Gate |
 |---|---:|---|---|
-| Accuracy | 4 | Only approved read-only commands are reproduced. | Human check |
+| Technical accuracy | 4 | Only approved read-only commands are reproduced. | Human check |
 | Safety | 5 | All state changes require authority and a tested command register. | Pass |
-| Decision branches | 5 | Stop, continue, escalate, and resolve conditions are measurable. | Pass |
-| Verification | 5 | Recovery requires sustained metrics and a synthetic transaction. | Pass |
+| Procedure quality | 5 | Numbered checks use exact read-only commands; stop and escalate conditions are measurable. | Pass |
+| Troubleshooting | 4 | Resolution requires sustained metrics and a synthetic checkout; symptom-to-cause checks beyond the two confirmations are not shown. | Pass |
 | Maintainability | 3 | Ownership exists, but last-tested evidence is missing. | Revise |
 
 ## Human review before use
