@@ -42,7 +42,7 @@ Do not invent test results, customer impact, confidence, mitigations, dependenci
 
 Use British English and this format: one-line headline; Why it matters; Ready; Still open; What happens next. Keep it between 120 and 170 words. Use short labels and no more than five bullets. State the 25 August fallback and that there is no exception path. Do not describe completed security or rollback work as proof of performance. Output only the update.
 
-Before finalising, review factual integrity, signal-to-noise, status clarity, owner/date visibility, caveat preservation, and actionability against the Executive Communication Rubric. A fluent update that implies Green is a failed draft.
+Before finalising, review bottom line, audience fit, evidence, decision clarity, risk and caveats, brevity, and tone against the Executive Communication Rubric. A fluent update that implies Green is a failed draft.
 
 SOURCE PACKET:
 [Paste the complete source packet above here.]
@@ -69,11 +69,13 @@ What happens next: Go/no-go is 14:00 on 14 August. Failure of either threshold m
 
 | Criterion | Score | Evidence | Gate |
 |---|---:|---|---|
-| Factual integrity | 5 | No test result or confidence is invented. | Pass |
-| Structure | 5 | Status, gate, threshold, consequence, and checkpoint scan quickly. | Pass |
-| Professional tone | 5 | Direct, calm, and free of launch theatre. | Pass |
-| Risk awareness | 5 | Amber status and the non-negotiable fallback remain clear. | Pass |
-| Usefulness | 5 | Leaders know the owner, test, date, and decision point. | Pass |
+| Bottom line | 5 | The headline states Amber status and the single open gate. | Pass |
+| Audience fit | 5 | Leaders get the test, owner, threshold, and checkpoint they need to act. | Pass |
+| Evidence | 5 | Load, threshold, and dates map to source; no test result or confidence is invented. | Pass |
+| Decision clarity | 4 | Checkpoint, test owner, and consequence of failure are explicit; the go/no-go decision owner is not named. | Pass |
+| Risk and caveats | 5 | Amber status and the non-negotiable fallback remain clear. | Pass |
+| Brevity | 5 | Three bullets and short labels; it reads in under a minute. | Pass |
+| Tone | 5 | Direct, calm, and free of launch theatre. | Pass |
 
 ## Human review before use
 

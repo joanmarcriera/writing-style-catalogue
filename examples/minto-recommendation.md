@@ -44,7 +44,7 @@ Use only the SOURCE PACKET. Do not invent customer satisfaction, staffing reduct
 
 Write in British English. Lead with the answer in one sentence. Support it with three mutually exclusive reasons: accountability, coverage, and management information. Then use Situation, Complication, Question, Answer; Evidence; Alternatives and trade-offs; Financial assumptions; Risk and mitigation; Decision requested. Explain why queue-only consolidation and the status quo were not selected without dismissing them. Keep it between 600 and 850 words and output only the recommendation.
 
-Before finalising, test factual integrity, logical grouping, option fairness, caveat preservation, decision clarity, and executive usefulness against the Executive Communication Rubric.
+Before finalising, test bottom line, audience fit, evidence, decision clarity, risk and caveats, brevity, and tone against the Executive Communication Rubric.
 
 SOURCE PACKET:
 [Paste the complete source packet above here.]
@@ -68,11 +68,13 @@ The estimated £420,000 annual saving has not passed finance assurance. Approval
 
 | Criterion | Score | Evidence | Gate |
 |---|---:|---|---|
-| Instruction fit | 5 | The recommendation asks for design and validation only. | Pass |
-| Factual integrity | 5 | Estimates and employment assumptions remain qualified. | Pass |
-| Structure | 5 | One answer is supported by three non-overlapping reasons. | Pass |
-| Risk awareness | 4 | Regional knowledge and contract assumptions remain visible. | Pass |
-| Usefulness | 5 | Leaders can approve a bounded next step without approving delivery. | Pass |
+| Bottom line | 5 | The first sentence states the recommended decision and its scope. | Pass |
+| Audience fit | 4 | Leaders can approve a bounded next step without approving delivery; the alternatives are outside the excerpt. | Pass |
+| Evidence | 4 | Cost and saving figures carry their assurance status; the transfer-rate and resolution baselines are outside the excerpt. | Pass |
+| Decision clarity | 4 | The decision is limited to design and validation; the source packet gives no deadline, so none is stated. | Pass |
+| Risk and caveats | 4 | The unassured saving and employment-terms caveat are visible; regional knowledge loss is not in the excerpt. | Pass |
+| Brevity | 5 | One answer is supported by three non-overlapping reasons and one caveat paragraph. | Pass |
+| Tone | 5 | Measured and confident without overstating the saving. | Pass |
 
 ## Human review before use
 

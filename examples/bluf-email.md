@@ -43,7 +43,7 @@ Use only the supplied SOURCE PACKET. Do not invent savings, service risks, negot
 
 Write a specific subject line. In the first sentence state the decision, amount, term, and deadline. Then give no more than four short bullets covering: price movement; budget position; completed assurance; fallback and its cost. Close with the precise response required. Keep the email between 130 and 190 words, use British English, and use £ figures consistently with “excluding VAT”. Do not add pleasantries, background history, or an invented consequence of non-renewal. Output only the subject line and email body.
 
-Before finalising, check instruction fit, factual integrity, specificity, structure, professional tone, risk awareness, and usefulness against the Executive Communication Rubric. Preserve the fallback caveat exactly.
+Before finalising, check bottom line, audience fit, evidence, decision clarity, risk and caveats, brevity, and tone against the Executive Communication Rubric. Preserve the fallback caveat exactly.
 
 SOURCE PACKET:
 [Paste the complete source packet above here.]
@@ -68,11 +68,13 @@ Please reply “approved” or identify the remaining question before the deadli
 
 | Criterion | Score | Evidence | Gate |
 |---|---:|---|---|
-| Instruction fit | 5 | The requested decision, length, and format are followed. | Pass |
-| Factual integrity | 5 | Every amount and status maps to the source packet. | Pass |
-| Structure | 5 | The decision is first and supporting facts are scannable. | Pass |
-| Professional tone | 4 | Direct without becoming abrupt or promotional. | Pass |
-| Usefulness | 5 | The recipient knows exactly how and when to respond. | Pass |
+| Bottom line | 5 | The first sentence states the decision, amount, term, and deadline. | Pass |
+| Audience fit | 4 | Framed around the CFO's budget and approval concerns; approval authority still needs the sender's check. | Pass |
+| Evidence | 5 | Price movement, budget, and review status all map to the source packet. | Pass |
+| Decision clarity | 4 | Decision, owner, and deadline are explicit; the excerpt does not say the quoted price expires at the deadline. | Pass |
+| Risk and caveats | 4 | The fallback, its cost, and its deadline are stated; no service risk is invented. | Pass |
+| Brevity | 5 | Four bullets and one closing line, with no pleasantries or background. | Pass |
+| Tone | 4 | Direct without becoming abrupt or promotional. | Pass |
 
 ## Human review before use
 

@@ -68,11 +68,11 @@ Visual: three-number estate diagnostic, explicitly labelled as current known fac
 
 | Criterion | Score | Evidence | Gate |
 |---|---:|---|---|
-| Decision clarity | 5 | Funding, duration, and discovery scope are explicit. | Pass |
+| Slide titles | 5 | Each excerpted title states the slide's message as a sentence. | Pass |
 | Narrative | 5 | Each slide advances the evidence-to-decision story. | Pass |
 | Evidence | 5 | Visuals use only supplied dates, counts, and cost. | Pass |
 | Speaker notes | 5 | Caveats prevent discovery from becoming programme approval. | Pass |
-| Final ask | 5 | The ask is bounded to £95,000 and eight weeks. | Pass |
+| Call to action | 5 | The ask is bounded to £95,000 and eight weeks. | Pass |
 
 ## Human review before use
 

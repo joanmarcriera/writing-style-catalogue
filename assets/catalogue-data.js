@@ -1590,37 +1590,49 @@ window.CATALOGUE_DATA = {
       ],
       "context": "A technology director needs a decision from the CFO without hiding the deadline, cost increase, or fallback. The email must be ready to send after commercial figures are checked.",
       "sourcePacket": "SCENARIO: Labelled composite.\nSENDER: Technology Director\nRECIPIENT: Chief Financial Officer\nDECISION: Approve a 12-month monitoring-platform renewal at £186,000 excluding VAT.\nDEADLINE: 16:00 on 21 August 2026; the quoted price expires then.\nCURRENT ANNUAL COST: £174,000 excluding VAT.\nCHANGE: £12,000 / 6.9% increase.\nBUDGET: Approved operations budget contains £190,000 for this service.\nPROCUREMENT: Commercial and security reviews complete; legal review complete with no material exceptions.\nFALLBACK: A one-month extension is available for £18,000, but written confirmation is required by the same deadline.\nUNKNOWN: None material to the approval request.",
-      "prompt": "You are an executive communications adviser. Draft a BLUF email from the Technology Director to the Chief Financial Officer requesting one decision: approval of the 12-month monitoring-platform renewal.\n\nUse only the supplied SOURCE PACKET. Do not invent savings, service risks, negotiation outcomes, vendor claims, approvals, or urgency. If the amount, deadline, budget position, review status, or fallback is missing or contradictory, return MISSING INFORMATION and list the exact gap instead of drafting the email.\n\nWrite a specific subject line. In the first sentence state the decision, amount, term, and deadline. Then give no more than four short bullets covering: price movement; budget position; completed assurance; fallback and its cost. Close with the precise response required. Keep the email between 130 and 190 words, use British English, and use £ figures consistently with “excluding VAT”. Do not add pleasantries, background history, or an invented consequence of non-renewal. Output only the subject line and email body.\n\nBefore finalising, check instruction fit, factual integrity, specificity, structure, professional tone, risk awareness, and usefulness against the Executive Communication Rubric. Preserve the fallback caveat exactly.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "prompt": "You are an executive communications adviser. Draft a BLUF email from the Technology Director to the Chief Financial Officer requesting one decision: approval of the 12-month monitoring-platform renewal.\n\nUse only the supplied SOURCE PACKET. Do not invent savings, service risks, negotiation outcomes, vendor claims, approvals, or urgency. If the amount, deadline, budget position, review status, or fallback is missing or contradictory, return MISSING INFORMATION and list the exact gap instead of drafting the email.\n\nWrite a specific subject line. In the first sentence state the decision, amount, term, and deadline. Then give no more than four short bullets covering: price movement; budget position; completed assurance; fallback and its cost. Close with the precise response required. Keep the email between 130 and 190 words, use British English, and use £ figures consistently with “excluding VAT”. Do not add pleasantries, background history, or an invented consequence of non-renewal. Output only the subject line and email body.\n\nBefore finalising, check bottom line, audience fit, evidence, decision clarity, risk and caveats, brevity, and tone against the Executive Communication Rubric. Preserve the fallback caveat exactly.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
       "output": "Subject: Approval required by 16:00, 21 August — £186,000 monitoring renewal\n\nPlease approve the 12-month monitoring-platform renewal at £186,000 excluding VAT by 16:00 on 21 August 2026.\n\n• The price is £12,000 (6.9%) above the current annual cost of £174,000.\n• The approved operations budget contains £190,000 for this service.\n• Procurement, security, and legal reviews are complete, with no material legal exceptions.\n• If approval cannot be given, a one-month extension costs £18,000 and must be confirmed by the same deadline.\n\nPlease reply “approved” or identify the remaining question before the deadline.",
       "scorecard": [
         {
-          "criterion": "Instruction fit",
+          "criterion": "Bottom line",
           "score": 5,
-          "evidence": "The requested decision, length, and format are followed.",
+          "evidence": "The first sentence states the decision, amount, term, and deadline.",
           "gate": "Pass"
         },
         {
-          "criterion": "Factual integrity",
-          "score": 5,
-          "evidence": "Every amount and status maps to the source packet.",
+          "criterion": "Audience fit",
+          "score": 4,
+          "evidence": "Framed around the CFO's budget and approval concerns; approval authority still needs the sender's check.",
           "gate": "Pass"
         },
         {
-          "criterion": "Structure",
+          "criterion": "Evidence",
           "score": 5,
-          "evidence": "The decision is first and supporting facts are scannable.",
+          "evidence": "Price movement, budget, and review status all map to the source packet.",
           "gate": "Pass"
         },
         {
-          "criterion": "Professional tone",
+          "criterion": "Decision clarity",
+          "score": 4,
+          "evidence": "Decision, owner, and deadline are explicit; the excerpt does not say the quoted price expires at the deadline.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Risk and caveats",
+          "score": 4,
+          "evidence": "The fallback, its cost, and its deadline are stated; no service risk is invented.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Brevity",
+          "score": 5,
+          "evidence": "Four bullets and one closing line, with no pleasantries or background.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Tone",
           "score": 4,
           "evidence": "Direct without becoming abrupt or promotional.",
-          "gate": "Pass"
-        },
-        {
-          "criterion": "Usefulness",
-          "score": 5,
-          "evidence": "The recipient knows exactly how and when to respond.",
           "gate": "Pass"
         }
       ],
@@ -1746,37 +1758,49 @@ window.CATALOGUE_DATA = {
       ],
       "context": "An executive committee needs the current delivery position, not a progress narrative. The update must expose the difference between achieved results and forecast outcomes and end with one decision.",
       "sourcePacket": "SCENARIO: Labelled composite.\nREPORTING DATE: 31 July 2026\nOVERALL STATUS: Amber\nSCOPE: Migrate 120 enterprise customers by 30 November 2026.\nDELIVERED: 46 customers migrated; 44 passed acceptance first time; 2 required data correction and then passed.\nFORECAST: 112–120 customers by deadline, depending on specialist partner capacity from September.\nBUDGET: £1.84m spent of £3.20m approved; current forecast £3.05m–£3.28m.\nRISKS: partner capacity unconfirmed after 1 September; eight customers have unresolved data-retention requirements.\nDECISION REQUIRED BY 7 AUGUST: reserve £180,000 contingency for a second migration partner. Spending still requires procurement approval.\nNEXT MILESTONES: partner commitment by 14 August; retention decisions by 21 August; 75 customers migrated by 30 September.",
-      "prompt": "You are a chief-of-staff writer preparing a one-page executive update for the sponsors of a customer migration programme. The readers need to understand current performance, forecast uncertainty, material risks, and one decision.\n\nUse only the SOURCE PACKET. Do not invent causes, savings, customer sentiment, partner commitments, mitigations, or confidence. Keep actual results, ranges, forecasts, and unresolved requirements visibly distinct. If reporting date, scope, achieved results, forecast, budget, risks, or decision are missing or inconsistent, return MISSING INFORMATION and do not draft the update.\n\nUse British English and this order: Bottom line; What has happened; So what; Decision required; Next 30 days. Keep it between 300 and 450 words. Lead with Amber status and the forecast range. State both the £3.05m–£3.28m forecast and the £3.20m approval; do not call the programme within budget. Explain that reserving contingency does not itself authorise spending. Use short paragraphs and a compact table only if it improves comparison. Output only the update.\n\nBefore finalising, review instruction fit, factual integrity, specificity, structure, tone, risk awareness, and usefulness against the Executive Communication Rubric. Preserve every uncertainty and deadline.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "prompt": "You are a chief-of-staff writer preparing a one-page executive update for the sponsors of a customer migration programme. The readers need to understand current performance, forecast uncertainty, material risks, and one decision.\n\nUse only the SOURCE PACKET. Do not invent causes, savings, customer sentiment, partner commitments, mitigations, or confidence. Keep actual results, ranges, forecasts, and unresolved requirements visibly distinct. If reporting date, scope, achieved results, forecast, budget, risks, or decision are missing or inconsistent, return MISSING INFORMATION and do not draft the update.\n\nUse British English and this order: Bottom line; What has happened; So what; Decision required; Next 30 days. Keep it between 300 and 450 words. Lead with Amber status and the forecast range. State both the £3.05m–£3.28m forecast and the £3.20m approval; do not call the programme within budget. Explain that reserving contingency does not itself authorise spending. Use short paragraphs and a compact table only if it improves comparison. Output only the update.\n\nBefore finalising, review bottom line, audience fit, evidence, decision clarity, risk and caveats, brevity, and tone against the Executive Communication Rubric. Preserve every uncertainty and deadline.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
       "output": "Bottom line — Amber\nForty-six of 120 enterprise customers have migrated. The programme forecasts 112–120 completions by 30 November, but the upper end depends on specialist partner capacity that is not confirmed after 1 September.\n\nBudget\n£1.84m of £3.20m has been spent. The current forecast is £3.05m–£3.28m, so the downside case exceeds the approved envelope.\n\nDecision required by 7 August\nReserve £180,000 contingency for a second migration partner. This reservation does not authorise expenditure; any engagement remains subject to procurement approval.\n\nNext 30 days\nConfirm partner capacity by 14 August, resolve eight data-retention decisions by 21 August, and protect the 75-customer milestone due 30 September.",
       "scorecard": [
         {
-          "criterion": "Factual integrity",
+          "criterion": "Bottom line",
+          "score": 5,
+          "evidence": "Amber status, completions to date, and the forecast range lead the update.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Audience fit",
+          "score": 4,
+          "evidence": "Written for sponsors' budget and decision rights; first-time acceptance results are left out.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Evidence",
           "score": 5,
           "evidence": "Actuals, forecast range, budget, and deadlines map to source.",
           "gate": "Pass"
         },
         {
-          "criterion": "Structure",
-          "score": 5,
-          "evidence": "Status, implication, decision, and next actions are immediately visible.",
+          "criterion": "Decision clarity",
+          "score": 4,
+          "evidence": "The decision and 7 August deadline are explicit; the consequence of not reserving contingency is not stated.",
           "gate": "Pass"
         },
         {
-          "criterion": "Risk awareness",
+          "criterion": "Risk and caveats",
           "score": 5,
-          "evidence": "Partner and retention uncertainty remain explicit.",
+          "evidence": "Partner and retention uncertainty, and the downside budget case, remain explicit.",
           "gate": "Pass"
         },
         {
-          "criterion": "Professional tone",
+          "criterion": "Brevity",
+          "score": 5,
+          "evidence": "Four short blocks with no progress narrative.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Tone",
           "score": 4,
           "evidence": "Direct and non-defensive without overstating control.",
-          "gate": "Pass"
-        },
-        {
-          "criterion": "Usefulness",
-          "score": 5,
-          "evidence": "The committee has one dated decision and three milestones.",
           "gate": "Pass"
         }
       ],
@@ -1970,37 +1994,49 @@ window.CATALOGUE_DATA = {
       ],
       "context": "Leadership must decide whether to consolidate three regional service desks. The recommendation should be persuasive because its logic is explicit, not because alternatives are caricatured.",
       "sourcePacket": "SCENARIO: Labelled composite.\nSITUATION: Three regional service desks use separate queues, reporting, and overnight cover.\nEVIDENCE: 18% of tickets are transferred between regions; median resolution is 14.2 hours; annual operating cost is £2.4m.\nCOMPLICATION: A single global tool is already contracted, but operating processes and ownership remain regional.\nOPTIONS: retain regional model; consolidate queues only; create one follow-the-sun operating model.\nRECOMMENDATION: Follow-the-sun model, phased over six months.\nSUPPORTING REASONS: one accountable queue owner; continuous cover using existing shifts; one reporting model.\nESTIMATE: implementation cost £310,000; expected annual saving £420,000 from contractor and duplicate-tool retirement.\nASSUMPTIONS: No redundancies; shifts remain within existing contracts; savings estimate has not passed finance assurance.\nRISK: regional knowledge may be lost during transition.\nDECISION: Approve detailed design and finance validation, not full implementation.",
-      "prompt": "You are a strategy director writing a Minto-style recommendation for the Chief Operating Officer and technology leadership team. The decision is whether to approve detailed design and finance validation for a follow-the-sun service desk model.\n\nUse only the SOURCE PACKET. Do not invent customer satisfaction, staffing reductions, regulatory benefits, validated savings, implementation dependencies, or option scores. Present the £420,000 saving as an unassured estimate and preserve the no-redundancy and employment-contract assumptions. If the decision, viable alternatives, evidence, financial estimate, or material risk is absent, return MISSING INFORMATION rather than a recommendation.\n\nWrite in British English. Lead with the answer in one sentence. Support it with three mutually exclusive reasons: accountability, coverage, and management information. Then use Situation, Complication, Question, Answer; Evidence; Alternatives and trade-offs; Financial assumptions; Risk and mitigation; Decision requested. Explain why queue-only consolidation and the status quo were not selected without dismissing them. Keep it between 600 and 850 words and output only the recommendation.\n\nBefore finalising, test factual integrity, logical grouping, option fairness, caveat preservation, decision clarity, and executive usefulness against the Executive Communication Rubric.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "prompt": "You are a strategy director writing a Minto-style recommendation for the Chief Operating Officer and technology leadership team. The decision is whether to approve detailed design and finance validation for a follow-the-sun service desk model.\n\nUse only the SOURCE PACKET. Do not invent customer satisfaction, staffing reductions, regulatory benefits, validated savings, implementation dependencies, or option scores. Present the £420,000 saving as an unassured estimate and preserve the no-redundancy and employment-contract assumptions. If the decision, viable alternatives, evidence, financial estimate, or material risk is absent, return MISSING INFORMATION rather than a recommendation.\n\nWrite in British English. Lead with the answer in one sentence. Support it with three mutually exclusive reasons: accountability, coverage, and management information. Then use Situation, Complication, Question, Answer; Evidence; Alternatives and trade-offs; Financial assumptions; Risk and mitigation; Decision requested. Explain why queue-only consolidation and the status quo were not selected without dismissing them. Keep it between 600 and 850 words and output only the recommendation.\n\nBefore finalising, test bottom line, audience fit, evidence, decision clarity, risk and caveats, brevity, and tone against the Executive Communication Rubric.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
       "output": "Recommendation\nApprove detailed design and finance validation for a six-month transition to one follow-the-sun service desk operating model.\n\nWhy this is the right next decision\n1. Accountability: one queue owner removes ambiguous hand-offs across three regional teams.\n2. Coverage: existing regional shifts can provide continuous cover, subject to confirmation that current employment terms permit the design.\n3. Management information: one reporting model makes transfer rate, ageing, and resolution performance comparable.\n\nThe estimated £420,000 annual saving has not passed finance assurance. Approval therefore covers detailed design and validation of the £310,000 implementation estimate—not full implementation.",
       "scorecard": [
         {
-          "criterion": "Instruction fit",
+          "criterion": "Bottom line",
           "score": 5,
-          "evidence": "The recommendation asks for design and validation only.",
+          "evidence": "The first sentence states the recommended decision and its scope.",
           "gate": "Pass"
         },
         {
-          "criterion": "Factual integrity",
-          "score": 5,
-          "evidence": "Estimates and employment assumptions remain qualified.",
-          "gate": "Pass"
-        },
-        {
-          "criterion": "Structure",
-          "score": 5,
-          "evidence": "One answer is supported by three non-overlapping reasons.",
-          "gate": "Pass"
-        },
-        {
-          "criterion": "Risk awareness",
+          "criterion": "Audience fit",
           "score": 4,
-          "evidence": "Regional knowledge and contract assumptions remain visible.",
+          "evidence": "Leaders can approve a bounded next step without approving delivery; the alternatives are outside the excerpt.",
           "gate": "Pass"
         },
         {
-          "criterion": "Usefulness",
+          "criterion": "Evidence",
+          "score": 4,
+          "evidence": "Cost and saving figures carry their assurance status; the transfer-rate and resolution baselines are outside the excerpt.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Decision clarity",
+          "score": 4,
+          "evidence": "The decision is limited to design and validation; the source packet gives no deadline, so none is stated.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Risk and caveats",
+          "score": 4,
+          "evidence": "The unassured saving and employment-terms caveat are visible; regional knowledge loss is not in the excerpt.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Brevity",
           "score": 5,
-          "evidence": "Leaders can approve a bounded next step without approving delivery.",
+          "evidence": "One answer is supported by three non-overlapping reasons and one caveat paragraph.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Tone",
+          "score": 5,
+          "evidence": "Measured and confident without overstating the saving.",
           "gate": "Pass"
         }
       ],
@@ -2052,9 +2088,9 @@ window.CATALOGUE_DATA = {
       "output": "Slide 1 — We need evidence before the 2028 lease deadline becomes a constraint\n• Decision today: £95,000 for an eight-week discovery.\n• The lease ends 30 September 2028; renewal terms arrive only 12 months before expiry.\nVisual: horizontal timeline from discovery to lease expiry, with no invented programme dates.\nSpeaker note: This is not a request to approve migration or select cloud. It buys the evidence needed for that later decision.\n\nSlide 3 — The current estate is not understood well enough to price an exit\n• 74 applications.\n• 19 contain unsupported operating-system components.\n• Dependency mapping is incomplete for 28 applications.\nVisual: three-number estate diagnostic, explicitly labelled as current known facts.",
       "scorecard": [
         {
-          "criterion": "Decision clarity",
+          "criterion": "Slide titles",
           "score": 5,
-          "evidence": "Funding, duration, and discovery scope are explicit.",
+          "evidence": "Each excerpted title states the slide's message as a sentence.",
           "gate": "Pass"
         },
         {
@@ -2076,7 +2112,7 @@ window.CATALOGUE_DATA = {
           "gate": "Pass"
         },
         {
-          "criterion": "Final ask",
+          "criterion": "Call to action",
           "score": 5,
           "evidence": "The ask is bounded to £95,000 and eight weeks.",
           "gate": "Pass"
@@ -2126,37 +2162,49 @@ window.CATALOGUE_DATA = {
       ],
       "context": "Leaders need a 30-second readiness update that does not disguise a conditional launch as green. The output must keep status logic and the exact go/no-go checkpoint.",
       "sourcePacket": "SCENARIO: Labelled composite.\nRELEASE: Customer reporting v2; target 18 August 2026.\nSTATUS: Amber until performance gate passes.\nREADY: security review complete; support guide approved; rollback rehearsal passed in staging.\nOPEN: peak-load test at 2,000 concurrent report requests; test scheduled 13 August, owned by Performance Engineering.\nTHRESHOLD: p95 response below 2.5 seconds and error rate below 1% for 30 minutes.\nCONSEQUENCE: failing either threshold moves launch to 25 August; no executive exception path.\nNEXT CHECKPOINT: go/no-go meeting at 14:00 on 14 August.\nUNKNOWN: Peak-load result.",
-      "prompt": "You are writing a Smart Brevity release-readiness update for product and engineering leadership. Produce a 30-second read using only the SOURCE PACKET.\n\nDo not invent test results, customer impact, confidence, mitigations, dependencies, or executive discretion. The release remains Amber until both supplied performance thresholds pass. If the target date, status logic, open gate, owner, threshold, consequence, or checkpoint is missing, return MISSING INFORMATION rather than an update.\n\nUse British English and this format: one-line headline; Why it matters; Ready; Still open; What happens next. Keep it between 120 and 170 words. Use short labels and no more than five bullets. State the 25 August fallback and that there is no exception path. Do not describe completed security or rollback work as proof of performance. Output only the update.\n\nBefore finalising, review factual integrity, signal-to-noise, status clarity, owner/date visibility, caveat preservation, and actionability against the Executive Communication Rubric. A fluent update that implies Green is a failed draft.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
+      "prompt": "You are writing a Smart Brevity release-readiness update for product and engineering leadership. Produce a 30-second read using only the SOURCE PACKET.\n\nDo not invent test results, customer impact, confidence, mitigations, dependencies, or executive discretion. The release remains Amber until both supplied performance thresholds pass. If the target date, status logic, open gate, owner, threshold, consequence, or checkpoint is missing, return MISSING INFORMATION rather than an update.\n\nUse British English and this format: one-line headline; Why it matters; Ready; Still open; What happens next. Keep it between 120 and 170 words. Use short labels and no more than five bullets. State the 25 August fallback and that there is no exception path. Do not describe completed security or rollback work as proof of performance. Output only the update.\n\nBefore finalising, review bottom line, audience fit, evidence, decision clarity, risk and caveats, brevity, and tone against the Executive Communication Rubric. A fluent update that implies Green is a failed draft.\n\nSOURCE PACKET:\n[Paste the complete source packet above here.]",
       "output": "Customer reporting v2 remains Amber pending one performance gate.\n\nWhy it matters: The 18 August launch depends on evidence that peak reporting load meets the agreed service threshold.\n\nReady\n• Security review, support guide, and staging rollback rehearsal are complete.\n\nStill open\n• Performance Engineering will test 2,000 concurrent report requests on 13 August.\n• Pass = p95 below 2.5 seconds and errors below 1% for 30 minutes.\n\nWhat happens next: Go/no-go is 14:00 on 14 August. Failure of either threshold moves launch to 25 August; there is no executive exception path.",
       "scorecard": [
         {
-          "criterion": "Factual integrity",
+          "criterion": "Bottom line",
           "score": 5,
-          "evidence": "No test result or confidence is invented.",
+          "evidence": "The headline states Amber status and the single open gate.",
           "gate": "Pass"
         },
         {
-          "criterion": "Structure",
+          "criterion": "Audience fit",
           "score": 5,
-          "evidence": "Status, gate, threshold, consequence, and checkpoint scan quickly.",
+          "evidence": "Leaders get the test, owner, threshold, and checkpoint they need to act.",
           "gate": "Pass"
         },
         {
-          "criterion": "Professional tone",
+          "criterion": "Evidence",
           "score": 5,
-          "evidence": "Direct, calm, and free of launch theatre.",
+          "evidence": "Load, threshold, and dates map to source; no test result or confidence is invented.",
           "gate": "Pass"
         },
         {
-          "criterion": "Risk awareness",
+          "criterion": "Decision clarity",
+          "score": 4,
+          "evidence": "Checkpoint, test owner, and consequence of failure are explicit; the go/no-go decision owner is not named.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Risk and caveats",
           "score": 5,
           "evidence": "Amber status and the non-negotiable fallback remain clear.",
           "gate": "Pass"
         },
         {
-          "criterion": "Usefulness",
+          "criterion": "Brevity",
           "score": 5,
-          "evidence": "Leaders know the owner, test, date, and decision point.",
+          "evidence": "Three bullets and short labels; it reads in under a minute.",
+          "gate": "Pass"
+        },
+        {
+          "criterion": "Tone",
+          "score": 5,
+          "evidence": "Direct, calm, and free of launch theatre.",
           "gate": "Pass"
         }
       ],
@@ -2208,13 +2256,13 @@ window.CATALOGUE_DATA = {
       "output": "Provisional conclusion\nOn the supplied facts and assumptions, the transaction should be tested under the general B2B place-of-supply and UK reverse-charge provisions identified in VAT Notice 741A. The customer is UK-established and VAT-registered; the supplier is stated to be US-established with no UK establishment; and the software is used for taxable business activity.\n\nThe packet is not sufficient to state the accounting amount or return entries. It supplies no VAT rate and does not reproduce the detailed HMRC rules or test whether a special provision applies. Finance should not post the final treatment until a qualified VAT adviser has checked the current notice, contract, invoice, establishment evidence, business-use evidence, and applicable rate.",
       "scorecard": [
         {
-          "criterion": "Facts and assumptions",
+          "criterion": "Facts",
           "score": 5,
           "evidence": "Business status, establishments, use, and special-rule assumption are separate.",
           "gate": "Pass"
         },
         {
-          "criterion": "Authority",
+          "criterion": "Law and guidance",
           "score": 4,
           "evidence": "The note uses one verified HMRC page without fabricating paragraphs.",
           "gate": "Human check"
@@ -2226,13 +2274,13 @@ window.CATALOGUE_DATA = {
           "gate": "Human check"
         },
         {
-          "criterion": "Conclusion and caveats",
+          "criterion": "Caveats",
           "score": 5,
           "evidence": "The conclusion is provisional and refuses an unsupported calculation.",
           "gate": "Pass"
         },
         {
-          "criterion": "Professional usefulness",
+          "criterion": "Next steps",
           "score": 4,
           "evidence": "Finance receives a concrete adviser-verification list.",
           "gate": "Human check"
@@ -2286,7 +2334,7 @@ window.CATALOGUE_DATA = {
       "output": "Approval status: NOT PRODUCTION-READY — no last-tested date is supplied.\n\nFirst five minutes\n1. Confirm the alert is current and open or join the active incident ticket.\n2. Run only the approved read-only checks:\n   kubectl -n production get deploy orders-api\n   kubectl -n production get pods -l app=orders-api\n   kubectl -n production rollout history deploy/orders-api\n3. Confirm both the pool alert and timeout log pattern. If either is absent, stop and use the generic API-degradation runbook.\n\nState-changing recovery\nDo not restart, roll back, or pause a job unless the incident commander approves the change, the operator is authorised, and the locally tested command register identifies the exact command and rollback target.\n\nResolution requires ten continuous minutes below 1% API errors and 70% pool utilisation, a passing synthetic checkout, and restoration or explicit tracking of every paused job.",
       "scorecard": [
         {
-          "criterion": "Accuracy",
+          "criterion": "Technical accuracy",
           "score": 4,
           "evidence": "Only approved read-only commands are reproduced.",
           "gate": "Human check"
@@ -2298,15 +2346,15 @@ window.CATALOGUE_DATA = {
           "gate": "Pass"
         },
         {
-          "criterion": "Decision branches",
+          "criterion": "Procedure quality",
           "score": 5,
-          "evidence": "Stop, continue, escalate, and resolve conditions are measurable.",
+          "evidence": "Numbered checks use exact read-only commands; stop and escalate conditions are measurable.",
           "gate": "Pass"
         },
         {
-          "criterion": "Verification",
-          "score": 5,
-          "evidence": "Recovery requires sustained metrics and a synthetic transaction.",
+          "criterion": "Troubleshooting",
+          "score": 4,
+          "evidence": "Resolution requires sustained metrics and a synthetic checkout; symptom-to-cause checks beyond the two confirmations are not shown.",
           "gate": "Pass"
         },
         {
@@ -2364,13 +2412,13 @@ window.CATALOGUE_DATA = {
       "output": "Executive summary\nThe public site explains that cloud consulting is offered but does not yet help the target buyer recognise whether the service fits their organisation or what outcome to expect. This is an Observed messaging gap, not evidence of poor conversion: analytics and form-completion data were not available.\n\nPriority 1 — Replace the generic homepage proposition\nEvidence: Observed headline “Transform your cloud journey” names neither the 200–2,000-person buyer nor the cloud-cost problem.\nAction: Marketing lead drafts and tests a proposition naming audience, problem, and evidence-backed outcome.\nAcceptance: one H1 names the target organisation and problem; supporting copy contains no unsupported result; CTA describes a discovery-call outcome.\n\nPriority 2 — Reduce untested form friction\nEvidence: Observed nine-field contact form. Inference: field count may discourage enquiries; no completion data is available.\nAcceptance: instrument start/completion events before changing fields, then compare a six-field variant for four weeks.",
       "scorecard": [
         {
-          "criterion": "Evidence discipline",
+          "criterion": "Fact integrity",
           "score": 5,
           "evidence": "Observations, inferences, and unavailable data remain distinct.",
           "gate": "Pass"
         },
         {
-          "criterion": "Commercial alignment",
+          "criterion": "Business relevance",
           "score": 5,
           "evidence": "Recommendations serve qualified discovery calls.",
           "gate": "Pass"
@@ -2382,7 +2430,7 @@ window.CATALOGUE_DATA = {
           "gate": "Pass"
         },
         {
-          "criterion": "Technical integrity",
+          "criterion": "Technical SEO accuracy",
           "score": 4,
           "evidence": "Public technical facts are bounded to inspected artefacts.",
           "gate": "Human check"

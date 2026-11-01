@@ -86,6 +86,40 @@ def parse_scorecard(section: str) -> list[dict[str, object]]:
     return rows
 
 
+def rubric_criteria(rubric_path: Path) -> set[str]:
+    """Return the lower-cased criteria from the rubric's first | Criterion | 1 | 3 | 5 | table."""
+    criteria: set[str] = set()
+    in_table = False
+    for line in rubric_path.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+        if not in_table:
+            in_table = stripped.startswith("|") and cells == ["Criterion", "1", "3", "5"]
+            continue
+        if not stripped.startswith("|"):
+            break
+        if cells[0] and not set(cells[0]) <= {"-", ":"}:
+            criteria.add(cells[0].lower())
+    return criteria
+
+
+def check_scorecard_matches_rubric(
+    scorecard: list[dict[str, object]], rubric_path: Path, rubric_label: str
+) -> list[str]:
+    """Every scorecard criterion must be named in the linked rubric's criteria table.
+
+    build_bundle prefixes each error with the bundle path.
+    """
+    criteria = rubric_criteria(rubric_path)
+    if not criteria:
+        return [f"{rubric_label} has no | Criterion | 1 | 3 | 5 | table"]
+    return [
+        f"scorecard criterion {row['criterion']!r} is not in {rubric_label}"
+        for row in scorecard
+        if str(row["criterion"]).strip().lower() not in criteria
+    ]
+
+
 def build_bundle(path: Path, base_path: Path) -> dict[str, object]:
     text = path.read_text(encoding="utf-8")
     fields, body = parse_frontmatter(text)
@@ -126,6 +160,16 @@ def build_bundle(path: Path, base_path: Path) -> dict[str, object]:
             errors.append(f"invalid gate for {row['criterion']}: {row['gate']}")
         if row["score"] < 3 and row["gate"] == "Pass":
             errors.append(f"score below 3 cannot pass: {row['criterion']}")
+
+    rubric_relative = fields.get("rubric_path")
+    if rubric_relative and (base_path / rubric_relative).is_file():
+        errors.extend(
+            check_scorecard_matches_rubric(
+                scorecard,
+                base_path / rubric_relative,
+                rubric_relative,
+            )
+        )
 
     if errors:
         relative_path = path.relative_to(base_path).as_posix()

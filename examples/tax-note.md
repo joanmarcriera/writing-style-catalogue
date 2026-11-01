@@ -61,11 +61,11 @@ The packet is not sufficient to state the accounting amount or return entries. I
 
 | Criterion | Score | Evidence | Gate |
 |---|---:|---|---|
-| Facts and assumptions | 5 | Business status, establishments, use, and special-rule assumption are separate. | Pass |
-| Authority | 4 | The note uses one verified HMRC page without fabricating paragraphs. | Human check |
+| Facts | 5 | Business status, establishments, use, and special-rule assumption are separate. | Pass |
+| Law and guidance | 4 | The note uses one verified HMRC page without fabricating paragraphs. | Human check |
 | Analysis | 4 | Reasoning follows the supplied B2B, belonging, and reverse-charge route. | Human check |
-| Conclusion and caveats | 5 | The conclusion is provisional and refuses an unsupported calculation. | Pass |
-| Professional usefulness | 4 | Finance receives a concrete adviser-verification list. | Human check |
+| Caveats | 5 | The conclusion is provisional and refuses an unsupported calculation. | Pass |
+| Next steps | 4 | Finance receives a concrete adviser-verification list. | Human check |
 
 ## Human review before use
 
