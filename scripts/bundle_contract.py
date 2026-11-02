@@ -31,9 +31,53 @@ ALLOWED_SCENARIOS = {"labelled-composite", "verified-public-project"}
 ALLOWED_GATES = {"Pass", "Revise", "Human check"}
 EXPECTED_BUNDLE_COUNT = 12
 
+# Rubric front-matter key that lists critical criteria, e.g.
+#   critical: [Decision required, Options analysis, Financial analysis, Risk]
+CRITICAL_FRONTMATTER_KEY = "critical"
+# Standard: "A bundle cannot claim to pass when a critical criterion scores below 4".
+CRITICAL_MIN_PASS_SCORE = 4
+
 
 class BundleContractError(ValueError):
     """Raised when a worked example does not meet the bundle contract."""
+
+
+def parse_critical_criteria(rubric_text: str) -> list[str] | None:
+    """Return the rubric's critical criteria, or None when the rubric has no marker.
+
+    The marker is a `critical:` front-matter field holding an inline list
+    (`[A, B]`) or a comma-separated string (`A, B`).
+    """
+    try:
+        fields, _ = parse_frontmatter(rubric_text)
+    except BundleContractError:
+        return None
+    if CRITICAL_FRONTMATTER_KEY not in fields:
+        return None
+    raw = fields[CRITICAL_FRONTMATTER_KEY].strip()
+    if raw.startswith("[") and raw.endswith("]"):
+        raw = raw[1:-1]
+    return [item.strip().strip("'\"") for item in raw.split(",") if item.strip()]
+
+
+def check_critical_criterion_gate(
+    bundle_name: str, scorecard: list[dict[str, object]], critical: list[str]
+) -> list[str]:
+    """Critical criterion scored below 4 cannot carry Gate = Pass."""
+    wanted = {name.casefold() for name in critical}
+    errors: list[str] = []
+    for row in scorecard:
+        criterion = str(row["criterion"])
+        if (
+            criterion.casefold() in wanted
+            and int(row["score"]) < CRITICAL_MIN_PASS_SCORE
+            and row["gate"] == "Pass"
+        ):
+            errors.append(
+                f"{bundle_name}: critical criterion {criterion!r} scored {row['score']} "
+                f"(below {CRITICAL_MIN_PASS_SCORE}) cannot carry Gate = Pass"
+            )
+    return errors
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
@@ -86,7 +130,9 @@ def parse_scorecard(section: str) -> list[dict[str, object]]:
     return rows
 
 
-def build_bundle(path: Path, base_path: Path) -> dict[str, object]:
+def build_bundle(
+    path: Path, base_path: Path, notices: list[str] | None = None
+) -> dict[str, object]:
     text = path.read_text(encoding="utf-8")
     fields, body = parse_frontmatter(text)
     errors: list[str] = []
@@ -127,6 +173,21 @@ def build_bundle(path: Path, base_path: Path) -> dict[str, object]:
         if row["score"] < 3 and row["gate"] == "Pass":
             errors.append(f"score below 3 cannot pass: {row['criterion']}")
 
+    rubric_relative = fields.get("rubric_path")
+    if rubric_relative and (base_path / rubric_relative).is_file():
+        critical = parse_critical_criteria(
+            (base_path / rubric_relative).read_text(encoding="utf-8")
+        )
+        bundle_name = fields.get("bundle_id") or path.stem
+        if critical is None:
+            if notices is not None:
+                notices.append(
+                    f"{bundle_name}: {rubric_relative} has no '{CRITICAL_FRONTMATTER_KEY}:' "
+                    "marker; critical-criterion gate rule skipped"
+                )
+        else:
+            errors.extend(check_critical_criterion_gate(bundle_name, scorecard, critical))
+
     if errors:
         relative_path = path.relative_to(base_path).as_posix()
         raise BundleContractError(f"{relative_path}: " + "; ".join(errors))
@@ -163,9 +224,11 @@ def build_bundle(path: Path, base_path: Path) -> dict[str, object]:
     }
 
 
-def load_bundles(base_path: Path) -> list[dict[str, object]]:
+def load_bundles(
+    base_path: Path, notices: list[str] | None = None
+) -> list[dict[str, object]]:
     examples = sorted((base_path / "examples").glob("*.md"))
-    bundles = [build_bundle(path, base_path) for path in examples]
+    bundles = [build_bundle(path, base_path, notices) for path in examples]
     ids = [bundle["id"] for bundle in bundles]
     duplicates = sorted({bundle_id for bundle_id in ids if ids.count(bundle_id) > 1})
     if duplicates:
